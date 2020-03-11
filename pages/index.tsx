@@ -17,10 +17,15 @@ const FeatherIconLink: FC<{ href: string }> = ({ children, href }) => (
 );
 
 const IndexPage = () => (
-  <div className="flex flex-row items-center justify-center max-w-4xl">
-    <div className="flex flex-col w-1/2 p-2">
+  <div className="flex flex-col justify-center max-w-4xl p-4 md:flex-row md:items-center">
+    <img
+      src="/assets/profile.jpeg"
+      alt="profile"
+      className="w-64 m-2 rounded-lg md:w-1/2"
+    />
+    <div className="flex flex-col m-2 md:ml-6 md:w-1/2">
       <h1 className="text-5xl font-bold">Mate Papp</h1>
-      <div className="text-xl text-gray-300">
+      <div className="text-xl text-gray-200">
         Co-Founder and CTO{" "}
         <a
           href="https://cogito.study"
@@ -59,7 +64,6 @@ const IndexPage = () => (
         </FeatherIconLink>
       </div>
     </div>
-    <img src="/assets/profile.jpeg" alt="profile" className="w-1/2 shadow-xl" />
   </div>
 );
 
