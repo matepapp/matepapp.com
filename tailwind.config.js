@@ -8,6 +8,11 @@ module.exports = {
       }
     }
   },
-  variants: {},
-  plugins: [require("@tailwindcss/ui")]
+  variants: {
+    backgroundColor: ["dark", "hover"],
+    textColor: ["dark", "hover"],
+    boxShadow: ["dark", "hover", "focus"],
+    borderRadius: ["dark"]
+  },
+  plugins: [require("tailwindcss-dark-mode")(), require("@tailwindcss/ui")]
 };
