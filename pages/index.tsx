@@ -1,15 +1,6 @@
-import useDarkMode from "use-dark-mode";
 import { SVGIconLink } from "../components/svg-icon";
 
 const IndexPage = () => {
-  const darkMode = useDarkMode(false, {
-    onChange: () => {
-      darkMode.value
-        ? document.documentElement.classList.add("mode-dark")
-        : document.documentElement.classList.remove("mode-dark");
-    }
-  });
-
   return (
     <div className="flex flex-col justify-center max-w-md m-4 overflow-hidden rounded-lg shadow-2xl md:max-w-4xl md:flex-row md:items-center">
       <img
@@ -18,43 +9,12 @@ const IndexPage = () => {
         className="dark:rounded-lg md:w-1/2"
       />
       <div className="flex flex-col m-4 md:ml-6 md:w-1/2">
-        <div className="flex items-center justify-between">
-          <h1 className="text-5xl font-bold">Mate Papp</h1>
-          <button onClick={darkMode.toggle}>
-            {darkMode.value ? (
-              <svg
-                viewBox="0 0 24 24"
-                className="w-10 h-10 transition duration-500 ease-in-out stroke-current stroke-2 hover:text-yellow-200"
-                fill="none"
-                strokeLinejoin="round"
-              >
-                <circle cx="12" cy="12" r="5" />
-                <line x1="12" y1="1" x2="12" y2="3" />
-                <line x1="12" y1="21" x2="12" y2="23" />
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                <line x1="1" y1="12" x2="3" y2="12" />
-                <line x1="21" y1="12" x2="23" y2="12" />
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-              </svg>
-            ) : (
-              <svg
-                viewBox="0 0 24 24"
-                className="w-10 h-10 transition duration-500 ease-in-out stroke-current stroke-2 hover:text-blue-800"
-                fill="none"
-                strokeLinejoin="round"
-              >
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-              </svg>
-            )}
-          </button>
-        </div>
+        <h1 className="text-5xl font-bold">Mate Papp</h1>
         <div className="text-xl text-gray-700 dark:text-gray-200">
           Co-Founder and CTO{" "}
           <a
             href="https://cogito.study"
-            className="text-yellow-300 transition duration-300 ease-in-out hover:underline"
+            className="text-yellow-400 transition duration-300 ease-in-out hover:underline"
           >
             @cogito.study
           </a>
