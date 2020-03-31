@@ -5,12 +5,12 @@ import { DarkModeSwitcher } from "./dark-mode-switcher";
 
 const NavLink: FC<LinkProps> = ({ href, children }) => {
   const router = useRouter();
-  const activeStyle = router.pathname === href && "text-yellow-400";
+  const activeStyle = router.pathname === href && "text-green-400";
 
   return (
     <Link href={href} passHref>
       <a
-        className={`pr-4 transition duration-300 ease-in-out hover:text-yellow-300
+        className={`pr-4 transition duration-300 ease-in-out hover:text-green-300
           ${activeStyle}`}
       >
         {children}
@@ -21,10 +21,10 @@ const NavLink: FC<LinkProps> = ({ href, children }) => {
 
 export const Layout: FC = ({ children }) => (
   <div className="flex justify-center min-h-screen antialiased text-gray-900 bg-gray-50 dark:text-gray-100 dark:bg-black">
-    <nav className="fixed flex items-center justify-between w-full h-12 px-4 text-lg bg-gray-50 dark:bg-black">
+    <nav className="fixed flex items-center justify-between w-full h-12 px-4 text-lg tracking-tight bg-gray-50 dark:bg-black">
       <Link href="/" passHref>
         <a>
-          matepapp<span className="font-semibold text-yellow-400">.</span>com
+          matepapp<span className="font-semibold text-green-400">.</span>com
         </a>
       </Link>
 
