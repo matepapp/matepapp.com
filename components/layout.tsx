@@ -10,7 +10,7 @@ const NavLink: FC<LinkProps> = ({ href, children }) => {
   return (
     <Link href={href} passHref>
       <a
-        className={`pr-4 transition duration-300 ease-in-out hover:text-green-300
+        className={`mr-4 transition duration-300 ease-in-out hover:text-green-300
           ${activeStyle}`}
       >
         {children}
@@ -21,22 +21,23 @@ const NavLink: FC<LinkProps> = ({ href, children }) => {
 
 export const Layout: FC = ({ children }) => (
   <div className="flex justify-center min-h-screen antialiased text-gray-900 bg-gray-50 dark:text-gray-100 dark:bg-black">
-    <nav className="fixed flex items-center justify-between w-full h-12 px-4 text-lg tracking-tight bg-gray-50 dark:bg-black">
-      <Link href="/" passHref>
-        <a>
-          matepapp<span className="font-semibold text-green-400">.</span>com
-        </a>
-      </Link>
+    <nav className="fixed flex items-start w-full px-4 py-2 text-lg tracking-tight bg-gray-50 dark:bg-black">
+      <div className="flex flex-col justify-between flex-1 sm:items-center sm:flex-row">
+        <Link href="/" passHref>
+          <a>
+            matepapp<span className="font-semibold text-green-400">.</span>com
+          </a>
+        </Link>
 
-      <div className="flex items-center">
-        <NavLink href="/about" passHref>
-          about
-        </NavLink>
-        <NavLink href="/contact" passHref>
-          contact
-        </NavLink>
-        <DarkModeSwitcher />
+        <div className="flex items-center py-1 overflow-auto sm:py-0">
+          <NavLink href="/about">about</NavLink>
+          <NavLink href="/contact">contact</NavLink>
+          <NavLink href="/career">career</NavLink>
+          <NavLink href="/thoughts">thoughts</NavLink>
+        </div>
       </div>
+
+      <DarkModeSwitcher />
     </nav>
     <main className="container flex items-center justify-center pt-12">
       {children}

@@ -14,7 +14,7 @@ export const DarkModeSwitcher = () => {
       {darkMode.value ? (
         <svg
           viewBox="0 0 24 24"
-          className="transition duration-500 ease-in-out stroke-current stroke-2 w-7 h-7 hover:text-yellow-300"
+          className="transition duration-500 ease-in-out stroke-current stroke-2 w-9 h-9 sm:h-7 sm:w-7 hover:text-yellow-300"
           fill="none"
           strokeLinejoin="round"
         >
@@ -31,7 +31,7 @@ export const DarkModeSwitcher = () => {
       ) : (
         <svg
           viewBox="0 0 24 24"
-          className="transition duration-500 ease-in-out stroke-current stroke-2 w-7 h-7 hover:text-blue-900"
+          className="transition duration-500 ease-in-out stroke-current stroke-2 w-9 h-9 sm:h-7 sm:w-7 hover:text-blue-900"
           fill="none"
           strokeLinejoin="round"
         >
