@@ -29,7 +29,7 @@ export const Layout: FC = ({ children }) => {
     }
   });
 
-  console.log({ value: darkMode.value });
+  console.log({ darkMode });
 
   return (
     <div className="flex justify-center min-h-screen antialiased text-gray-900 bg-gray-50 dark:text-gray-100 dark:bg-black">
@@ -59,7 +59,7 @@ export const Layout: FC = ({ children }) => {
       </nav>
       <main className="container flex flex-col items-center mt-24 sm:mt-14">
         <div className="flex-1">{children}</div>
-        <footer className="flex flex-col items-center my-2 text-xs text-gray-500 dark:text-gray-300">
+        <footer className="flex flex-col items-center my-2 text-xs text-gray-500 dark:text-gray-400">
           <p>
             built with <FiHeart className="inline w-4 h-4 text-green-400" />
           </p>
