@@ -41,9 +41,9 @@ export const Layout: FC = ({ children }) => {
 
           <div className="flex items-center mt-3 overflow-auto sm:mr-6 sm:mt-0">
             <NavLink href="/about">about</NavLink>
-            <NavLink href="/contact">contact</NavLink>
             <NavLink href="/career">career</NavLink>
             <NavLink href="/thoughts">thoughts</NavLink>
+            <NavLink href="/contact">contact</NavLink>
           </div>
         </div>
 

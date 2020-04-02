@@ -11,7 +11,7 @@ const CareerCard: FC<CareerCardProps> = ({ children, title, dateInterval }) => (
   <div className="p-3 mt-4 bg-white rounded-lg shadow-md dark:bg-black dark:shadow-outline-gray">
     <div className="flex flex-row flex-wrap items-center">
       <h3 className="mr-2 text-xl">{title}</h3>
-      <div className="px-2 text-sm text-white bg-gray-500 rounded-md">
+      <div className="px-2 text-sm text-white bg-gray-400 rounded-md">
         {dateInterval}
       </div>
     </div>
