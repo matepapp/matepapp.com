@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import { Layout } from "../components/layout";
 import "../css/tailwind.css";
 
-const seoTitle = "Mate Papp";
 const seoDescription = "Passionate Software Engineer";
 
 const App = ({ Component, pageProps }: AppProps) => {

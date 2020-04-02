@@ -23,8 +23,8 @@ const IndexPage = () => {
       </Link>
 
       <div className="mt-8 text-xl text-gray-800 dark:text-gray-200">
-        Started my career as an iOS Developer then discovered the web &
-        serverless world. Successfully worked on several client's projects and
+        Started my career as an iOS Developer then discovered the Web &
+        Serverless world. Successfully worked on several client's projects and
         co-founded a startup.
       </div>
       <Link href="/career" passHref>

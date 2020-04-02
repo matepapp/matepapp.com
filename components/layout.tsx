@@ -11,7 +11,7 @@ const NavLink: FC<LinkProps> = ({ href, children }) => {
   return (
     <Link href={href} passHref>
       <a
-        className={`mr-4 transition duration-300 ease-in-out hover:text-green-300
+        className={`mr-4 transition duration-300 ease-in-out text-xl sm:text-lg hover:text-green-400
           ${activeStyle}`}
       >
         {children}
@@ -34,12 +34,12 @@ export const Layout: FC = ({ children }) => {
       <nav className="fixed flex items-start w-full px-4 py-3 text-lg tracking-tight bg-gray-50 dark:bg-black">
         <div className="flex flex-col justify-between flex-1 sm:items-center sm:flex-row">
           <Link href="/" passHref>
-            <a>
-              matepapp<span className="font-semibold text-green-400">.</span>com
+            <a className="text-xl sm:text-lg">
+              matepapp<span className="text-green-400">.</span>com
             </a>
           </Link>
 
-          <div className="flex items-center py-1 overflow-auto sm:py-0">
+          <div className="flex items-center mt-3 overflow-auto sm:mr-6 sm:mt-0">
             <NavLink href="/about">about</NavLink>
             <NavLink href="/contact">contact</NavLink>
             <NavLink href="/career">career</NavLink>
@@ -47,7 +47,7 @@ export const Layout: FC = ({ children }) => {
           </div>
         </div>
 
-        <button onClick={darkMode.toggle}>
+        <button className="fixed top-3 right-3" onClick={darkMode.toggle}>
           {darkMode.value ? (
             <FiSun className="transition duration-500 ease-in-out w-9 h-9 sm:h-7 sm:w-7 hover:text-yellow-300" />
           ) : (
@@ -55,7 +55,7 @@ export const Layout: FC = ({ children }) => {
           )}
         </button>
       </nav>
-      <main className="flex flex-col flex-1 w-full px-4 mt-24 md:max-w-3xl sm:max-w-xl sm:px-0 sm:mt-14">
+      <main className="flex flex-col flex-1 w-full px-4 mt-28 lg:max-w-3xl sm:max-w-lg sm:px-0 sm:mt-14">
         {children}
       </main>
       <footer className="flex flex-col items-center my-2 text-xs text-gray-500 dark:text-gray-400">
