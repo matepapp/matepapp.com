@@ -34,8 +34,8 @@ const AboutPage: NextPage = () => {
         </a>
         <a
           href="https://swift.org"
-          className="text-white tech-link"
-          style={{ backgroundColor: "#f05138" }}
+          className="tech-link"
+          style={{ backgroundColor: "#f05138", color: "#111" }}
         >
           Swift
         </a>
@@ -148,6 +148,13 @@ const AboutPage: NextPage = () => {
           Storybook JS
         </a>
         <a
+          href="https://reactnative.dev/"
+          className="tech-link"
+          style={{ color: "#61dafb", backgroundColor: "#20232a" }}
+        >
+          React Native
+        </a>
+        <a
           href="https://firebase.google.com/"
           className="tech-link"
           style={{ backgroundColor: "rgb(251, 192, 45)", color: "#424242" }}
@@ -194,6 +201,20 @@ const AboutPage: NextPage = () => {
           }}
         >
           iTerm
+        </a>
+        <a
+          href="https://www.netlify.com/"
+          className="text-white tech-link"
+          style={{ backgroundColor: "#00ad9f" }}
+        >
+          Netlify
+        </a>
+        <a
+          href="https://zeit.co/"
+          className="text-white tech-link"
+          style={{ backgroundColor: "#111" }}
+        >
+          Zeit Now
         </a>
       </div>
     </>
