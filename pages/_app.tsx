@@ -19,7 +19,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="assets/favicon.ico" />
+        <link rel="icon" href="/assets/favicon.ico" />
       </Head>
       <DefaultSeo
         title={seoTitle}
@@ -32,7 +32,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           description: seoDescription,
           images: [
             {
-              url: "assets/profile.jpeg",
+              url: "/assets/profile.jpeg",
               width: 1024,
               height: 1024,
               alt: "Mate Papp Profile"
