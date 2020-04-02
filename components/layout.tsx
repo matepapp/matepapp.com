@@ -31,7 +31,7 @@ export const Layout: FC = ({ children }) => {
 
   return (
     <div className="flex flex-col items-center min-h-screen antialiased text-gray-900 bg-gray-50 dark:text-gray-100 dark:bg-black">
-      <nav className="fixed flex items-start w-full px-4 py-3 text-lg tracking-tight bg-gray-50 dark:bg-black">
+      <nav className="fixed flex items-start w-full px-4 py-3 text-lg tracking-tight shadow-sm sm:shadow-none bg-gray-50 dark:bg-black">
         <div className="flex flex-col justify-between flex-1 sm:items-center sm:flex-row">
           <Link href="/" passHref>
             <a className="text-xl sm:text-lg">
@@ -65,13 +65,13 @@ export const Layout: FC = ({ children }) => {
         </p>
         <div>
           <a
-            className="mr-3 transition duration-300 ease-in-out hover:text-green-400"
+            className="mr-4 transition duration-300 ease-in-out hover:text-green-400"
             href="https://github.com/matepapp/matepapp.com"
           >
             source on <FiGithub className="inline w-5 h-5" />
           </a>
           <a
-            className="mr-3 transition duration-300 ease-in-out hover:text-green-400"
+            className="mr-4 transition duration-300 ease-in-out hover:text-green-400"
             href="https://nextjs.org"
           >
             powered by
