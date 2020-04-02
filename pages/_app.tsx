@@ -1,4 +1,4 @@
-import { NextSeo } from "next-seo";
+import { DefaultSeo } from "next-seo";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { Layout } from "../components/layout";
@@ -17,7 +17,7 @@ const App = ({ Component, pageProps }: AppProps) => (
       />
       <link rel="icon" href="/assets/favicon.ico" />
     </Head>
-    <NextSeo
+    <DefaultSeo
       title={seoTitle}
       description={seoDescription}
       openGraph={{
