@@ -10,6 +10,7 @@ const seoDescription = "Passionate Software Engineer";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
+  const url = `https://matepapp.com${router.pathname}`;
 
   return (
     <>
@@ -24,10 +25,10 @@ const App = ({ Component, pageProps }: AppProps) => {
       <DefaultSeo
         title={seoTitle}
         titleTemplate="%s | Mate Papp"
-        canonical="https://matepapp.com"
+        canonical={url}
         description={seoDescription}
         openGraph={{
-          url: `https://matepapp.com${router.pathname}`,
+          url,
           title: seoTitle,
           description: seoDescription,
           images: [
