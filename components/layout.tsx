@@ -29,8 +29,6 @@ export const Layout: FC = ({ children }) => {
     }
   });
 
-  console.log({ darkMode });
-
   return (
     <div className="flex justify-center min-h-screen antialiased text-gray-900 bg-gray-50 dark:text-gray-100 dark:bg-black">
       <nav className="fixed flex items-start w-full px-4 py-3 text-lg tracking-tight bg-gray-50 dark:bg-black">
