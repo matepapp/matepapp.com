@@ -3,11 +3,14 @@ import Link from "next/link";
 
 const IndexPage = () => {
   const title = "Mate Papp";
+
   return (
     <>
       <NextSeo title={title} openGraph={{ title }} />
       <h1 className="sm:mt-10">Hey, I'm Mate! 👋🏻</h1>
-      <h2 className="mt-2 text-2xl">Software Engineer and Designer</h2>
+      <h2 className="mt-2 text-xl text-gray-700 uppercase dark:text-gray-300">
+        Software Engineer & Designer
+      </h2>
 
       <div className="mt-8 text-xl text-gray-800 dark:text-gray-200">
         I'm passionate about building apps that people love to use by crafting
