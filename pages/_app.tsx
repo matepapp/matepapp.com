@@ -23,13 +23,10 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel="icon" href="/assets/favicon.ico" />
       </Head>
       <DefaultSeo
-        title={seoTitle}
-        titleTemplate="%s | Mate Papp"
         canonical={url}
         description={seoDescription}
         openGraph={{
           url,
-          title: seoTitle,
           description: seoDescription,
           images: [
             {

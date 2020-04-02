@@ -4,7 +4,7 @@ import { SVGIconLink } from "../components/svg-icon";
 const IndexPage = () => {
   return (
     <>
-      <NextSeo titleTemplate="%s" title="Mate Papp" />
+      <NextSeo title="Mate Papp" openGraph={{ title: "Mate Papp" }} />
       <div className="flex flex-col justify-center max-w-md m-4 overflow-hidden rounded-lg shadow-2xl md:max-w-4xl md:flex-row md:items-center">
         <img
           src="/assets/profile.jpeg"
