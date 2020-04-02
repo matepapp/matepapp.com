@@ -2,9 +2,10 @@ import { NextSeo } from "next-seo";
 import { SVGIconLink } from "../components/svg-icon";
 
 const IndexPage = () => {
+  const title = "Mate Papp";
   return (
     <>
-      <NextSeo title="Mate Papp" openGraph={{ title: "Mate Papp" }} />
+      <NextSeo title={title} openGraph={{ title }} />
       <div className="flex flex-col justify-center max-w-md m-4 overflow-hidden rounded-lg shadow-2xl md:max-w-4xl md:flex-row md:items-center">
         <img
           src="/assets/profile.jpeg"
