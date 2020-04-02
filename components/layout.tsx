@@ -31,7 +31,7 @@ export const Layout: FC = ({ children }) => {
 
   return (
     <div className="flex flex-col items-center min-h-screen antialiased text-gray-900 bg-gray-50 dark:text-gray-100 dark:bg-black">
-      <nav className="fixed flex items-start w-full px-4 py-3 text-lg tracking-tight shadow-sm sm:shadow-none bg-gray-50 dark:bg-black">
+      <nav className="fixed z-20 flex items-start w-full px-4 py-3 text-lg tracking-tight shadow-sm sm:shadow-none bg-gray-50 dark:bg-black">
         <div className="flex flex-col justify-between flex-1 sm:items-center sm:flex-row">
           <Link href="/" passHref>
             <a className="text-xl sm:text-lg">
@@ -58,7 +58,7 @@ export const Layout: FC = ({ children }) => {
       <main className="flex flex-col flex-1 w-full px-4 mt-28 lg:max-w-3xl sm:max-w-lg sm:px-0 sm:mt-14">
         {children}
       </main>
-      <footer className="flex flex-col items-center my-2 text-xs text-gray-500 dark:text-gray-400">
+      <footer className="flex flex-col items-center mt-8 mb-2 text-xs text-gray-500 dark:text-gray-400">
         <p>
           built with <FiHeart className="inline w-4 h-4 text-green-400" /> in
           Budapest, Hungary
