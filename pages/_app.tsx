@@ -11,8 +11,6 @@ const seoDescription = "Passionate Software Engineer";
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
 
-  console.log({ router });
-
   return (
     <>
       <Head>
@@ -25,10 +23,10 @@ const App = ({ Component, pageProps }: AppProps) => {
       </Head>
       <DefaultSeo
         title={seoTitle}
-        titleTemplate=""
+        titleTemplate="%s | Mate Papp"
         description={seoDescription}
         openGraph={{
-          url: "https://www.url.ie/a",
+          url: `https://matepapp.com${router.pathname}`,
           title: seoTitle,
           description: seoDescription,
           images: [

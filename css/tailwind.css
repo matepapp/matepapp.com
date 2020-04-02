@@ -2,6 +2,8 @@
 @import 'tailwindcss/base';
 /* purgecss end ignore */
 
+@import './styles.css';
+
 @import 'tailwindcss/components';
 
 @import 'tailwindcss/utilities';
