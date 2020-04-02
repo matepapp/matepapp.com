@@ -15,7 +15,7 @@ const ContactPage: NextPage = () => {
     <>
       <NextSeo title={title} openGraph={{ title }} />
       <h1>Contact</h1>
-      <h2 className="dark:text-gray-300">
+      <h2 className="text-xl text-gray-700 dark:text-gray-300">
         Feel free to reach me out anywhere! Preferably on twitter or email, but
         you can find me on almost every major social media (except TikTok).
       </h2>

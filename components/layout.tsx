@@ -60,7 +60,8 @@ export const Layout: FC = ({ children }) => {
       </main>
       <footer className="flex flex-col items-center my-2 text-xs text-gray-500 dark:text-gray-400">
         <p>
-          built with <FiHeart className="inline w-4 h-4 text-green-400" />
+          built with <FiHeart className="inline w-4 h-4 text-green-400" /> in
+          Budapest, Hungary
         </p>
         <div>
           <a
