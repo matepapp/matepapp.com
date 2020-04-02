@@ -13,9 +13,10 @@ const IndexPage = () => {
       </h2>
 
       <p className="mt-6 text-lg text-gray-800 sm:text-xl dark:text-gray-200">
-        I'm obsessed with building apps that people love to use by crafting the
-        best user experience. My passion is to stay up-to-date with the latest
-        hot trends and topics via meetups, podcasts, and conferences.
+        Focusing on building apps that people love to use by crafting the best
+        user experience. I'm trying to stay up-to-date with the latest hot
+        trends and topics by visiting meetups, conferences and listening
+        podcasts.
       </p>
       <Link href="/about" passHref>
         <a className="mt-2 text-xl transition duration-200 ease-in-out underline-green-400">
