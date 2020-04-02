@@ -1,5 +1,23 @@
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
+import { FC } from "react";
+
+type CareerCardProps = {
+  title: string;
+  dateInterval: string;
+};
+
+const CareerCard: FC<CareerCardProps> = ({ children, title, dateInterval }) => (
+  <div className="p-3 mt-4 bg-white rounded-lg shadow-md dark:bg-black dark:shadow-outline-gray">
+    <div className="flex flex-row flex-wrap items-center">
+      <h3 className="mr-2 text-xl">{title}</h3>
+      <div className="px-2 text-sm text-white bg-gray-500 rounded-md">
+        {dateInterval}
+      </div>
+    </div>
+    {children}
+  </div>
+);
 
 const CareerPage: NextPage = () => {
   const title = "Career | Mate Papp";
@@ -7,9 +25,34 @@ const CareerPage: NextPage = () => {
     <>
       <NextSeo title={title} openGraph={{ title }} />
       <h1>Career</h1>
-      <h2>Jobs</h2>
-      <h2>Education</h2>
-      <h2>Workshop</h2>
+      <h2 className="mt-4 text-2xl font-bold">Jobs</h2>
+      <CareerCard
+        title="Junior iOS Developer"
+        dateInterval="July 2016 - Feb 2017"
+      >
+        <p className="mt-1 text-lg text-gray-700 dark:text-gray-200">
+          POSSIBLE CEE
+        </p>
+        <a className="mt-4 transition duration-200 ease-in-out underline-green-400">
+          Read More
+        </a>
+      </CareerCard>
+
+      <h2 className="mt-8 text-2xl font-bold">Education</h2>
+      <CareerCard title="University" dateInterval="2014 - 2018">
+        <p className="mt-1 text-gray-700 dark:text-gray-200">
+          University Budapest University of Technology and Economics Computer
+          <i className="block">Engineering BSc Major - Systems Engineering</i>
+        </p>
+      </CareerCard>
+
+      <CareerCard title="High School" dateInterval="2010 - 2014">
+        <p className="mt-1 text-gray-700 dark:text-gray-200">
+          Nagy Lajos Gimnázium Szombathely <i className="block">Mathematics</i>
+        </p>
+      </CareerCard>
+
+      <h2 className="mt-4 text-2xl font-bold">Workshop</h2>
     </>
   );
 };

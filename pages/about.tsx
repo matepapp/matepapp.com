@@ -8,16 +8,13 @@ const AboutPage: NextPage = () => {
     <>
       <NextSeo title={title} openGraph={{ title }} />
       <h1>About</h1>
+      <h2 className="mt-4 text-2xl font-bold">My Story</h2>
       <p>
-        My name is Mate Papp, I'm a Software Engineer & Designer, Entrepreneur,
-        currently based in Budapest, Hungary.
+        My name is Mate Papp, I'm 24 year old a Software Engineer, Designer,
+        Entrepreneur, currently based in Budapest, Hungary.
       </p>
 
-      <h2 className="mt-3 text-2xl font-bold">Skills</h2>
-
-      <h2 className="mt-3 text-2xl font-bold">Hobbies</h2>
-
-      <h2 className="mt-3 text-2xl font-bold">
+      <h2 className="mt-8 text-2xl font-bold">
         Stuff I
         <IoIosHeart className="inline w-6 h-6 mx-1 mb-1 text-red-500" />
         to use
@@ -217,6 +214,34 @@ const AboutPage: NextPage = () => {
           Zeit Now
         </a>
       </div>
+
+      <h2 className="mt-8 text-2xl font-bold">Hobbies</h2>
+      <ul className="grid grid-cols-1 gap-3 mt-1 sm:grid-cols-2 lg:grid-cols-3">
+        <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
+          listening podcasts
+        </li>
+        <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
+          reading
+        </li>
+        <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
+          being with friends & family
+        </li>
+        <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
+          functional training
+        </li>
+        <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
+          cycling
+        </li>
+        <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
+          boardgames
+        </li>
+        <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
+          cooking
+        </li>
+        <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
+          tasting craftbeer & coffee
+        </li>
+      </ul>
     </>
   );
 };

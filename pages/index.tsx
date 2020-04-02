@@ -12,22 +12,22 @@ const IndexPage = () => {
         Software Engineer & Designer
       </h2>
 
-      <div className="mt-6 text-lg text-gray-800 sm:text-xl dark:text-gray-200">
-        I'm passionate about building apps that people love to use by crafting
-        the best user experience. My passion is to stay up-to-date with the
-        latest hot trends and topics via meetups, podcasts, and conferences.
-      </div>
+      <p className="mt-6 text-lg text-gray-800 sm:text-xl dark:text-gray-200">
+        I'm obsessed with building apps that people love to use by crafting the
+        best user experience. My passion is to stay up-to-date with the latest
+        hot trends and topics via meetups, podcasts, and conferences.
+      </p>
       <Link href="/about" passHref>
         <a className="mt-2 text-xl transition duration-200 ease-in-out underline-green-400">
           More about me...
         </a>
       </Link>
 
-      <div className="mt-8 text-lg text-gray-800 sm:text-xl dark:text-gray-200">
+      <p className="mt-8 text-lg text-gray-800 sm:text-xl dark:text-gray-200">
         I started my career as an iOS Developer then discovered the Web &
         Serverless world. Successfully worked on several client projects and
         co-founded a startup.
-      </div>
+      </p>
       <Link href="/career" passHref>
         <a className="mt-2 text-xl transition duration-200 ease-in-out underline-green-400">
           The rest is history...
