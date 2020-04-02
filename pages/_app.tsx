@@ -24,6 +24,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <DefaultSeo
         title={seoTitle}
         titleTemplate="%s | Mate Papp"
+        canonical="https://matepapp.com"
         description={seoDescription}
         openGraph={{
           url: `https://matepapp.com${router.pathname}`,
