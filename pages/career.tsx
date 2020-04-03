@@ -35,7 +35,9 @@ const CareerPage: NextPage = () => {
         <p className="mt-1 text-lg text-gray-700 dark:text-gray-200">
           POSSIBLE CEE
         </p>
-        <a className="mt-4 default-transition underline-green-400">Read More</a>
+        <a className="mt-4 text-green-400 default-transition hover:underline">
+          Read More
+        </a>
       </CareerCard>
 
       <h2 className="mt-8 text-2xl font-bold">Education</h2>

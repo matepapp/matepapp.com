@@ -2,8 +2,10 @@
 @import 'tailwindcss/base';
 /* purgecss end ignore */
 
-@import './styles.css';
+@import './global.css';
 
 @import 'tailwindcss/components';
+
+@import './utilities.css';
 
 @import 'tailwindcss/utilities';
