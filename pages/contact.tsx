@@ -19,12 +19,9 @@ const ContactPage: NextPage = () => {
         Feel free to reach me out anywhere! Preferably on twitter or email, but
         you can find me on almost every major social media (except TikTok).
       </h2>
-      <ul className="mx-8 my-6">
-        <li>
-          <a
-            href="mailto:matepapp@icloud.com"
-            className="text-lg hover:text-green-400"
-          >
+      <ul className="grid grid-cols-1 gap-5 mt-1 sm:grid-cols-2 lg:grid-cols-3">
+        <li className="text-lg text-white card default-transition dark:shadow-outline-gray hover:bg-green-400">
+          <a href="mailto:matepapp@icloud.com" className="block w-full h-full">
             <FiMail className="contact-social-icon" />
             mail
           </a>

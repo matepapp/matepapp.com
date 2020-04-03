@@ -32,35 +32,35 @@ const AboutPage: NextPage = () => {
       <div className="grid grid-cols-2 gap-3 mt-1 sm:grid-cols-3">
         <a
           href="https://www.typescriptlang.org"
-          className="tech-link"
+          className="card card-transition"
           style={{ backgroundColor: "#294E80", color: "#e7e7e7" }}
         >
           TypeScript
         </a>
         <a
           href="https://swift.org"
-          className="tech-link"
+          className="card card-transition"
           style={{ backgroundColor: "#f05138", color: "#111" }}
         >
           Swift
         </a>
         <a
           href="https://graphql.org"
-          className="text-white tech-link"
+          className="text-white card card-transition"
           style={{ backgroundColor: "#E10098" }}
         >
           GraphQL
         </a>
         <a
           href="https://en.wikipedia.org/wiki/Functional_reactive_programming"
-          className="text-white tech-link"
+          className="text-white card card-transition"
           style={{ backgroundColor: "#c2185b" }}
         >
           Rx
         </a>
         <a
           href="https://www.javascript.com/"
-          className="text-black tech-link"
+          className="text-black card card-transition"
           style={{ backgroundColor: "rgb(247, 223, 30)" }}
         >
           JavaScript
@@ -71,97 +71,97 @@ const AboutPage: NextPage = () => {
       <div className="grid grid-cols-2 gap-3 mt-1 sm:grid-cols-3">
         <a
           href="https://reactjs.org"
-          className="tech-link"
+          className="card card-transition"
           style={{ color: "#61dafb", backgroundColor: "#20232a" }}
         >
           React
         </a>
         <a
           href="https://developer.apple.com/xcode/swiftui/"
-          className="text-black tech-link"
+          className="text-black card card-transition"
           style={{ backgroundColor: "rgb(1, 216, 251)" }}
         >
           SwiftUI
         </a>
         <a
           href="https://nextjs.org/"
-          className="text-white tech-link"
+          className="text-white card card-transition"
           style={{ backgroundColor: "#111" }}
         >
           NextJS
         </a>
         <a
           href="https://nodejs.org/en/"
-          className="text-white tech-link"
+          className="text-white card card-transition"
           style={{ backgroundColor: "#026e00" }}
         >
           Node.js
         </a>
         <a
           href="https://prisma.io/"
-          className="text-white tech-link"
+          className="text-white card card-transition"
           style={{ backgroundColor: "rgb(12, 52, 75)" }}
         >
           Prisma
         </a>
         <a
           href="https://www.gatsbyjs.org/"
-          className="text-white tech-link"
+          className="text-white card card-transition"
           style={{ backgroundColor: "#663399" }}
         >
           Gatsby
         </a>
         <a
           href="https://serverless.com/"
-          className="text-white tech-link"
+          className="text-white card card-transition"
           style={{ backgroundColor: "#fd5750" }}
         >
           Serverless
         </a>
         <a
           href="https://jamstack.org/"
-          className="text-white tech-link"
+          className="text-white card card-transition"
           style={{ backgroundColor: "#00c7b7" }}
         >
           JAMStack
         </a>
         <a
           href="https://www.apollographql.com/"
-          className="text-white tech-link"
+          className="text-white card card-transition"
           style={{ backgroundColor: "#3f20ba" }}
         >
           Apollo
         </a>
         <a
           href="https://tailwindcss.com/"
-          className="text-white bg-teal-500 tech-link"
+          className="text-white bg-teal-500 card card-transition"
         >
           TailwindCSS
         </a>
         <a
           href="https://hasura.io/"
-          className="text-white tech-link"
+          className="text-white card card-transition"
           style={{ backgroundColor: "#001934" }}
         >
           Hasura
         </a>
         <a
           href="https://storybook.js.org/"
-          className="text-white tech-link"
+          className="text-white card card-transition"
           style={{ backgroundColor: "rgb(255, 71, 133)" }}
         >
           Storybook JS
         </a>
         <a
           href="https://reactnative.dev/"
-          className="tech-link"
+          className="card card-transition"
           style={{ color: "#61dafb", backgroundColor: "#20232a" }}
         >
           React Native
         </a>
         <a
           href="https://firebase.google.com/"
-          className="tech-link"
+          className="card card-transition"
           style={{ backgroundColor: "rgb(251, 192, 45)", color: "#424242" }}
         >
           Firebase
@@ -172,34 +172,34 @@ const AboutPage: NextPage = () => {
       <div className="grid grid-cols-2 gap-3 mt-1 sm:grid-cols-3">
         <a
           href="https://www.figma.com/"
-          className="text-white bg-black tech-link"
+          className="text-white bg-black card card-transition"
         >
           Figma
         </a>
         <a
           href="https://www.notion.so/"
-          className="tech-link"
+          className="card card-transition"
           style={{ backgroundColor: "#fffefc", color: "#111" }}
         >
           Notion
         </a>
         <a
           href="https://slack.com/"
-          className="text-white tech-link"
+          className="text-white card card-transition"
           style={{ backgroundColor: "#611f69" }}
         >
           Slack
         </a>
         <a
           href="https://code.visualstudio.com/"
-          className="text-white tech-link"
+          className="text-white card card-transition"
           style={{ backgroundColor: "#444" }}
         >
           VSCode
         </a>
         <a
           href="https://www.iterm2.com/"
-          className="text-white tech-link"
+          className="text-white card card-transition"
           style={{
             backgroundColor: "rgb(33, 42, 47)",
             color: "rgb(14, 232, 40)"
@@ -209,14 +209,14 @@ const AboutPage: NextPage = () => {
         </a>
         <a
           href="https://www.netlify.com/"
-          className="text-white tech-link"
+          className="text-white card card-transition"
           style={{ backgroundColor: "#00ad9f" }}
         >
           Netlify
         </a>
         <a
           href="https://zeit.co/"
-          className="text-white tech-link"
+          className="text-white card card-transition"
           style={{ backgroundColor: "#111" }}
         >
           Zeit Now
@@ -225,28 +225,16 @@ const AboutPage: NextPage = () => {
 
       <h2 className="mt-8 text-2xl font-bold">Hobbies</h2>
       <ul className="grid grid-cols-1 gap-3 mt-1 sm:grid-cols-2 lg:grid-cols-3">
-        <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
-          listening podcasts
-        </li>
-        <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
-          reading
-        </li>
-        <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
+        <li className="card dark:shadow-outline-gray">listening podcasts</li>
+        <li className="card dark:shadow-outline-gray">reading</li>
+        <li className="card dark:shadow-outline-gray">
           being with friends & family
         </li>
-        <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
-          functional training
-        </li>
-        <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
-          cycling
-        </li>
-        <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
-          playing boardgames
-        </li>
-        <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
-          cooking
-        </li>
-        <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
+        <li className="card dark:shadow-outline-gray">functional training</li>
+        <li className="card dark:shadow-outline-gray">cycling</li>
+        <li className="card dark:shadow-outline-gray">playing boardgames</li>
+        <li className="card dark:shadow-outline-gray">cooking</li>
+        <li className="card dark:shadow-outline-gray">
           tasting craftbeer & coffee
         </li>
       </ul>

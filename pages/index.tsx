@@ -19,7 +19,7 @@ const IndexPage = () => {
         podcasts.
       </p>
       <Link href="/about" passHref>
-        <a className="mt-2 text-xl transition duration-200 ease-in-out underline-green-400">
+        <a className="mt-2 text-xl default-transition underline-green-400">
           More about me...
         </a>
       </Link>
@@ -30,7 +30,7 @@ const IndexPage = () => {
         co-founded a startup.
       </p>
       <Link href="/career" passHref>
-        <a className="mt-2 text-xl transition duration-200 ease-in-out underline-green-400">
+        <a className="mt-2 text-xl default-transition underline-green-400">
           The rest is history...
         </a>
       </Link>

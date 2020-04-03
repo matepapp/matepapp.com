@@ -18,6 +18,22 @@ h1 {
   color: #007bb5;
 }
 
+.default-transition {
+  @apply transition duration-200 ease-in-out;
+}
+
+.card {
+  @apply px-5 py-4 rounded-lg shadow-md;
+}
+
+.card-transition {
+  @apply duration-200 ease-in-out transform;
+}
+
+.card-transition:hover {
+  @apply scale-105 shadow-lg;
+}
+
 .underline-green-400 {
   text-decoration: underline;
   text-decoration-color: #31c48d;
@@ -29,12 +45,4 @@ h1 {
 
 .contact-social-icon {
   @apply inline w-8 h-8 mr-3 duration-300 ease-in-out transform;
-}
-
-.tech-link {
-  @apply px-5 py-4 duration-200 ease-in-out transform rounded-lg shadow-md;
-}
-
-.tech-link:hover {
-  @apply scale-105 shadow-lg;
 }

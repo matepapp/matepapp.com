@@ -11,7 +11,7 @@ const NavLink: FC<LinkProps> = ({ href, children }) => {
   return (
     <Link href={href} passHref>
       <a
-        className={`mr-4 transition duration-300 ease-in-out text-xl sm:text-lg hover:text-green-400
+        className={`mr-4 default-transition text-xl sm:text-lg hover:text-green-400
           ${activeStyle}`}
       >
         {children}
@@ -65,13 +65,13 @@ export const Layout: FC = ({ children }) => {
         </p>
         <div>
           <a
-            className="mr-4 transition duration-300 ease-in-out hover:text-green-400"
+            className="mr-4 default-transition hover:text-green-400"
             href="https://github.com/matepapp/matepapp.com"
           >
             source on <FiGithub className="inline w-5 h-5" />
           </a>
           <a
-            className="mr-4 transition duration-300 ease-in-out hover:text-green-400"
+            className="mr-4 default-transition hover:text-green-400"
             href="https://nextjs.org"
           >
             powered by
@@ -156,7 +156,7 @@ export const Layout: FC = ({ children }) => {
             )}
           </a>
           <a
-            className="transition duration-300 ease-in-out hover:text-green-400"
+            className="default-transition hover:text-green-400"
             href="https://zeit.co/"
           >
             hosted on{" "}
