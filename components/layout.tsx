@@ -1,24 +1,8 @@
-import Link, { LinkProps } from "next/link";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import { FC } from "react";
 import { FiGithub, FiHeart, FiMoon, FiSun } from "react-icons/fi";
 import useDarkMode from "use-dark-mode";
-
-const NavLink: FC<LinkProps> = ({ href, children }) => {
-  const router = useRouter();
-  const activeStyle = router.pathname === href && "text-green-400";
-
-  return (
-    <Link href={href} passHref>
-      <a
-        className={`mr-4 default-transition text-xl sm:text-lg hover:text-green-400
-          ${activeStyle}`}
-      >
-        {children}
-      </a>
-    </Link>
-  );
-};
+import { NavLink } from "./nav-link";
 
 export const Layout: FC = ({ children }) => {
   const darkMode = useDarkMode(false, {
@@ -159,7 +143,7 @@ export const Layout: FC = ({ children }) => {
             className="default-transition hover:text-green-400"
             href="https://zeit.co/"
           >
-            hosted on{" "}
+            hosted on
             {darkMode.value ? (
               <svg className="inline h-4 ml-1" viewBox="0 0 113 100">
                 <defs>
