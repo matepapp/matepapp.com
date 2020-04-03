@@ -19,57 +19,63 @@ const ContactPage: NextPage = () => {
         Feel free to reach me out anywhere! Preferably on twitter or email, but
         you can find me on almost every major social media (except TikTok).
       </h2>
-      <ul className="grid grid-cols-1 gap-5 mt-1 sm:grid-cols-2 lg:grid-cols-3">
-        <li className="text-lg text-white card default-transition dark:shadow-outline-gray hover:bg-green-400">
-          <a href="mailto:matepapp@icloud.com" className="block w-full h-full">
-            <FiMail className="contact-social-icon" />
+      <ul className="grid grid-cols-1 gap-5 mt-1 mt-8 text-lg sm:grid-cols-2 lg:grid-cols-3">
+        <li className="rounded-lg shadow-md hover:text-white default-transition dark:shadow-outline-gray hover:bg-green-400">
+          <a
+            href="mailto:matepapp@icloud.com"
+            className="block w-full h-full px-4 py-3"
+          >
+            <FiMail className="inline w-8 h-8 mr-3" />
             mail
           </a>
         </li>
 
-        <li className="mt-3">
-          <a href="https://twitter.com/matepappp" className="text-lg twitter">
-            <FiTwitter className="contact-social-icon" />
+        <li className="rounded-lg shadow-md hover:text-white default-transition dark:shadow-outline-gray twitter">
+          <a
+            href="https://twitter.com/matepappp"
+            className="block w-full h-full px-4 py-3"
+          >
+            <FiTwitter className="inline w-8 h-8 mr-3" />
             twitter
           </a>
         </li>
 
-        <li className="mt-3">
+        <li className="rounded-lg shadow-md hover:text-white default-transition dark:shadow-outline-gray instagram">
           <a
             href="https://instagram.com/pappmate"
-            className="text-lg instagram"
+            className="block w-full h-full px-4 py-3"
           >
-            <FiInstagram className="contact-social-icon" />
+            <FiInstagram className="inline w-8 h-8 mr-3" />
             instagram
           </a>
         </li>
 
-        <li className="mt-3">
+        <li className="rounded-lg shadow-md hover:text-white default-transition dark:shadow-outline-gray facebook">
           <a
             href="https://facebook.com/pappmatesz"
-            className="text-lg facebook"
+            className="block w-full h-full px-4 py-3"
           >
-            <FiFacebook className="contact-social-icon" />
+            <FiFacebook className="inline w-8 h-8 mr-3" />
             facebook
           </a>
         </li>
 
-        <li className="mt-3">
+        <li className="rounded-lg shadow-md hover:text-white default-transition hover:bg-gray-500 dark:shadow-outline-gray">
           <a
             href="https://github.com/matepapp"
-            className="text-lg hover:text-gray-500"
+            className="block w-full h-full px-4 py-3"
           >
-            <FiGithub className="contact-social-icon" />
+            <FiGithub className="inline w-8 h-8 mr-3" />
             github
           </a>
         </li>
 
-        <li className="mt-3">
+        <li className="rounded-lg shadow-md hover:text-white linkedin default-transition dark:shadow-outline-gray">
           <a
             href="https://www.linkedin.com/in/matepapp/"
-            className="text-lg linkedin"
+            className="block w-full h-full px-4 py-3"
           >
-            <FiLinkedin className="contact-social-icon" />
+            <FiLinkedin className="inline w-8 h-8 mr-3" />
             linkedin
           </a>
         </li>

@@ -3,19 +3,19 @@ h1 {
 }
 
 .twitter:hover {
-  color: #1da1f2
+  background-color: #1da1f2
 }
 
 .instagram:hover {
-  color: #c32aa3
+  background-color: #c32aa3
 }
 
 .facebook:hover {
-  color: #1877f2;
+  background-color: #1877f2;
 }
 
 .linkedin:hover {
-  color: #007bb5;
+  background-color: #007bb5;
 }
 
 .default-transition {
@@ -41,8 +41,4 @@ h1 {
 
 .underline-green-400:hover {
   @apply text-green-400;
-}
-
-.contact-social-icon {
-  @apply inline w-8 h-8 mr-3 duration-300 ease-in-out transform;
 }
