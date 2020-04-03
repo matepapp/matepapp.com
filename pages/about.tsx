@@ -2,6 +2,8 @@ import { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import { IoIosHeart } from "react-icons/io";
 
+// TODO: Picture
+
 const AboutPage: NextPage = () => {
   const title = "About | Mate Papp";
   return (
@@ -9,10 +11,16 @@ const AboutPage: NextPage = () => {
       <NextSeo title={title} openGraph={{ title }} />
       <h1>About</h1>
       <h2 className="mt-4 text-2xl font-bold">My Story</h2>
-      <p>
-        My name is Mate Papp, I'm 24 year old a Software Engineer, Designer,
-        Entrepreneur, currently based in Budapest, Hungary.
-      </p>
+      <div className="flex flex-col mt-5 sm:flex-row">
+        <img
+          src="/assets/profile.jpeg"
+          className="rounded-lg shadow-md sm:w-40 sm:h-40"
+        />
+        <p className="mt-4 sm:mt-0 sm:ml-4">
+          My name is Mate Papp, I'm 24 year old a Software Engineer, Designer,
+          Entrepreneur, currently based in Budapest, Hungary.
+        </p>
+      </div>
 
       <h2 className="mt-8 text-2xl font-bold">
         Stuff I
@@ -233,7 +241,7 @@ const AboutPage: NextPage = () => {
           cycling
         </li>
         <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
-          boardgames
+          playing boardgames
         </li>
         <li className="px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray">
           cooking
