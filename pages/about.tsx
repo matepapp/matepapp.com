@@ -225,16 +225,22 @@ const AboutPage: NextPage = () => {
 
       <h2 className="mt-8 text-2xl font-bold">Hobbies</h2>
       <ul className="grid grid-cols-1 gap-3 mt-1 sm:grid-cols-2 lg:grid-cols-3">
-        <li className="card dark:shadow-outline-gray">listening podcasts</li>
-        <li className="card dark:shadow-outline-gray">reading</li>
-        <li className="card dark:shadow-outline-gray">
+        <li className="card dark:bg-black dark:shadow-outline-gray">
+          listening podcasts
+        </li>
+        <li className="card dark:bg-black dark:shadow-outline-gray">reading</li>
+        <li className="card dark:bg-black dark:shadow-outline-gray">
           being with friends & family
         </li>
-        <li className="card dark:shadow-outline-gray">functional training</li>
-        <li className="card dark:shadow-outline-gray">cycling</li>
-        <li className="card dark:shadow-outline-gray">playing boardgames</li>
-        <li className="card dark:shadow-outline-gray">cooking</li>
-        <li className="card dark:shadow-outline-gray">
+        <li className="card dark:bg-black dark:shadow-outline-gray">
+          functional training
+        </li>
+        <li className="card dark:bg-black dark:shadow-outline-gray">cycling</li>
+        <li className="card dark:bg-black dark:shadow-outline-gray">
+          playing boardgames
+        </li>
+        <li className="card dark:bg-black dark:shadow-outline-gray">cooking</li>
+        <li className="card dark:bg-black dark:shadow-outline-gray">
           tasting craftbeer & coffee
         </li>
       </ul>

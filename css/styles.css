@@ -23,7 +23,7 @@ h1 {
 }
 
 .card {
-  @apply px-5 py-4 rounded-lg shadow-md;
+  @apply px-5 py-4 rounded-lg shadow-md bg-gray-50;
 }
 
 .card-transition {

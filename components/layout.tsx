@@ -30,8 +30,8 @@ export const Layout: FC = ({ children }) => {
   });
 
   return (
-    <div className="flex flex-col items-center min-h-screen antialiased text-gray-900 bg-gray-50 dark:text-gray-100 dark:bg-black">
-      <nav className="fixed z-20 flex items-start w-full px-4 py-3 text-lg tracking-tight shadow-sm sm:shadow-none bg-gray-50 dark:bg-black">
+    <div className="flex flex-col items-center min-h-screen antialiased text-gray-900 bg-gray-100 dark:text-gray-100 dark:bg-black">
+      <nav className="fixed z-20 flex items-start w-full px-4 py-3 text-lg tracking-tight bg-gray-50 dark:bg-black">
         <div className="flex flex-col justify-between flex-1 sm:items-center sm:flex-row">
           <Link href="/" passHref>
             <a className="text-xl sm:text-lg">
