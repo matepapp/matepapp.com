@@ -2,16 +2,15 @@ import { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import { IoIosHeart } from "react-icons/io";
 
-// TODO: Picture
-
 const AboutPage: NextPage = () => {
   const title = "About | Mate Papp";
+
   return (
     <>
       <NextSeo title={title} openGraph={{ title }} />
       <h1>About</h1>
-      <h2 className="mt-4 text-2xl font-bold">My Story</h2>
-      <div className="flex flex-col mt-5 sm:flex-row">
+      <h2>My Story</h2>
+      <div className="flex flex-col pt-4 sm:flex-row">
         <img
           src="/assets/profile.jpeg"
           className="rounded-lg shadow-md sm:w-40 sm:h-40"
@@ -22,14 +21,13 @@ const AboutPage: NextPage = () => {
         </p>
       </div>
 
-      <h2 className="mt-8 text-2xl font-bold">
+      <h2>
         Stuff I
         <IoIosHeart className="inline w-6 h-6 mx-1 mb-1 text-red-500" />
-        to use
       </h2>
 
-      <h3 className="mt-2 text-xl font-bold">Programming</h3>
-      <div className="grid grid-cols-2 gap-3 mt-1 sm:grid-cols-3">
+      <h3 className="pt-2 text-gray-800 dark:text-gray-200">Programming</h3>
+      <div className="grid grid-cols-2 gap-3 pt-2 sm:grid-cols-3">
         <a
           href="https://www.typescriptlang.org"
           className="card card-transition"
@@ -67,8 +65,8 @@ const AboutPage: NextPage = () => {
         </a>
       </div>
 
-      <h3 className="mt-5 text-xl font-bold">Frameworks</h3>
-      <div className="grid grid-cols-2 gap-3 mt-1 sm:grid-cols-3">
+      <h3 className="text-gray-800 dark:text-gray-200">Frameworks</h3>
+      <div className="grid grid-cols-2 gap-3 pt-2 sm:grid-cols-3">
         <a
           href="https://reactjs.org"
           className="card card-transition"
@@ -168,8 +166,8 @@ const AboutPage: NextPage = () => {
         </a>
       </div>
 
-      <h3 className="mt-5 text-xl font-bold">Tools</h3>
-      <div className="grid grid-cols-2 gap-3 mt-1 sm:grid-cols-3">
+      <h3 className="text-gray-800 dark:text-gray-200">Tools</h3>
+      <div className="grid grid-cols-2 gap-3 pt-2 sm:grid-cols-3">
         <a
           href="https://www.figma.com/"
           className="text-white bg-black card card-transition"
@@ -223,24 +221,30 @@ const AboutPage: NextPage = () => {
         </a>
       </div>
 
-      <h2 className="mt-8 text-2xl font-bold">Hobbies</h2>
-      <ul className="grid grid-cols-1 gap-3 mt-1 sm:grid-cols-2 lg:grid-cols-3">
-        <li className="card dark:bg-black dark:shadow-outline-gray">
+      <h2>Hobbies</h2>
+      <ul className="grid grid-cols-1 gap-3 list-none sm:grid-cols-2 lg:grid-cols-3">
+        <li className="m-0 card dark:bg-black dark:shadow-outline-gray">
           listening podcasts
         </li>
-        <li className="card dark:bg-black dark:shadow-outline-gray">reading</li>
-        <li className="card dark:bg-black dark:shadow-outline-gray">
+        <li className="m-0 card dark:bg-black dark:shadow-outline-gray">
+          reading
+        </li>
+        <li className="m-0 card dark:bg-black dark:shadow-outline-gray">
           being with friends & family
         </li>
-        <li className="card dark:bg-black dark:shadow-outline-gray">
+        <li className="m-0 card dark:bg-black dark:shadow-outline-gray">
           functional training
         </li>
-        <li className="card dark:bg-black dark:shadow-outline-gray">cycling</li>
-        <li className="card dark:bg-black dark:shadow-outline-gray">
+        <li className="m-0 card dark:bg-black dark:shadow-outline-gray">
+          cycling
+        </li>
+        <li className="m-0 card dark:bg-black dark:shadow-outline-gray">
           playing boardgames
         </li>
-        <li className="card dark:bg-black dark:shadow-outline-gray">cooking</li>
-        <li className="card dark:bg-black dark:shadow-outline-gray">
+        <li className="m-0 card dark:bg-black dark:shadow-outline-gray">
+          cooking
+        </li>
+        <li className="m-0 card dark:bg-black dark:shadow-outline-gray">
           tasting craftbeer & coffee
         </li>
       </ul>

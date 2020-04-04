@@ -5,30 +5,23 @@ import { CareerCard } from "../components/career-card";
 import { JobMeta } from "../types/job";
 import { fetchJobMetaList } from "../utils/fetch-jobs";
 
-export const getStaticProps: GetStaticProps = async () => {
-  return { props: { jobs: fetchJobMetaList() } };
-};
-
 type CareerPageProps = {
   jobs: JobMeta[];
 };
 
 const CareerPage: NextPage<CareerPageProps> = ({ jobs }) => {
-  console.log({ jobs });
   const title = "Career | Mate Papp";
+
   return (
     <>
       <NextSeo title={title} openGraph={{ title }} />
       <h1>Career</h1>
-      <h2 className="mt-4 text-2xl font-bold">Jobs</h2>
-      <div className="grid grid-cols-1 gap-6">
+      <h2>Jobs</h2>
+      <div className="grid grid-cols-1 gap-5 pt-4">
         {jobs.map(({ title, company, date, slug }, index) => (
-          <CareerCard title={title} tag={date} key={index}>
-            <p className="mt-1 text-lg text-gray-700 dark:text-gray-200">
-              {company}
-            </p>
+          <CareerCard title={title} tag={date} subtitle={company} key={index}>
             <Link href="/jobs/[slug]" as={`/jobs/${slug}`} passHref>
-              <a className="block mt-4 text-green-400 default-transition hover:underline">
+              <a className="block mt-2 text-green-400 default-transition hover:underline">
                 Read More
               </a>
             </Link>
@@ -36,23 +29,34 @@ const CareerPage: NextPage<CareerPageProps> = ({ jobs }) => {
         ))}
       </div>
 
-      <h2 className="mt-8 text-2xl font-bold">Education</h2>
-      <CareerCard title="University" tag="2014 - 2018" className="mt-4">
-        <p className="mt-1 text-gray-700 dark:text-gray-200">
-          University Budapest University of Technology and Economics Computer
-          <i className="block">Engineering BSc Major - Systems Engineering</i>
-        </p>
-      </CareerCard>
+      <h2>Education</h2>
+      <div className="grid grid-cols-1 gap-5 pt-4">
+        <CareerCard
+          title="University"
+          tag="2014 - 2018"
+          subtitle="University Budapest University of Technology and Economics"
+          description="Computer Engineering"
+        >
+          <i className="block text-sm text-gray-600 dark:text-gray-400">
+            Major - Systems Engineering
+          </i>
+        </CareerCard>
 
-      <CareerCard title="High School" tag="2010 - 2014" className="mt-4">
-        <p className="mt-1 text-gray-700 dark:text-gray-200">
-          Nagy Lajos Gimnázium Szombathely <i className="block">Mathematics</i>
-        </p>
-      </CareerCard>
+        <CareerCard
+          title="High School"
+          tag="2010 - 2014"
+          subtitle="Nagy Lajos Gimnázium Szombathely"
+          description="Mathematics"
+        />
 
-      <h2 className="mt-4 text-2xl font-bold">Workshop</h2>
+        <h2>Events</h2>
+      </div>
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  return { props: { jobs: fetchJobMetaList() } };
 };
 
 export default CareerPage;

@@ -1,17 +1,17 @@
 .twitter:hover {
-  background-color: #1da1f2
+  background-color: #1da1f2 !important;
 }
 
 .instagram:hover {
-  background-color: #c32aa3
+  background-color: #c32aa3 !important;
 }
 
 .facebook:hover {
-  background-color: #1877f2;
+  background-color: #1877f2 !important;
 }
 
 .linkedin:hover {
-  background-color: #007bb5;
+  background-color: #007bb5 !important;
 }
 
 .default-transition {

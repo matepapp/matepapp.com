@@ -15,7 +15,7 @@ export const Layout: FC = ({ children }) => {
 
   return (
     <div className="flex flex-col items-center min-h-screen antialiased text-gray-900 bg-gray-100 dark:text-gray-100 dark:bg-black">
-      <nav className="fixed z-20 flex items-start w-full px-4 py-3 text-lg tracking-tight bg-gray-50 dark:bg-black">
+      <nav className="fixed z-20 flex items-start w-full px-4 py-3 text-lg tracking-tight shadow-md dark:shadow-outline-gray bg-gray-50 dark:bg-black">
         <div className="flex flex-col justify-between flex-1 sm:items-center sm:flex-row">
           <Link href="/" passHref>
             <a className="text-xl sm:text-lg">
@@ -39,7 +39,7 @@ export const Layout: FC = ({ children }) => {
           )}
         </button>
       </nav>
-      <main className="flex flex-col flex-1 w-full px-4 mt-28 lg:max-w-3xl sm:max-w-lg sm:px-0 sm:mt-14">
+      <main className="flex flex-col flex-1 w-full px-4 mt-28 lg:max-w-3xl sm:max-w-lg sm:px-0 sm:mt-20">
         {children}
       </main>
       <footer className="flex flex-col items-center mt-8 mb-2 text-xs text-gray-500 dark:text-gray-400">
