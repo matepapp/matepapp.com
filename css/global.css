@@ -15,9 +15,9 @@ h4 {
 }
 
 ul {
-  @apply pt-2 list-disc;
+  @apply pt-2 list-disc list-inside;
 }
 
 li {
-  @apply px-4 ml-8;
+  @apply px-5;
 }

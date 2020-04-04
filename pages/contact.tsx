@@ -20,7 +20,7 @@ const ContactPage: NextPage = () => {
         you can find me on almost every major social media (except TikTok).
       </div>
       <ul className="grid grid-cols-1 gap-3 pt-8 text-lg list-none sm:grid-cols-2 lg:grid-cols-3">
-        <li className="p-0 m-0 card dark:bg-black hover:text-gray-100 default-transition dark:shadow-outline-gray hover:bg-green-400">
+        <li className="p-0 card dark:bg-black hover:text-gray-100 default-transition dark:shadow-outline-gray hover:bg-green-400">
           <a
             href="mailto:matepapp@icloud.com"
             className="block w-full h-full px-4 py-3"
@@ -30,7 +30,7 @@ const ContactPage: NextPage = () => {
           </a>
         </li>
 
-        <li className="p-0 m-0 card dark:bg-black hover:text-gray-100 default-transition dark:shadow-outline-gray twitter">
+        <li className="p-0 card dark:bg-black hover:text-gray-100 default-transition dark:shadow-outline-gray twitter">
           <a
             href="https://twitter.com/matepappp"
             className="block w-full h-full px-4 py-3"
@@ -40,7 +40,7 @@ const ContactPage: NextPage = () => {
           </a>
         </li>
 
-        <li className="p-0 m-0 card dark:bg-black hover:text-gray-100 default-transition dark:shadow-outline-gray instagram">
+        <li className="p-0 card dark:bg-black hover:text-gray-100 default-transition dark:shadow-outline-gray instagram">
           <a
             href="https://instagram.com/pappmate"
             className="block w-full h-full px-4 py-3"
@@ -50,7 +50,7 @@ const ContactPage: NextPage = () => {
           </a>
         </li>
 
-        <li className="p-0 m-0 card dark:bg-black hover:text-gray-100 default-transition dark:shadow-outline-gray facebook">
+        <li className="p-0 card dark:bg-black hover:text-gray-100 default-transition dark:shadow-outline-gray facebook">
           <a
             href="https://facebook.com/pappmatesz"
             className="block w-full h-full px-4 py-3"
@@ -60,7 +60,7 @@ const ContactPage: NextPage = () => {
           </a>
         </li>
 
-        <li className="p-0 m-0 card dark:bg-black hover:text-gray-100 default-transition hover:bg-gray-500 dark:shadow-outline-gray">
+        <li className="p-0 card dark:bg-black hover:text-gray-100 default-transition hover:bg-gray-500 dark:shadow-outline-gray">
           <a
             href="https://github.com/matepapp"
             className="block w-full h-full px-4 py-3"
@@ -70,7 +70,7 @@ const ContactPage: NextPage = () => {
           </a>
         </li>
 
-        <li className="p-0 m-0 card dark:bg-black hover:text-gray-100 linkedin default-transition dark:shadow-outline-gray">
+        <li className="p-0 card dark:bg-black hover:text-gray-100 linkedin default-transition dark:shadow-outline-gray">
           <a
             href="https://www.linkedin.com/in/matepapp/"
             className="block w-full h-full px-4 py-3"

@@ -223,28 +223,22 @@ const AboutPage: NextPage = () => {
 
       <h2>Hobbies</h2>
       <ul className="grid grid-cols-1 gap-3 list-none sm:grid-cols-2 lg:grid-cols-3">
-        <li className="m-0 card dark:bg-black dark:shadow-outline-gray">
+        <li className="card dark:bg-black dark:shadow-outline-gray">
           listening podcasts
         </li>
-        <li className="m-0 card dark:bg-black dark:shadow-outline-gray">
-          reading
-        </li>
-        <li className="m-0 card dark:bg-black dark:shadow-outline-gray">
+        <li className="card dark:bg-black dark:shadow-outline-gray">reading</li>
+        <li className="card dark:bg-black dark:shadow-outline-gray">
           being with friends & family
         </li>
-        <li className="m-0 card dark:bg-black dark:shadow-outline-gray">
+        <li className="card dark:bg-black dark:shadow-outline-gray">
           functional training
         </li>
-        <li className="m-0 card dark:bg-black dark:shadow-outline-gray">
-          cycling
-        </li>
-        <li className="m-0 card dark:bg-black dark:shadow-outline-gray">
+        <li className="card dark:bg-black dark:shadow-outline-gray">cycling</li>
+        <li className="card dark:bg-black dark:shadow-outline-gray">
           playing boardgames
         </li>
-        <li className="m-0 card dark:bg-black dark:shadow-outline-gray">
-          cooking
-        </li>
-        <li className="m-0 card dark:bg-black dark:shadow-outline-gray">
+        <li className="card dark:bg-black dark:shadow-outline-gray">cooking</li>
+        <li className="card dark:bg-black dark:shadow-outline-gray">
           tasting craftbeer & coffee
         </li>
       </ul>
