@@ -10,9 +10,12 @@ h3 {
   @apply pt-4 text-xl font-bold;
 }
 
+/* purgecss start ignore */
 h4 {
-  @apply pt-3 text-lg tracking-tight uppercase;
+  @apply pt-3 text-lg tracking-tight text-red-400 uppercase;
 }
+
+/* purgecss end ignore */
 
 ul {
   @apply pt-2 list-disc list-inside;
