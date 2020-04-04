@@ -1,6 +1,6 @@
 ---
 title: iOS Developer
-date: Feb 2017 - Oct 2017
+date: Mar 2017 - Oct 2017
 company: Fornax ICT
 ---
 
