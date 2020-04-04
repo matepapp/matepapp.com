@@ -1,44 +1,40 @@
-import { NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import { NextSeo } from "next-seo";
-import { FC, HTMLAttributes } from "react";
+import Link from "next/link";
+import { CareerCard } from "../components/career-card";
+import { JobMeta } from "../types/job";
+import { fetchJobMetaList } from "../utils/fetch-jobs";
 
-type CareerCardProps = {
-  title: string;
-  tag: string;
-} & HTMLAttributes<HTMLDivElement>;
+export const getStaticProps: GetStaticProps = async () => {
+  return { props: { jobs: fetchJobMetaList() } };
+};
 
-const CareerCard: FC<CareerCardProps> = ({
-  children,
-  title,
-  tag,
-  className
-}) => (
-  <div className={"card dark:bg-black dark:shadow-outline-gray " + className}>
-    <div className="flex flex-row flex-wrap items-center">
-      <h3 className="mr-2 text-xl">{title}</h3>
-      <div className="px-2 text-sm text-white bg-gray-400 rounded-md">
-        {tag}
-      </div>
-    </div>
-    {children}
-  </div>
-);
+type CareerPageProps = {
+  jobs: JobMeta[];
+};
 
-const CareerPage: NextPage = () => {
+const CareerPage: NextPage<CareerPageProps> = ({ jobs }) => {
+  console.log({ jobs });
   const title = "Career | Mate Papp";
   return (
     <>
       <NextSeo title={title} openGraph={{ title }} />
       <h1>Career</h1>
       <h2 className="mt-4 text-2xl font-bold">Jobs</h2>
-      <CareerCard title="Junior iOS Developer" tag="July 2016 - Feb 2017">
-        <p className="mt-1 text-lg text-gray-700 dark:text-gray-200">
-          POSSIBLE CEE
-        </p>
-        <a className="mt-4 text-green-400 default-transition hover:underline">
-          Read More
-        </a>
-      </CareerCard>
+      <div className="grid grid-cols-1 gap-6">
+        {jobs.map(({ title, company, date, slug }, index) => (
+          <CareerCard title={title} tag={date} key={index}>
+            <p className="mt-1 text-lg text-gray-700 dark:text-gray-200">
+              {company}
+            </p>
+            <Link href="/jobs/[slug]" as={`/jobs/${slug}`} passHref>
+              <a className="block mt-4 text-green-400 default-transition hover:underline">
+                Read More
+              </a>
+            </Link>
+          </CareerCard>
+        ))}
+      </div>
 
       <h2 className="mt-8 text-2xl font-bold">Education</h2>
       <CareerCard title="University" tag="2014 - 2018" className="mt-4">
