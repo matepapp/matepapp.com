@@ -1,10 +1,14 @@
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { FiGithub, FiHeart, FiMoon, FiSun } from "react-icons/fi";
 import useDarkMode from "use-dark-mode";
 import { NavLink } from "./nav-link";
 
 export const Layout: FC = ({ children }) => {
+  const [currentScrollPos, setCurrentScrollPos] = useState(0);
+  const [prevScrollPos, setPrevScrollPos] = useState(1);
+  const [isNavVisible, setIsNavVisible] = useState(true);
+
   const darkMode = useDarkMode(false, {
     onChange: () => {
       darkMode.value
@@ -13,9 +17,32 @@ export const Layout: FC = ({ children }) => {
     }
   });
 
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    setCurrentScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+    const visible = prevScrollPos > currentScrollPos;
+    setIsNavVisible(visible);
+    setPrevScrollPos(currentScrollPos);
+  }, [currentScrollPos]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const visibleNavClass = !isNavVisible && "-translate-y-24";
+
   return (
     <div className="flex flex-col items-center min-h-screen antialiased text-gray-900 bg-gray-100 dark:text-gray-100 dark:bg-black">
-      <nav className="fixed z-20 flex items-start w-full px-4 py-3 text-lg tracking-tight shadow-md dark:shadow-outline-gray bg-gray-50 dark:bg-black">
+      <nav
+        className={
+          "fixed z-20 flex items-start w-full px-4 transform duration-300 py-3 text-lg tracking-tight shadow-md dark:shadow-outline-gray bg-gray-50 dark:bg-black " +
+          visibleNavClass
+        }
+      >
         <div className="flex flex-col justify-between flex-1 sm:items-center sm:flex-row">
           <Link href="/" passHref>
             <a className="text-xl sm:text-lg">
