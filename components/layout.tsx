@@ -19,7 +19,7 @@ export const Layout: FC = ({ children }) => {
 
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
-    setCurrentScrollPos(currentScrollPos);
+    setCurrentScrollPos(currentScrollPos < 0 ? 0 : currentScrollPos);
   };
 
   useEffect(() => {
