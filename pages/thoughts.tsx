@@ -12,7 +12,7 @@ const ThoughtsPage: NextPage = () => {
       <div className="pt-4 text-xl text-gray-700 dark:text-gray-300">
         One of my goals is to write articles, blog posts or anything that I find
         interesting to share. Until this point, I procrastinated more than I
-        should but in the future, I'll take more time to focus on my writings.
+        should but in the future, I'll take more time to focus on writing.
       </div>
     </>
   );

@@ -53,7 +53,7 @@ const CareerPage: NextPage<CareerPageProps> = ({ jobs }) => {
         />
       </div>
 
-      <h2>Events</h2>
+      <h2>Talks</h2>
       <div className="grid grid-cols-1 gap-5 pt-4">
         <CareerCard
           title="Let's Jump on the JAMStack Hype Train"
@@ -62,13 +62,13 @@ const CareerPage: NextPage<CareerPageProps> = ({ jobs }) => {
         />
 
         <CareerCard
-          title="Intro to GraphQL for iOS Developer - Part 2"
+          title="Intro to GraphQL for iOS Developers - Part 2"
           tag="NSBudapest"
           subtitle="Second part of my GraphQL introduction Meetup talk"
         />
 
         <CareerCard
-          title="Intro to GraphQL for iOS Developer - Part 1"
+          title="Intro to GraphQL for iOS Developers - Part 1"
           tag="NSBudapest"
           subtitle="First part of my GraphQL introduction Meetup talk"
         />
