@@ -1,7 +1,6 @@
 import { GetStaticProps, NextPage } from "next";
 import { NextSeo } from "next-seo";
-import { ButtonLink } from "../../components/button-link";
-import { CareerCard } from "../../components/career-card";
+import { ButtonLink, CareerCard } from "../../components";
 import { JobMeta } from "../../types/job";
 import { fetchJobMetaList } from "../../utils/fetch-jobs";
 
@@ -52,8 +51,33 @@ const CareerPage: NextPage<CareerPageProps> = ({ jobs }) => {
           subtitle="Nagy Lajos Gimnázium Szombathely"
           description="Mathematics"
         />
+      </div>
 
-        <h2>Events</h2>
+      <h2>Events</h2>
+      <div className="grid grid-cols-1 gap-5 pt-4">
+        <CareerCard
+          title="Let's Jump on the JAMStack Hype Train"
+          tag="JSConf BP '19"
+          subtitle="Workshop about what is, how and when to use the JAMStack"
+        />
+
+        <CareerCard
+          title="Intro to GraphQL for iOS Developer - Part 2"
+          tag="NSBudapest"
+          subtitle="Second part of my GraphQL introduction Meetup talk"
+        />
+
+        <CareerCard
+          title="Intro to GraphQL for iOS Developer - Part 1"
+          tag="NSBudapest"
+          subtitle="First part of my GraphQL introduction Meetup talk"
+        />
+
+        <CareerCard
+          title="From Simonyi to the British Royal Palace"
+          tag="XVI. Simonyi Conference"
+          subtitle="Conference talk about our journey with Cogito"
+        />
       </div>
     </>
   );

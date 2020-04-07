@@ -1,5 +1,5 @@
 import { NextSeo } from "next-seo";
-import { ButtonLink } from "../components/button-link";
+import { ButtonLink } from "../components";
 
 const IndexPage = () => {
   const title = "Mate Papp";
