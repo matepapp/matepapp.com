@@ -238,7 +238,7 @@ const AboutPage: NextPage = () => {
       <h2>Hobbies</h2>
       <ul className="grid grid-cols-1 gap-3 list-none sm:grid-cols-2 lg:grid-cols-3">
         <li className="card dark:bg-black dark:shadow-outline-gray">
-          listening podcasts
+          listening to podcasts
         </li>
         <li className="card dark:bg-black dark:shadow-outline-gray">reading</li>
         <li className="card dark:bg-black dark:shadow-outline-gray">
