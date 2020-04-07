@@ -24,7 +24,6 @@ const JobPage: NextPage<JobPageProps> = ({ job }) => {
         {meta.company}
       </div>
       <div className="mt-4 text-xl">{meta.excerpt}</div>
-      <h2 className="pt-6">About</h2>
       {content && <div dangerouslySetInnerHTML={{ __html: content }} />}
     </>
   );

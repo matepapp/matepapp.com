@@ -22,5 +22,5 @@ ul {
 }
 
 li {
-  @apply px-5;
+  @apply px-3 pt-1;
 }
