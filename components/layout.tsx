@@ -45,8 +45,12 @@ export const Layout: FC = ({ children }) => {
       >
         <div className="flex flex-col justify-between flex-1 sm:items-center sm:flex-row">
           <Link href="/" passHref>
-            <a className="text-xl sm:text-lg">
-              matepapp<span className="text-green-400">.</span>com
+            <a>
+              <img
+                src="/assets/mp.png"
+                alt="matepapp.com"
+                className="w-8 h-8"
+              />
             </a>
           </Link>
 
