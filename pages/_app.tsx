@@ -4,12 +4,11 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { Layout } from "../components";
 import "../css/tailwind.css";
-
-const seoDescription = "Passionate Software Engineer";
+import { SEO } from "../utils/seo";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
-  const url = `https://matepapp.com${router.pathname}`;
+  const url = SEO.url(router.pathname);
 
   return (
     <>
@@ -23,10 +22,10 @@ const App = ({ Component, pageProps }: AppProps) => {
       </Head>
       <DefaultSeo
         canonical={url}
-        description={seoDescription}
+        description={SEO.description}
         openGraph={{
           url,
-          description: seoDescription,
+          description: SEO.description,
           images: [
             {
               url:

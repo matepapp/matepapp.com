@@ -1,9 +1,10 @@
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import { IoIosHeart } from "react-icons/io";
+import { SEO } from "../utils/seo";
 
 const AboutPage: NextPage = () => {
-  const title = "About | Mate Papp";
+  const title = SEO.titleTemplate("About");
 
   return (
     <>
@@ -15,12 +16,7 @@ const AboutPage: NextPage = () => {
           src="/assets/profile.jpeg"
           className="rounded-lg shadow-md sm:w-40 sm:h-40 md:w-36 md:h-36 lg:w-28 lg:h-28"
         />
-        <p className="mt-4 leading-7 sm:mt-0 sm:ml-4">
-          My name is Mate Papp, a 24-year-old a Software Engineer, Designer,
-          Entrepreneur, currently based in Budapest, Hungary. I'm a lifelong
-          learner & teacher, an Apple fanboy, a GraphQL enthusiast and a really
-          fast speaker.
-        </p>
+        <p className="mt-4 leading-7 sm:mt-0 sm:ml-4">{SEO.description}</p>
       </div>
       <p className="pt-3 leading-7">
         I've decided to become a Software Engineer after reading

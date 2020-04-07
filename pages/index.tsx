@@ -1,8 +1,9 @@
 import { NextSeo } from "next-seo";
 import { ButtonLink } from "../components";
+import { SEO } from "../utils/seo";
 
 const IndexPage = () => {
-  const title = "Mate Papp";
+  const { title } = SEO;
 
   return (
     <>

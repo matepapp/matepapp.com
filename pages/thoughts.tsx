@@ -1,8 +1,10 @@
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
+import { SEO } from "../utils/seo";
 
 const ThoughtsPage: NextPage = () => {
-  const title = "Thoughts | Mate Papp ";
+  const title = SEO.titleTemplate("Thoughts");
+
   return (
     <>
       <NextSeo title={title} openGraph={{ title }} />

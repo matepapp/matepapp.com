@@ -8,9 +8,11 @@ import {
   FiMail,
   FiTwitter,
 } from "react-icons/fi";
+import { SEO } from "../utils/seo";
 
 const ContactPage: NextPage = () => {
-  const title = "Contact | Mate Papp";
+  const title = SEO.titleTemplate("Contact");
+
   return (
     <>
       <NextSeo title={title} openGraph={{ title }} />
