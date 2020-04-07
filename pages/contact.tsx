@@ -18,8 +18,9 @@ const ContactPage: NextPage = () => {
       <NextSeo title={title} openGraph={{ title }} />
       <h1>Contact</h1>
       <div className="pt-4 text-xl text-gray-700 dark:text-gray-300">
-        Feel free to reach me out anywhere! Preferably on twitter or email, but
-        you can find me on almost every major social media (except TikTok).
+        Feel free to get in touch with me anywhere! Preferably on twitter or
+        email, but you can find me on almost every major social media platform
+        (except TikTok).
       </div>
       <ul className="grid grid-cols-1 gap-3 pt-8 text-lg list-none sm:grid-cols-2 lg:grid-cols-3">
         <li className="p-0 card dark:bg-black hover:text-gray-100 default-transition dark:shadow-outline-gray hover:bg-green-400">

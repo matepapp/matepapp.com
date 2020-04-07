@@ -20,7 +20,7 @@ const IndexPage = () => {
             Designer, and &frac14; Entrepreneur who is focusing on building
             products that people love to use. I'm passionate about exploring new
             things and staying up-to-date with the latest hot trends and topics
-            by visiting (and occasionally speaking) meetups, conferences and
+            by visiting (and occasionally speaking at) meetups, conferences and
             listening podcasts.
           </p>
           <ButtonLink href="/about" className="mt-4">
