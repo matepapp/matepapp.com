@@ -23,7 +23,7 @@ const IndexPage = () => {
             listening podcasts.
           </p>
           <ButtonLink href="/about" className="mt-4">
-            More about me
+            More About Me
           </ButtonLink>
         </div>
 
@@ -45,7 +45,7 @@ const IndexPage = () => {
             .
           </p>
           <ButtonLink href="/career" className="mt-4">
-            The rest is history
+            My Career
           </ButtonLink>
         </div>
       </div>

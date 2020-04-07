@@ -8,8 +8,9 @@ const ThoughtsPage: NextPage = () => {
       <NextSeo title={title} openGraph={{ title }} />
       <h1>Thoughts</h1>
       <div className="pt-4 text-xl text-gray-700 dark:text-gray-300">
-        Promise, that I'll write articles, blog post or anything that I find
-        interesting to share. When I do, this will be the output of my brain.
+        One of my goals is to write articles, blog posts or anything that I find
+        interesting to share. Until this point, I procrastinated more than I
+        should but in the future, I'll take more time to focus on my writings.
       </div>
     </>
   );

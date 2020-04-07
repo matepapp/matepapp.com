@@ -2,6 +2,7 @@
 title: Software Developer
 date: Nov 2017 - Jul 2019
 company: Supercharge Ltd.
+excerpt: Joined as an iOS Developer then moved to the Frontend Team.
 ---
 
 ## Projects

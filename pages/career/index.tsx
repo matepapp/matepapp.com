@@ -18,8 +18,14 @@ const CareerPage: NextPage<CareerPageProps> = ({ jobs }) => {
       <h1>Career</h1>
       <h2>Jobs</h2>
       <div className="grid grid-cols-1 gap-5 pt-4">
-        {jobs.map(({ title, company, date, slug }, index) => (
-          <CareerCard title={title} tag={date} subtitle={company} key={index}>
+        {jobs.map(({ title, company, date, slug, excerpt }, index) => (
+          <CareerCard
+            title={title}
+            tag={date}
+            subtitle={company}
+            description={excerpt}
+            key={index}
+          >
             <ButtonLink
               href="/career/[slug]"
               as={`/career/${slug}`}
@@ -37,12 +43,8 @@ const CareerPage: NextPage<CareerPageProps> = ({ jobs }) => {
           title="University"
           tag="2014 - 2018"
           subtitle="University Budapest University of Technology and Economics"
-          description="Computer Engineering"
-        >
-          <i className="block text-sm text-gray-600 dark:text-gray-400">
-            Major - Systems Engineering
-          </i>
-        </CareerCard>
+          description="Computer Engineering BSc (Major - Systems Engineering)"
+        />
 
         <CareerCard
           title="High School"
