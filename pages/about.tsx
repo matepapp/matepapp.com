@@ -13,13 +13,31 @@ const AboutPage: NextPage = () => {
       <div className="flex flex-col pt-4 sm:flex-row">
         <img
           src="/assets/profile.jpeg"
-          className="rounded-lg shadow-md sm:w-40 sm:h-40"
+          className="rounded-lg shadow-md sm:w-40 sm:h-40 md:w-36 md:h-36 lg:w-28 lg:h-28"
         />
-        <p className="mt-4 sm:mt-0 sm:ml-4">
-          My name is Mate Papp, I'm 24 year old a Software Engineer, Designer,
-          Entrepreneur, currently based in Budapest, Hungary.
+        <p className="mt-4 leading-7 sm:mt-0 sm:ml-4">
+          My name is Mate Papp, a 24-year-old a Software Engineer, Designer,
+          Entrepreneur, currently based in Budapest, Hungary. I'm a lifelong
+          learner & teacher, an Apple fanboy, a GraphQL enthusiast and a really
+          fast speaker.
         </p>
       </div>
+      <p className="pt-3 leading-7">
+        I've decided to become a Software Engineer after reading
+        <a
+          href="https://www.goodreads.com/book/show/11084145-steve-jobs"
+          className="mx-1 text-green-400 hover:text-green-300"
+        >
+          Steve Jobs' biography
+        </a>
+        in high school. In my 2nd year at the University I started to learn iOS
+        development by myself and joined a Hungarian agency as an intern. When I
+        successfully graduated from University I've gained more than 2 years of
+        real-life work experience and started to explore more opportunities.
+        I've jumped into Web development, both in Frontend and Backend. When I
+        discovered GraphQL, I completely fall in love with the concept and I
+        truly believe that this is the future of API communication.
+      </p>
 
       <h2>
         Stuff I
@@ -200,7 +218,7 @@ const AboutPage: NextPage = () => {
           className="text-white card card-transition"
           style={{
             backgroundColor: "rgb(33, 42, 47)",
-            color: "rgb(14, 232, 40)"
+            color: "rgb(14, 232, 40)",
           }}
         >
           iTerm
@@ -229,6 +247,12 @@ const AboutPage: NextPage = () => {
         <li className="card dark:bg-black dark:shadow-outline-gray">reading</li>
         <li className="card dark:bg-black dark:shadow-outline-gray">
           being with friends & family
+        </li>
+        <li className="card dark:bg-black dark:shadow-outline-gray">
+          meetups & conferences
+        </li>
+        <li className="card dark:bg-black dark:shadow-outline-gray">
+          travelling
         </li>
         <li className="card dark:bg-black dark:shadow-outline-gray">
           functional training

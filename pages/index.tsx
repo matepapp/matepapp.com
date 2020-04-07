@@ -14,7 +14,7 @@ const IndexPage = () => {
 
       <div className="grid grid-cols-1 gap-5 mt-8">
         <div className="card dark:bg-black dark:shadow-outline-gray">
-          <p className="text-lg text-gray-800 sm:text-xl dark:text-gray-200">
+          <p className="text-lg text-gray-800 dark:text-gray-200">
             I'd like to refer myself as &frac12; Software Engineer, &frac14;
             Designer, and &frac14; Entrepreneur who is focusing on building
             products that people love to use. I'm passionate about exploring new
@@ -28,7 +28,7 @@ const IndexPage = () => {
         </div>
 
         <div className="card dark:bg-black dark:shadow-outline-gray">
-          <p className="text-lg text-gray-800 sm:text-xl dark:text-gray-200">
+          <p className="text-lg text-gray-800 dark:text-gray-200">
             I've started my career as an iOS Developer then discovered the
             beauty of the Web & Serverless world with GraphQL and the JAMStack.
             Over the years, I've successfully worked on several client projects
