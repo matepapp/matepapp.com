@@ -2,7 +2,7 @@
 title: Junior Mobile Developer
 date: Jul 2016 - Feb 2017
 company: POSSIBLE CEE
-excerpt: Started as an intern by stabilizing my fundamentals of iOS development. After that, I joined a couple of projects, and participated in agile ceremonies.
+excerpt: Started as an intern by stabilizing my knowledge about the fundamentals of iOS development. Later, I worked on a couple of projects, and participated in agile ceremonies.
 ---
 
 ## Projects
