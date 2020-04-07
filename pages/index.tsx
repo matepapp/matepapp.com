@@ -1,5 +1,5 @@
 import { NextSeo } from "next-seo";
-import Link from "next/link";
+import { ButtonLink } from "../components/button-link";
 
 const IndexPage = () => {
   const title = "Mate Papp";
@@ -15,29 +15,38 @@ const IndexPage = () => {
       <div className="grid grid-cols-1 gap-5 mt-8">
         <div className="card dark:bg-black dark:shadow-outline-gray">
           <p className="text-lg text-gray-800 sm:text-xl dark:text-gray-200">
-            Focusing on building apps that people love to use by crafting the
-            best user experience. I'm trying to stay up-to-date with the latest
-            hot trends and topics by visiting meetups, conferences and listening
-            podcasts.
+            I'd like to refer myself as &frac12; Software Engineer, &frac14;
+            Designer, and &frac14; Entrepreneur who is focusing on building
+            products that people love to use. I'm passionate about exploring new
+            things and staying up-to-date with the latest hot trends and topics
+            by visiting (and occasionally speaking) meetups, conferences and
+            listening podcasts.
           </p>
-          <Link href="/about" passHref>
-            <a className="block mt-4 text-xl text-green-400 hover:underline">
-              More about me...
-            </a>
-          </Link>
+          <ButtonLink href="/about" className="mt-4">
+            More about me
+          </ButtonLink>
         </div>
 
         <div className="card dark:bg-black dark:shadow-outline-gray">
           <p className="text-lg text-gray-800 sm:text-xl dark:text-gray-200">
-            I started my career as an iOS Developer then discovered the Web &
-            Serverless world. Successfully worked on several client projects and
-            co-founded a startup.
-          </p>
-          <Link href="/career" passHref>
-            <a className="block mt-4 text-xl text-green-400 hover:underline">
-              The rest is history...
+            I've started my career as an iOS Developer then discovered the
+            beauty of the Web & Serverless world with GraphQL and the JAMStack.
+            Over the years, I've successfully worked on several client projects
+            in agencies and as a freelancer. Recently, I've co-founded and built
+            a startup,
+            <a
+              href="https://cogito.study"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-1 text-green-400 transition duration-200 ease-in-out hover:text-green-300"
+            >
+              Cogito
             </a>
-          </Link>
+            .
+          </p>
+          <ButtonLink href="/career" className="mt-4">
+            The rest is history
+          </ButtonLink>
         </div>
       </div>
     </>

@@ -5,10 +5,10 @@ import path from "path";
 import { Job, JobMeta } from "../types/job";
 
 export const fetchJobMetaList = (): JobMeta[] => {
-  const jobsDirectory = path.join(process.cwd(), "/data/jobs");
+  const jobsDirectory = path.join(process.cwd(), "/data/career");
   const filenames = fs.readdirSync(jobsDirectory);
 
-  const jobMetaList: JobMeta[] = filenames.reverse().map(filename => {
+  const jobMetaList: JobMeta[] = filenames.reverse().map((filename) => {
     const filePath = path.join(jobsDirectory, filename);
     const fileContents = fs.readFileSync(filePath).toString();
     const parsedMarkdown = matter(fileContents);
@@ -16,7 +16,7 @@ export const fetchJobMetaList = (): JobMeta[] => {
 
     return {
       ...jobMeta,
-      slug: filename.substring(2, filename.length - 3)
+      slug: filename.substring(2, filename.length - 3),
     };
   });
 
@@ -24,10 +24,10 @@ export const fetchJobMetaList = (): JobMeta[] => {
 };
 
 export const fetchJob = (slug: string): Job => {
-  const jobsDirectory = path.join(process.cwd(), "/data/jobs");
+  const jobsDirectory = path.join(process.cwd(), "/data/career");
   const filenames = fs.readdirSync(jobsDirectory);
 
-  const jobs: Job[] = filenames.reverse().map(filename => {
+  const jobs: Job[] = filenames.reverse().map((filename) => {
     const filePath = path.join(jobsDirectory, filename);
     const fileContents = fs.readFileSync(filePath).toString();
     const parsedMarkdown = matter(fileContents);
@@ -36,11 +36,11 @@ export const fetchJob = (slug: string): Job => {
     return {
       meta: {
         ...jobMeta,
-        slug: filename.substring(2, filename.length - 3)
+        slug: filename.substring(2, filename.length - 3),
       },
-      content: marked(parsedMarkdown.content)
+      content: marked(parsedMarkdown.content),
     };
   });
 
-  return jobs.find(job => job.meta.slug === slug);
+  return jobs.find((job) => job.meta.slug === slug);
 };

@@ -4,7 +4,8 @@ import { FC } from "react";
 
 export const NavLink: FC<LinkProps> = ({ href, children }) => {
   const router = useRouter();
-  const activeStyle = router.pathname === href && "text-green-400";
+  const activeStyle =
+    router.pathname.includes(href as string) && "text-green-400";
 
   return (
     <Link href={href} passHref>

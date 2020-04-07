@@ -6,7 +6,7 @@ import {
   FiInstagram,
   FiLinkedin,
   FiMail,
-  FiTwitter
+  FiTwitter,
 } from "react-icons/fi";
 
 const ContactPage: NextPage = () => {
@@ -26,7 +26,7 @@ const ContactPage: NextPage = () => {
             className="block w-full h-full px-4 py-3"
           >
             <FiMail className="inline w-8 h-8 mr-3" />
-            mail
+            email
           </a>
         </li>
 

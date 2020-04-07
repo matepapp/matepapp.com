@@ -1,9 +1,9 @@
 import { GetStaticProps, NextPage } from "next";
 import { NextSeo } from "next-seo";
-import Link from "next/link";
-import { CareerCard } from "../components/career-card";
-import { JobMeta } from "../types/job";
-import { fetchJobMetaList } from "../utils/fetch-jobs";
+import { ButtonLink } from "../../components/button-link";
+import { CareerCard } from "../../components/career-card";
+import { JobMeta } from "../../types/job";
+import { fetchJobMetaList } from "../../utils/fetch-jobs";
 
 type CareerPageProps = {
   jobs: JobMeta[];
@@ -20,11 +20,13 @@ const CareerPage: NextPage<CareerPageProps> = ({ jobs }) => {
       <div className="grid grid-cols-1 gap-5 pt-4">
         {jobs.map(({ title, company, date, slug }, index) => (
           <CareerCard title={title} tag={date} subtitle={company} key={index}>
-            <Link href="/jobs/[slug]" as={`/jobs/${slug}`} passHref>
-              <a className="block mt-2 text-green-400 default-transition hover:underline">
-                Read More
-              </a>
-            </Link>
+            <ButtonLink
+              href="/career/[slug]"
+              as={`/career/${slug}`}
+              className="mt-4"
+            >
+              Read More
+            </ButtonLink>
           </CareerCard>
         ))}
       </div>
