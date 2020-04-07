@@ -1,6 +1,5 @@
 import { DefaultSeo } from "next-seo";
 import { AppProps } from "next/app";
-import Head from "next/head";
 import { useRouter } from "next/router";
 import { Layout } from "../components";
 import "../css/tailwind.css";
@@ -12,14 +11,6 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap"
-          rel="stylesheet"
-        />
-        <link rel="icon" href="/assets/favicon.ico" />
-      </Head>
       <DefaultSeo
         canonical={url}
         description={SEO.description}
