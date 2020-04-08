@@ -75,7 +75,7 @@ const CareerPage: NextPage<CareerPageProps> = ({ jobs }) => {
 
         <CareerCard
           title="From Simonyi to the British Royal Palace"
-          tag="XVI. Simonyi Conference"
+          tag="Simonyi Conference XVI."
           subtitle="Conference talk about our journey with Cogito"
         />
       </div>
