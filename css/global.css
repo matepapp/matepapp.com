@@ -15,7 +15,6 @@ h4 {
   @apply pt-3 text-lg tracking-tight uppercase;
 }
 
-/* purgecss end ignore */
 
 ul {
   @apply pt-2 list-disc list-inside;
@@ -24,3 +23,9 @@ ul {
 li {
   @apply px-3 pt-1;
 }
+
+pre {
+  @apply p-4 bg-gray-900 rounded-lg;
+}
+
+/* purgecss end ignore */

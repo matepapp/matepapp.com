@@ -3,13 +3,14 @@ import { NextSeo } from "next-seo";
 import { ButtonLink, CareerCard } from "../../components";
 import { JobMeta } from "../../types/job";
 import { fetchJobMetaList } from "../../utils/fetch-jobs";
+import { SEO } from "../../utils/seo";
 
 type CareerPageProps = {
   jobs: JobMeta[];
 };
 
 const CareerPage: NextPage<CareerPageProps> = ({ jobs }) => {
-  const title = "Career | Mate Papp";
+  const title = SEO.titleTemplate("Career");
 
   return (
     <>

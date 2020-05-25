@@ -3,6 +3,7 @@ import { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { Layout } from "../components";
 import "../css/tailwind.css";
+import "../css/prism.css";
 import { SEO } from "../utils/seo";
 
 const App = ({ Component, pageProps }: AppProps) => {
