@@ -17,7 +17,7 @@ export const fetchThoughtMetaList = (): ThoughtMeta[] => {
 
     return {
       ...thoughtMeta,
-      slug: filename,
+      slug: filename.split(".").slice(0, -1).join("."),
     };
   });
 
@@ -42,7 +42,7 @@ export const fetchThought = (slug: string): Thought => {
     return {
       meta: {
         ...thoughtMeta,
-        slug: filename,
+        slug: filename.split(".").slice(0, -1).join("."),
       },
       content: marked(parsedMarkdown.content),
     };

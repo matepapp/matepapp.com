@@ -14,6 +14,13 @@ Created: May 24, 2020 9:06 PM
 const variable = new Map();
 ```
 
+```css
+.card {
+  background-color: red;
+  padding: 0 24px 0 12px;
+}
+```
+
 ### Intentions
 
 1. ...
