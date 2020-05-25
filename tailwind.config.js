@@ -1,6 +1,10 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
+  purge: {
+    content: ["./components/**/*.tsx", "./pages/**/*.tsx"],
+    whitelist: ["mode-dark"],
+  },
   theme: {
     extend: {
       fontFamily: {

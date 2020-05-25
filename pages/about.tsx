@@ -100,7 +100,7 @@ const AboutPage: NextPage = () => {
           className="text-white card card-transition"
           style={{ backgroundColor: "#111" }}
         >
-          NextJS
+          Next.js
         </a>
         <a
           href="https://nodejs.org/en/"
@@ -227,11 +227,11 @@ const AboutPage: NextPage = () => {
           Netlify
         </a>
         <a
-          href="https://zeit.co/"
+          href="https://vercel.com/"
           className="text-white card card-transition"
           style={{ backgroundColor: "#111" }}
         >
-          Zeit Now
+          Vercel
         </a>
       </div>
 

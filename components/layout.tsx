@@ -148,7 +148,7 @@ export const Layout: FC = ({ children }) => {
           </a>
           <a
             className="default-transition hover:text-green-400"
-            href="https://zeit.co/"
+            href="https://vercel.com/"
           >
             hosted on
             {darkMode.value ? (
