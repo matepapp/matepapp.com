@@ -15,7 +15,6 @@ h4 {
   @apply pt-3 text-lg tracking-tight uppercase;
 }
 
-
 ul {
   @apply pt-2 list-disc list-inside;
 }
@@ -25,7 +24,7 @@ li {
 }
 
 pre {
-  @apply p-4 my-2 bg-gray-900 rounded-lg;
+  @apply p-4 my-2 overflow-auto bg-gray-900 rounded-lg;
 }
 
 /* purgecss end ignore */
