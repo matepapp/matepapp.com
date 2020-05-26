@@ -28,12 +28,12 @@ const AboutPage: NextPage = () => {
         >
           Steve Jobs' biography
         </a>
-        in high school. In my 2nd year at the University I started to learn iOS
+        in high school. In my 2nd year at the university, I started to learn iOS
         development by myself and joined a Hungarian agency as an intern. When I
-        successfully graduated from University I've gained more than 2 years of
-        real-life work experience and started to explore more opportunities.
+        successfully graduated from university, I've gained more than two years
+        of real-life work experience and started to explore more opportunities.
         I've jumped into Web development, both in Frontend and Backend. When I
-        discovered GraphQL, I completely fall in love with the concept and I
+        discovered GraphQL, I completely fall in love with the concept, and I
         truly believe that this is the future of API communication.
       </p>
 
