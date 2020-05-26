@@ -1,50 +1,23 @@
 ---
 title: My Road to Vue.js from React
-createdAt: 05-25-2020
+createdAt: 05-24-2020
 updatedAt: 05-25-2020
 ---
 
-# My Road to Vue.js from React
+In my first blog post I walk you through my process of how I learned Vue.js from having years of React experience.
 
-Created: May 24, 2020 9:06 PM
+## Background
 
-**Notion Tip:** Create a new page and select `Daily Entry` \*\*\*\*from the list of template options to automatically generate the format below every day.
+Recently, I've co-founded a [community based educational startup](https://cogito.study) which was quite successful. We supposed to receive our first, pre-seed VC investment from a Berlin-based firm. Unfortunately, due to current COVID-19 circumstances we felt that we won't be able to deliver our future plans and won't be able to make our company financially stable. After weeks of discussion, we decided to shut it down and pursue other dreams. That's how I ended up in the job market.
 
-```javascript
-const variable = new Map();
-```
+About a month ago, I've started looking for possible opportunities and I've applied for a couple of open positions. Skip to nowadays, I just signed my offer with a successful Spanish unicorn, [Glovo](https://glovoapp.com/en/) where I'll join the Content Activation and Pricing team as a Senior Frontend Engineer.
 
-```css
-.card {
-  background-color: red;
-  padding: 0 24px 0 12px;
-}
-```
+Since Glovo's web app built with Vue.js and I've used the framework only once, I decided to learn the fundamentals and establish my knowledge before my starting date.
 
-```tsx
-import { FC } from "react";
+## Where to start?
 
-export const Card: FC<{ className?: string }> = ({ children, className }) => (
-  <div
-    className={
-      "px-5 py-4 rounded-lg shadow-md dark:shadow-outline-gray" + className
-    }
-  >
-    {children}
-  </div>
-);
-```
+I'm kinda like an old-fashioned guy when I'm learning new technologies. I always like to start with the official documentation and yes, I prefer reading the docs first without touching any code.
 
-### Intentions
+[https://twitter.com/iamdevloper/status/1060067235316809729?s=20](https://twitter.com/iamdevloper/status/1060067235316809729?s=20)
 
-1. ...
-2. ...
-3. ...
-
-## Happenings
-
-# Grateful for
-
-1. ...
-2. ...
-3. ...
+My initial plan was to go through the whole documentation and then sign up to [VueMastery](https://www.vuemastery.com/) and watch the beginner → intermediate → advanced videos.

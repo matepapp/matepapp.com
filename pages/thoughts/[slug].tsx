@@ -12,6 +12,7 @@ const ThoughtPage: NextPage<ThoughtPageProps> = ({ thought }) => {
   const { meta, content } = thought;
   const title = SEO.titleTemplate(meta.title);
 
+  // TODO: SEO Description
   return (
     <>
       <NextSeo title={title} openGraph={{ title }} />
@@ -21,7 +22,12 @@ const ThoughtPage: NextPage<ThoughtPageProps> = ({ thought }) => {
           {meta.createdAt}
         </div>
       </div>
-      {content && <div dangerouslySetInnerHTML={{ __html: content }} />}
+      {content && (
+        <div
+          className="font-normal"
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+      )}
     </>
   );
 };

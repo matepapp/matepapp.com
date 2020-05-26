@@ -16,9 +16,11 @@ const AboutPage: NextPage = () => {
           src="/assets/profile.jpeg"
           className="rounded-lg shadow-md sm:w-40 sm:h-40 md:w-36 md:h-36 lg:w-28 lg:h-28"
         />
-        <p className="mt-4 leading-7 sm:mt-0 sm:ml-4">{SEO.description}</p>
+        <p className="mt-4 font-medium leading-7 sm:mt-0 sm:ml-4">
+          {SEO.description}
+        </p>
       </div>
-      <p className="pt-3 leading-7">
+      <p className="pt-3 leading-7 text-gray-800 dark:text-gray-200">
         I've decided to become a Software Engineer after reading
         <a
           href="https://www.goodreads.com/book/show/11084145-steve-jobs"
@@ -41,7 +43,7 @@ const AboutPage: NextPage = () => {
       </h2>
 
       <h3 className="pt-2 text-gray-800 dark:text-gray-200">Programming</h3>
-      <div className="grid grid-cols-2 gap-3 pt-2 sm:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3 pt-2 font-medium sm:grid-cols-3">
         <a
           href="https://www.typescriptlang.org"
           className="card card-transition"
@@ -80,7 +82,7 @@ const AboutPage: NextPage = () => {
       </div>
 
       <h3 className="text-gray-800 dark:text-gray-200">Frameworks</h3>
-      <div className="grid grid-cols-2 gap-3 pt-2 sm:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3 pt-2 font-medium sm:grid-cols-3">
         <a
           href="https://reactjs.org"
           className="card card-transition"
@@ -181,7 +183,7 @@ const AboutPage: NextPage = () => {
       </div>
 
       <h3 className="text-gray-800 dark:text-gray-200">Tools</h3>
-      <div className="grid grid-cols-2 gap-3 pt-2 sm:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3 pt-2 font-medium sm:grid-cols-3">
         <a
           href="https://www.figma.com/"
           className="text-white bg-black card card-transition"
@@ -236,7 +238,7 @@ const AboutPage: NextPage = () => {
       </div>
 
       <h2>Hobbies</h2>
-      <ul className="grid grid-cols-1 gap-3 list-none sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid grid-cols-1 gap-3 font-medium list-none sm:grid-cols-2 lg:grid-cols-3">
         <li className="card dark:bg-black dark:shadow-outline-gray">
           listening to podcasts
         </li>

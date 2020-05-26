@@ -9,11 +9,11 @@ const IndexPage = () => {
     <>
       <NextSeo title={title} openGraph={{ title }} />
       <h1>Hey, I'm Mate! 👋🏻</h1>
-      <div className="text-xl text-gray-700 uppercase dark:text-gray-300">
+      <div className="text-xl font-medium text-gray-700 uppercase dark:text-gray-300">
         Software Engineer
       </div>
 
-      <div className="grid grid-cols-1 gap-5 mt-8">
+      <div className="grid grid-cols-1 gap-5 mt-8 font-medium">
         <div className="card dark:bg-black dark:shadow-outline-gray">
           <p className="text-lg text-gray-800 dark:text-gray-200">
             I like to refer to myself as &frac12; Software Engineer, &frac14;

@@ -10,7 +10,7 @@ export const NavLink: FC<LinkProps> = ({ href, children }) => {
   return (
     <Link href={href} passHref>
       <a
-        className={`mr-4 default-transition text-xl sm:text-lg hover:text-green-400
+        className={`mr-4 default-transition text-xl font-medium sm:text-lg hover:text-green-400
           ${activeStyle}`}
       >
         {children}

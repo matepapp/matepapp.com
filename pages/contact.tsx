@@ -22,7 +22,7 @@ const ContactPage: NextPage = () => {
         email, but you can find me on almost every major social media platform
         (except TikTok).
       </div>
-      <ul className="grid grid-cols-1 gap-3 pt-8 text-lg list-none sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid grid-cols-1 gap-3 pt-8 text-lg font-medium list-none sm:grid-cols-2 lg:grid-cols-3">
         <li className="p-0 card dark:bg-black hover:text-gray-100 default-transition dark:shadow-outline-gray hover:bg-green-400">
           <a
             href="mailto:matepapp@icloud.com"
