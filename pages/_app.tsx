@@ -1,9 +1,11 @@
 import { DefaultSeo } from "next-seo";
 import { AppProps } from "next/app";
 import { useRouter } from "next/router";
+import "prismjs/themes/prism-tomorrow.css";
+import "react-notion/src/styles.css";
 import { Layout } from "../components";
+import "../css/notion.css";
 import "../css/tailwind.css";
-import "../css/prism.css";
 import { SEO } from "../utils/seo";
 
 const App = ({ Component, pageProps }: AppProps) => {

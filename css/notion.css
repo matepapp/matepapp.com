@@ -1,0 +1,24 @@
+.notion {
+  @apply font-sans;
+  color: inherit;
+}
+
+.notion-bookmark {
+  @apply m-1 border-none rounded-lg shadow-md bg-gray-50;
+}
+
+.mode-dark .notion-bookmark {
+  @apply bg-black shadow-outline-gray;
+}
+
+.mode-dark .notion-bookmark * {
+  @apply text-gray-200;
+}
+
+.notion-callout {
+  @apply my-2 text-green-800 bg-green-100 border-none rounded-md;
+}
+
+.mode-dark .notion-callout {
+  @apply text-green-100 bg-green-800;
+}
