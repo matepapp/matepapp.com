@@ -3,8 +3,12 @@
   color: inherit;
 }
 
+.notion * {
+  word-break: normal;
+}
+
 .notion-bookmark {
-  @apply m-1 border-none rounded-lg shadow-md bg-gray-50;
+  @apply m-2 border-none rounded-lg shadow-md bg-gray-50;
 }
 
 .mode-dark .notion-bookmark {
