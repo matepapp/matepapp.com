@@ -12,7 +12,7 @@
 }
 
 .mode-dark .notion-bookmark {
-  @apply bg-black shadow-outline-gray;
+  @apply bg-gray-900;
 }
 
 .mode-dark .notion-bookmark * {

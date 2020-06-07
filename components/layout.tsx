@@ -39,7 +39,7 @@ export const Layout: FC = ({ children }) => {
     <div className="flex flex-col items-center min-h-screen antialiased text-gray-900 bg-gray-100 dark:text-gray-100 dark:bg-black">
       <nav
         className={
-          "fixed z-20 flex items-start w-full px-4 transform duration-300 py-3 text-lg tracking-tight shadow-md dark:shadow-outline-gray bg-gray-50 dark:bg-black " +
+          "fixed z-20 flex items-start w-full px-4 transform duration-300 py-3 text-lg tracking-tight " +
           visibleNavClass
         }
       >

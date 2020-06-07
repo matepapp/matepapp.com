@@ -19,7 +19,7 @@
 }
 
 .card {
-  @apply px-5 py-4 rounded-lg shadow-md bg-gray-50;
+  @apply px-5 py-4 rounded-lg bg-gray-50;
 }
 
 .card-transition {
