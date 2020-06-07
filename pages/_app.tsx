@@ -1,16 +1,30 @@
+import * as Fathom from "fathom-client";
 import { DefaultSeo } from "next-seo";
 import { AppProps } from "next/app";
-import { useRouter } from "next/router";
+import Router, { useRouter } from "next/router";
 import "prismjs/themes/prism-tomorrow.css";
+import { useEffect } from "react";
 import "react-notion/src/styles.css";
 import { Layout } from "../components";
 import "../css/notion.css";
 import "../css/tailwind.css";
 import { SEO } from "../utils/seo";
 
+// Record a pageview when route changes
+Router.events.on("routeChangeComplete", () => {
+  Fathom.trackPageview();
+});
+
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
   const url = SEO.url(router.pathname);
+
+  // Initialize Fathom when the app loads
+  useEffect(() => {
+    Fathom.load("ZHUXHBHV", {
+      includedDomains: ["matepapp.com"],
+    });
+  }, []);
 
   return (
     <>

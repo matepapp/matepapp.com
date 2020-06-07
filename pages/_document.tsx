@@ -18,7 +18,7 @@ class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
             rel="stylesheet"
-          ></link>
+          />
           <link rel="icon" href="/assets/favicon.ico" />
         </Head>
         <body>
