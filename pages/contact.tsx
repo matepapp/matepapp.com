@@ -23,7 +23,7 @@ const ContactPage: NextPage = () => {
         (except TikTok).
       </div>
       <ul className="grid grid-cols-1 gap-3 pt-8 text-lg font-medium list-none sm:grid-cols-2 lg:grid-cols-3">
-        <li className="p-0 card dark:bg-black hover:text-gray-100 default-transition dark:shadow-outline-gray hover:bg-green-400">
+        <li className="p-0 card hover:text-gray-100 default-transition hover:bg-green-400">
           <a
             href="mailto:matepapp@icloud.com"
             className="block w-full h-full px-4 py-3"
@@ -33,7 +33,7 @@ const ContactPage: NextPage = () => {
           </a>
         </li>
 
-        <li className="p-0 card dark:bg-black hover:text-gray-100 default-transition dark:shadow-outline-gray twitter">
+        <li className="p-0 card hover:text-gray-100 default-transition twitter">
           <a
             href="https://twitter.com/matepappp"
             className="block w-full h-full px-4 py-3"
@@ -43,7 +43,7 @@ const ContactPage: NextPage = () => {
           </a>
         </li>
 
-        <li className="p-0 card dark:bg-black hover:text-gray-100 default-transition dark:shadow-outline-gray instagram">
+        <li className="p-0 card hover:text-gray-100 default-transition instagram">
           <a
             href="https://instagram.com/pappmate"
             className="block w-full h-full px-4 py-3"
@@ -53,7 +53,7 @@ const ContactPage: NextPage = () => {
           </a>
         </li>
 
-        <li className="p-0 card dark:bg-black hover:text-gray-100 default-transition dark:shadow-outline-gray facebook">
+        <li className="p-0 card hover:text-gray-100 default-transition facebook">
           <a
             href="https://facebook.com/pappmatesz"
             className="block w-full h-full px-4 py-3"
@@ -63,7 +63,7 @@ const ContactPage: NextPage = () => {
           </a>
         </li>
 
-        <li className="p-0 card dark:bg-black hover:text-gray-100 default-transition hover:bg-gray-500 dark:shadow-outline-gray">
+        <li className="p-0 card hover:text-gray-100 default-transition hover:bg-gray-500">
           <a
             href="https://github.com/matepapp"
             className="block w-full h-full px-4 py-3"
@@ -73,7 +73,7 @@ const ContactPage: NextPage = () => {
           </a>
         </li>
 
-        <li className="p-0 card dark:bg-black hover:text-gray-100 linkedin default-transition dark:shadow-outline-gray">
+        <li className="p-0 card hover:text-gray-100 default-transition linkedin">
           <a
             href="https://www.linkedin.com/in/matepapp/"
             className="block w-full h-full px-4 py-3"

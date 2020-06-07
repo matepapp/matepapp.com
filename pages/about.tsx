@@ -14,7 +14,7 @@ const AboutPage: NextPage = () => {
       <div className="flex flex-col pt-4 sm:flex-row">
         <img
           src="/assets/profile.jpeg"
-          className="rounded-lg shadow-md sm:w-40 sm:h-40 md:w-36 md:h-36 lg:w-28 lg:h-28"
+          className="rounded-lg sm:w-40 sm:h-40 md:w-36 md:h-36 lg:w-28 lg:h-28"
         />
         <p className="mt-4 font-medium leading-7 sm:mt-0 sm:ml-4">
           {SEO.description}

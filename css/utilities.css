@@ -22,10 +22,14 @@
   @apply px-5 py-4 rounded-lg bg-gray-50;
 }
 
+.mode-dark .card {
+  @apply bg-gray-900;
+}
+
 .card-transition {
   @apply duration-200 ease-in-out transform;
 }
 
 .card-transition:hover {
-  @apply scale-105 shadow-lg;
+  @apply scale-105 shadow-md;
 }

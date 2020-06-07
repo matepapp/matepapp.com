@@ -1,7 +1,6 @@
 import { GetStaticProps, NextPage } from "next";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
-import { Card } from "../../components";
 import { ThoughtMeta } from "../../types/thought";
 import { fetchThoughtMetaList } from "../../utils/fetch-thoughts";
 import { SEO } from "../../utils/seo";
@@ -20,7 +19,7 @@ const ThoughtsPage: NextPage<ThoughtsPageProps> = ({ thoughts }) => {
       {thoughts.map(({ Slug, Name }) => (
         <Link passHref href={`/thoughts/${Slug}`} key={Slug}>
           <a>
-            <Card>{Name}</Card>
+            <div className="card">{Name}</div>
           </a>
         </Link>
       ))}
