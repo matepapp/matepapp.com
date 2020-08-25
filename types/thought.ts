@@ -4,4 +4,5 @@ export type ThoughtMeta = {
   Slug: string;
   CreatedAt: string;
   Name: string;
+  Published: boolean;
 };
