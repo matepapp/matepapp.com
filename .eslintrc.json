@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "plugin:@next/next/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:eslint-comments/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/prettier",
+    "prettier/react"
+  ],
+  "rules": {
+    "@typescript-eslint/array-type": "error",
+    "@typescript-eslint/consistent-indexed-object-style": [
+      "error",
+      "index-signature" // Prevent ambiguity with Records & Tuples
+    ],
+    "@typescript-eslint/consistent-type-assertions": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off", // Reduce bloat
+    "@typescript-eslint/method-signature-style": "error", // Force type safety
+    "@typescript-eslint/no-invalid-void-type": "error", // Force type safety
+    "@typescript-eslint/prefer-ts-expect-error": "error", // Force type safety
+    "prefer-exponentiation-operator": "error", // Auto-fix for an inherited rule
+    "react/react-in-jsx-scope": "off", // React is always in scope with Next
+    "react/require-default-props": "off" // React `defaultProps` are deprecated
+  }
+}
