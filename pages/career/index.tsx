@@ -1,16 +1,16 @@
-import { GetStaticProps, NextPage } from "next";
-import { NextSeo } from "next-seo";
-import { ButtonLink, CareerCard } from "../../components";
-import { JobMeta } from "../../types/job";
-import { fetchJobMetaList } from "../../utils/fetch-jobs";
-import { SEO } from "../../utils/seo";
+import { GetStaticProps, NextPage } from 'next'
+import { NextSeo } from 'next-seo'
+import { ButtonLink, CareerCard } from '../../components'
+import { JobMeta } from '../../types/job'
+import { fetchJobMetaList } from '../../utils/fetch-jobs'
+import { SEO } from '../../utils/seo'
 
 type CareerPageProps = {
-  jobs: JobMeta[];
-};
+  jobs: JobMeta[]
+}
 
 const CareerPage: NextPage<CareerPageProps> = ({ jobs }) => {
-  const title = SEO.titleTemplate("Career");
+  const title = SEO.titleTemplate('Career')
 
   return (
     <>
@@ -19,18 +19,8 @@ const CareerPage: NextPage<CareerPageProps> = ({ jobs }) => {
       <h2>Jobs</h2>
       <div className="grid grid-cols-1 gap-5 pt-4">
         {jobs.map(({ title, company, date, slug, excerpt }, index) => (
-          <CareerCard
-            title={title}
-            tag={date}
-            subtitle={company}
-            description={excerpt}
-            key={index}
-          >
-            <ButtonLink
-              href="/career/[slug]"
-              as={`/career/${slug}`}
-              className="mt-4"
-            >
+          <CareerCard title={title} tag={date} subtitle={company} description={excerpt} key={index}>
+            <ButtonLink href={`/career/${slug}`} className="mt-4">
               Read More
             </ButtonLink>
           </CareerCard>
@@ -81,11 +71,11 @@ const CareerPage: NextPage<CareerPageProps> = ({ jobs }) => {
         />
       </div>
     </>
-  );
-};
+  )
+}
 
 export const getStaticProps: GetStaticProps = async () => {
-  return { props: { jobs: fetchJobMetaList() } };
-};
+  return { props: { jobs: fetchJobMetaList() } }
+}
 
-export default CareerPage;
+export default CareerPage
