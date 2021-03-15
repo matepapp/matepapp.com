@@ -10,7 +10,7 @@ export const ButtonLink: FC<LinkProps & HTMLAttributes<HTMLAnchorElement>> = ({
   <Link href={href} passHref>
     <a
       className={
-        'inline-flex items-center pl-3 pr-2 py-1 bg-green-100 font-medium text-green-500 duration-200 ease-in-out transform hover:scale-105 rounded-lg dark:text-green-300 dark:bg-green-900 ' +
+        'inline-flex items-center pl-3 pr-2 py-1 bg-green-100  text-green-500 duration-200 ease-in-out transform hover:scale-105 rounded-lg dark:text-green-300 dark:bg-green-900 ' +
         className
       }
     >

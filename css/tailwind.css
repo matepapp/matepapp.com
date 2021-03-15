@@ -1,11 +1,47 @@
 @import 'tailwindcss/base';
-
-@import './global.css';
-
-/* Start purging... */
 @import 'tailwindcss/components';
-
-@import './utilities.css';
-
 @import 'tailwindcss/utilities';
-/* Stop purging. */
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+}
+
+@layer components {
+  .twitter:hover {
+    background-color: #1da1f2 !important;
+  }
+
+  .instagram:hover {
+    background-color: #c32aa3 !important;
+  }
+
+  .facebook:hover {
+    background-color: #1877f2 !important;
+  }
+
+  .linkedin:hover {
+    background-color: #007bb5 !important;
+  }
+
+  .default-transition {
+    @apply transition duration-200 ease-in-out;
+  }
+
+  .card {
+    @apply dark:bg-gray-800 p-4 rounded-xl bg-white shadow-sm;
+  }
+
+  .card-transition {
+    @apply duration-200 ease-in-out transform hover:scale-105 hover:shadow-md;
+  }
+}
