@@ -16,7 +16,7 @@ const ContactPage: NextPage = () => {
       <div className="sm:grid-cols-2 lg:grid-cols-3 grid grid-cols-1 gap-3 text-lg list-none">
         <a
           href="mailto:matepapp@icloud.com"
-          className="card hover:text-gray-100 default-transition hover:bg-green-400 text-gray-800"
+          className="card hover:text-gray-100 default-transition hover:bg-green-400 dark:text-gray-100 text-gray-800"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ const ContactPage: NextPage = () => {
 
         <a
           href="https://twitter.com/matepappp"
-          className="card hover:text-gray-100 default-transition twitter text-gray-800"
+          className="card hover:text-gray-100 default-transition twitter dark:text-gray-100 text-gray-800"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ const ContactPage: NextPage = () => {
 
         <a
           href="https://instagram.com/pappmate"
-          className="card hover:text-gray-100 default-transition instagram text-gray-800"
+          className="card hover:text-gray-100 default-transition instagram dark:text-gray-100 text-gray-800"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@ const ContactPage: NextPage = () => {
 
         <a
           href="https://facebook.com/pappmatesz"
-          className="card hover:text-gray-100 default-transition facebook text-gray-800"
+          className="card hover:text-gray-100 default-transition facebook dark:text-gray-100 text-gray-800"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +103,7 @@ const ContactPage: NextPage = () => {
 
         <a
           href="https://github.com/matepapp"
-          className="card hover:text-gray-100 default-transition hover:bg-gray-500 text-gray-800"
+          className="card hover:text-gray-100 default-transition hover:bg-gray-500 dark:text-gray-100 text-gray-800"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +124,7 @@ const ContactPage: NextPage = () => {
 
         <a
           href="https://www.linkedin.com/in/matepapp/"
-          className="card hover:text-gray-100 default-transition linkedin text-gray-800"
+          className="card hover:text-gray-100 default-transition linkedin dark:text-gray-100 text-gray-800"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
