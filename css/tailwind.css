@@ -1,11 +1,11 @@
-/* purgecss start ignore */
 @import 'tailwindcss/base';
-/* purgecss end ignore */
 
 @import './global.css';
 
+/* Start purging... */
 @import 'tailwindcss/components';
 
 @import './utilities.css';
 
 @import 'tailwindcss/utilities';
+/* Stop purging. */

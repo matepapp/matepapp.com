@@ -1,12 +1,10 @@
 import * as Fathom from "fathom-client";
 import { DefaultSeo } from "next-seo";
+import { ThemeProvider } from "next-themes";
 import { AppProps } from "next/app";
 import Router, { useRouter } from "next/router";
-import "prismjs/themes/prism-tomorrow.css";
 import { useEffect } from "react";
-import "react-notion/src/styles.css";
 import { Layout } from "../components";
-import "../css/notion.css";
 import "../css/tailwind.css";
 import { SEO } from "../utils/seo";
 
@@ -50,9 +48,11 @@ const App = ({ Component, pageProps }: AppProps) => {
           cardType: "summary_large_image",
         }}
       />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ThemeProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     </>
   );
 };
