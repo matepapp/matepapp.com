@@ -11,7 +11,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link
-            href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
             rel="stylesheet"
           />
           {/* Generated using https://www.favicon-generator.org */}
@@ -72,7 +72,7 @@ class MyDocument extends Document {
           <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png" />
           <meta name="theme-color" content="#34D399" />
         </Head>
-        <body className="bg-gray-50 dark:text-gray-100 dark:bg-gray-900 min-h-screen antialiased text-gray-900">
+        <body className="bg-gray-50 dark:text-gray-100 dark:bg-gray-900 antialiased text-gray-900">
           <Main />
           <NextScript />
         </body>

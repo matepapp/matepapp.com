@@ -1,10 +1,9 @@
 import Link from 'next/link'
 import { FC } from 'react'
-import { FiHeart } from 'react-icons/fi'
 import { NavLink } from './nav-link'
 
 export const Layout: FC = ({ children }) => (
-  <div className="flex flex-col items-center w-full max-w-2xl px-4 mx-auto">
+  <div className="flex flex-col items-center w-full max-w-2xl min-h-screen px-4 mx-auto">
     <nav className="dark:bg-gray-900 bg-gray-50 sticky top-0 z-20 flex items-start justify-between w-full py-4 tracking-tight">
       <Link href="/">
         <a>
@@ -24,11 +23,35 @@ export const Layout: FC = ({ children }) => (
         <NavLink href="/thoughts">thoughts</NavLink>
       </div>
     </nav>
-    <main className="flex flex-col flex-1 mt-8">{children}</main>
-    <footer className="dark:text-gray-400 mt-8 mb-2 text-xs text-gray-500">
-      <p>
-        built with <FiHeart className="inline w-4 h-4 text-green-400" /> in Budapest & Barcelona
-      </p>
+    <main className="flex flex-col flex-1 mt-8 space-y-8">{children}</main>
+    <footer className="dark:text-gray-400 mt-8 mb-2 text-xs text-center text-gray-500">
+      <div>
+        built with
+        <div className="inline px-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            className="inline w-5 h-5 text-red-400"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+            />
+          </svg>
+        </div>
+        in Budapest & Barcelona
+      </div>
+
+      <div>
+        using <a href="https://nextjs.org">Next.js</a> &{' '}
+        <a href="https://tailwindcss.com">TailwindCSS</a>, hosted on{' '}
+        <a href="https://vercel.com">Vercel</a>, source available on{' '}
+        <a href="https://github.com/matepapp/matepapp.com">Github</a>
+      </div>
     </footer>
   </div>
 )

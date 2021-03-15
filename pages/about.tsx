@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
-import { IoIosHeart } from 'react-icons/io'
+import Image from 'next/image'
 import { SEO } from '../utils/seo'
 
 const AboutPage: NextPage = () => {
@@ -10,15 +10,19 @@ const AboutPage: NextPage = () => {
     <>
       <NextSeo title={title} openGraph={{ title }} />
       <h1>About</h1>
-      <h2>My Story</h2>
-      <div className="sm:flex-row flex flex-col pt-4">
-        <img
+
+      <div>
+        <Image
           src="/assets/profile.jpeg"
-          className="sm:w-40 sm:h-40 md:w-36 md:h-36 lg:w-28 lg:h-28 rounded-lg"
+          alt="Profile photo"
+          className="rounded-xl"
+          width={1024}
+          height={1024}
         />
-        <p className="sm:mt-0 sm:ml-4 mt-4 leading-7">{SEO.description}</p>
       </div>
-      <p className="card dark:text-gray-200 p-6 mt-3 leading-7 text-gray-800">
+
+      <p className="card p-6">{SEO.description}</p>
+      <p className="card p-6">
         I've decided to become a Software Engineer after reading
         <a
           href="https://www.goodreads.com/book/show/11084145-steve-jobs"
@@ -34,13 +38,10 @@ const AboutPage: NextPage = () => {
         that this is the future of API communication.
       </p>
 
-      <h2>
-        Stuff I
-        <IoIosHeart className="inline w-6 h-6 mx-1 mb-1 text-red-500" />
-      </h2>
+      <h2>Stuff I</h2>
 
-      <h3 className="dark:text-gray-200 pt-2 text-gray-800">Programming</h3>
-      <div className="sm:grid-cols-3  grid grid-cols-2 gap-3 pt-2">
+      <h3 className="">Programming</h3>
+      <div className="sm:grid-cols-3 grid grid-cols-2 gap-3">
         <a
           href="https://www.typescriptlang.org"
           className="card card-transition"
@@ -78,8 +79,8 @@ const AboutPage: NextPage = () => {
         </a>
       </div>
 
-      <h3 className="dark:text-gray-200 text-gray-800">Frameworks</h3>
-      <div className="sm:grid-cols-3  grid grid-cols-2 gap-3 pt-2">
+      <h3 className="">Frameworks</h3>
+      <div className="sm:grid-cols-3 grid grid-cols-2 gap-3 pt-2">
         <a
           href="https://reactjs.org"
           className="card card-transition"
@@ -176,8 +177,8 @@ const AboutPage: NextPage = () => {
         </a>
       </div>
 
-      <h3 className="dark:text-gray-200 text-gray-800">Tools</h3>
-      <div className="sm:grid-cols-3  grid grid-cols-2 gap-3 pt-2">
+      <h3 className="">Tools</h3>
+      <div className="sm:grid-cols-3 grid grid-cols-2 gap-3 pt-2">
         <a href="https://www.figma.com/" className="card card-transition text-white bg-black">
           Figma
         </a>
@@ -229,7 +230,7 @@ const AboutPage: NextPage = () => {
       </div>
 
       <h2>Hobbies</h2>
-      <ul className="sm:grid-cols-2 lg:grid-cols-3 grid grid-cols-1 gap-3 list-none">
+      <ul className="sm:grid-cols-2 grid grid-cols-1 gap-4 list-none">
         <li className="card">listening to podcasts</li>
         <li className="card">reading</li>
         <li className="card">being with friends & family</li>
