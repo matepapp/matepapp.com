@@ -1,26 +1,15 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   purge: {
-    content: ["./components/**/*.tsx", "./pages/**/*.tsx"],
-    whitelist: ["mode-dark"],
+    content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   },
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        gray: {
-          "50": "#fefefe",
-          "100": "#f5f5f5",
-          "200": "#eeeeee",
-          "300": "#e0e0e0",
-          "400": "#bdbdbd",
-          "500": "#9e9e9e",
-          "600": "#757575",
-          "700": "#616161",
-          "800": "#424242",
-          "900": "#212121",
-        },
-        black: "#111111",
+        gray: colors.gray,
       },
       fontFamily: {
         sans: ["Rubik", ...defaultTheme.fontFamily.sans],
@@ -28,11 +17,7 @@ module.exports = {
     },
   },
   variants: {
-    backgroundColor: ["dark", "hover"],
-    textColor: ["dark", "hover", "group-hover"],
-    boxShadow: ["dark", "hover", "focus", "responsive"],
-    borderRadius: ["dark"],
-    scale: ["responsive", "hover", "focus", "active", "group-hover"],
+    extend: {},
   },
-  plugins: [require("tailwindcss-dark-mode")(), require("@tailwindcss/ui")],
+  plugins: [],
 };
