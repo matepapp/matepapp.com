@@ -1,4 +1,3 @@
-import { getBase64 } from '@plaiceholder/base64'
 import { getImage } from '@plaiceholder/next'
 import { GetStaticProps, NextPage } from 'next'
 import { NextSeo } from 'next-seo'
@@ -18,13 +17,13 @@ const AboutPage: NextPage<AboutPageProps> = ({ imgSrc, imgBase64 }) => {
       <NextSeo title={title} openGraph={{ title }} />
       <h1>About</h1>
       <div className="rounded-xl relative overflow-hidden" style={{ width: 640, height: 640 }}>
-        <img
+        {/* <img
           aria-hidden="true"
           alt=""
           src={imgBase64}
           className="absolute top-0 bottom-0 left-0 right-0 object-cover object-center w-full h-full"
           style={{ filter: 'blur(2rem)' }}
-        />
+        /> */}
         <Image src={imgSrc} alt="Profile photo" className="" width={1024} height={1024} />
       </div>
       <p className="card p-6">{SEO.description}</p>
@@ -202,11 +201,11 @@ const AboutPage: NextPage<AboutPageProps> = ({ imgSrc, imgBase64 }) => {
 export const getStaticProps: GetStaticProps = async () => {
   const imgSrc = '/assets/profile.jpeg'
   const img = await getImage(imgSrc)
-  const imgBase64 = await getBase64(img)
+  // const imgBase64 = await getBase64(img)
 
   return {
     props: {
-      imgBase64,
+      // imgBase64,
       imgSrc,
     },
   }
