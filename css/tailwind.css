@@ -41,6 +41,14 @@
     background-color: #007bb5 !important;
   }
 
+  .text-primary {
+    @apply text-gray-900 dark:text-gray-100
+  }
+
+  .text-secondary {
+    @apply text-gray-700 dark:text-gray-300
+  }
+
   .default-transition {
     @apply transition duration-200 ease-in-out;
   }

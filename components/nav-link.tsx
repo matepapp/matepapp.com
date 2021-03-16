@@ -9,14 +9,7 @@ export const NavLink: FC<LinkProps> = ({ href, children }) => {
 
   return (
     <Link href={href} passHref>
-      <a
-        className={clsx(
-          'text-xl font-medium sm:text-lg text-gray-900 dark:text-gray-100',
-          activeStyle,
-        )}
-      >
-        {children}
-      </a>
+      <a className={clsx('text-xl font-medium sm:text-lg text-primary', activeStyle)}>{children}</a>
     </Link>
   )
 }
