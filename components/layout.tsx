@@ -23,7 +23,7 @@ export const Layout: FC = ({ children }) => (
         <NavLink href="/thoughts">thoughts</NavLink>
       </div>
     </nav>
-    <main className="flex flex-col flex-1 mt-8 space-y-8">{children}</main>
+    <main className="flex flex-col flex-1 w-full mt-8 space-y-8">{children}</main>
     <footer className="dark:text-gray-400 mt-14 mb-4 text-xs text-center text-gray-500">
       <div>
         built with

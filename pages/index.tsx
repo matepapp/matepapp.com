@@ -9,7 +9,6 @@ const IndexPage = () => {
     <>
       <NextSeo title={title} openGraph={{ title }} />
       <h1>Hey, I'm Mate! 👋🏻</h1>
-      <div className="dark:text-gray-200 text-xl text-gray-800">Software Engineer</div>
 
       <div className="card p-6">
         <p className="dark:text-gray-200 text-gray-800">

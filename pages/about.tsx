@@ -10,7 +10,6 @@ const AboutPage: NextPage = () => {
     <>
       <NextSeo title={title} openGraph={{ title }} />
       <h1>About</h1>
-
       <div>
         <Image
           src="/assets/profile.jpeg"
@@ -20,7 +19,6 @@ const AboutPage: NextPage = () => {
           height={1024}
         />
       </div>
-
       <p className="card p-6">{SEO.description}</p>
       <p className="card p-6">
         I've decided to become a Software Engineer after reading
@@ -37,7 +35,8 @@ const AboutPage: NextPage = () => {
         When I discovered GraphQL, I completely fall in love with the concept, and I truly believe
         that this is the future of API communication.
       </p>
-
+      <h2 id="career">Career</h2>
+      // TODO: Career section similar to Lee Rob's timeline
       <h2 id="contact">Contact</h2>
       <div>
         Feel free to get in touch with me anywhere! Preferably on twitter or email, but you can find
@@ -175,7 +174,6 @@ const AboutPage: NextPage = () => {
           linkedin
         </a>
       </div>
-
       <h2>Hobbies</h2>
       <ul className="sm:grid-cols-2 grid grid-cols-1 gap-4 list-none">
         <li className="card">listening to podcasts</li>

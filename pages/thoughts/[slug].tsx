@@ -1,57 +1,54 @@
 import { NextPage } from 'next'
-import { ThoughtMeta } from '../../types/thought'
+import { NextSeo } from 'next-seo'
+import { SEO } from '../../utils/seo'
+import { fetchThought, fetchThoughtMetaList, Thought } from '../../utils/thoughts'
 
 type ThoughtPageProps = {
-  thought: {
-    // content: BlockMapType;
-    meta: ThoughtMeta
-  }
+  thought: Thought
 }
 
 const ThoughtPage: NextPage<ThoughtPageProps> = ({ thought }) => {
-  // const { meta, content } = thought;
-  // const title = SEO.titleTemplate(meta.Name);
+  const { meta, content } = thought
+  const title = SEO.titleTemplate(meta.title)
+  const description = meta.excerpt
 
-  // TODO: SEO Description
   return (
     <>
-      {/* <NextSeo title={title} openGraph={{ title }} />
-      <div className="flex flex-row flex-wrap items-center">
-        <h1 className="mr-4">{meta.Name}</h1>
-        <div className="px-2 my-1 text-white bg-gray-500 rounded-md">
-          {meta.CreatedAt}
+      <NextSeo title={title} description={description} openGraph={{ title, description }} />
+      <div>
+        <h1>{meta.title}</h1>
+        <div className="text-tertiary mt-2">
+          <span>{meta.createdAt}</span> · <span>{meta.readingTime}</span>
         </div>
       </div>
-      {content && <NotionRenderer blockMap={content} />} */}
+      {content && (
+        <div
+          className="lg:prose-lg dark:prose-dark prose"
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+      )}
     </>
   )
 }
 
-// export const getStaticProps: GetStaticProps = async ({ params }) => {
-//   const { slug } = params;
-//   const thoughtMetaList = await fetchThoughtMetaList();
-//   const meta = thoughtMetaList.find((thought) => thought.Slug === slug);
-//   const content = await fetchThought(meta.id);
+export function getStaticProps({ params }) {
+  const { slug } = params
+  const thought = fetchThought(slug)
 
-//   return {
-//     props: {
-//       thought: { meta, content },
-//     },
-//   };
-// };
+  return {
+    props: { thought },
+  }
+}
 
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   const thoughtMetaList = await fetchThoughtMetaList();
+export function getStaticPaths() {
+  const thoughtMetaList = fetchThoughtMetaList()
 
-//   return {
-//     paths: thoughtMetaList.map(({ id, Slug }) => ({
-//       params: {
-//         id,
-//         slug: Slug,
-//       },
-//     })),
-//     fallback: false,
-//   };
-// };
+  return {
+    paths: thoughtMetaList.map(({ slug }) => ({
+      params: { slug },
+    })),
+    fallback: false,
+  }
+}
 
 export default ThoughtPage

@@ -1,10 +1,23 @@
 ---
 title: My Road to Vue.js from React
-createdAt: 05-24-2020
-updatedAt: 05-25-2020
+createdAt: March 16, 2021
+updatedAt:
+slug: my-road-to-vuejs-from-react
+published: true
+excerpt: My journey how I learnt Vue.js after spending several years in the React ecosystem.
 ---
 
 In my first blog post I walk you through my process of how I learned Vue.js from having years of React experience.
+
+what about code blocks and **bold** plus _italic_ texts?
+
+```typescript
+const lofasz: String = 'hello'
+```
+
+how does it support images?
+
+![](/assets/profile.jpeg)
 
 ## Background
 
