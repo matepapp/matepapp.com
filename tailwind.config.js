@@ -10,6 +10,10 @@ module.exports = {
     extend: {
       colors: {
         gray: colors.gray,
+        twitter: '#1da1f2',
+        instagram: '#c32aa3',
+        facebook: '#1877f2',
+        linkedin: '#007bb5',
       },
       fontFamily: {
         sans: ['Rubik', ...defaultTheme.fontFamily.sans],
@@ -25,7 +29,7 @@ module.exports = {
               },
             },
             img: {
-              borderRadius: theme('borderRadius.lg'),
+              borderRadius: theme('borderRadius.xl'),
             },
           },
         },
