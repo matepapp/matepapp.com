@@ -42,15 +42,15 @@
   }
 
   .text-primary {
-    @apply text-gray-900 dark:text-gray-100
+    @apply text-gray-900 dark:text-gray-100;
   }
 
   .text-secondary {
-    @apply text-gray-800 dark:text-gray-200
+    @apply text-gray-800 dark:text-gray-200;
   }
 
   .text-tertiary {
-    @apply text-gray-600 dark:text-gray-400
+    @apply text-gray-600 dark:text-gray-400;
   }
 
   .default-transition {
