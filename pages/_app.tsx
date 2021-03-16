@@ -1,28 +1,15 @@
-import * as Fathom from "fathom-client";
-import { DefaultSeo } from "next-seo";
-import { ThemeProvider } from "next-themes";
-import { AppProps } from "next/app";
-import Router, { useRouter } from "next/router";
-import { useEffect } from "react";
-import { Layout } from "../components";
-import "../css/tailwind.css";
-import { SEO } from "../utils/seo";
-
-// Record a pageview when route changes
-Router.events.on("routeChangeComplete", () => {
-  Fathom.trackPageview();
-});
+import PlausibleProvider from 'next-plausible'
+import { DefaultSeo } from 'next-seo'
+import { ThemeProvider } from 'next-themes'
+import { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
+import { Layout } from '../components'
+import '../css/tailwind.css'
+import { SEO } from '../utils/seo'
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const router = useRouter();
-  const url = SEO.url(router.pathname);
-
-  // Initialize Fathom when the app loads
-  useEffect(() => {
-    Fathom.load("ZHUXHBHV", {
-      includedDomains: ["matepapp.com"],
-    });
-  }, []);
+  const router = useRouter()
+  const url = SEO.url(router.pathname)
 
   return (
     <>
@@ -35,26 +22,28 @@ const App = ({ Component, pageProps }: AppProps) => {
           images: [
             {
               url:
-                "https://scontent-vie1-1.xx.fbcdn.net/v/t1.0-9/44932812_2120289778001346_6477928589340704768_o.jpg?_nc_cat=101&_nc_sid=85a577&_nc_ohc=DDiVel8Quo8AX-s2MIs&_nc_ht=scontent-vie1-1.xx&oh=c3a891698a897901cebda669450267d9&oe=5EABEE7D",
+                'https://scontent-vie1-1.xx.fbcdn.net/v/t1.0-9/44932812_2120289778001346_6477928589340704768_o.jpg?_nc_cat=101&_nc_sid=85a577&_nc_ohc=DDiVel8Quo8AX-s2MIs&_nc_ht=scontent-vie1-1.xx&oh=c3a891698a897901cebda669450267d9&oe=5EABEE7D',
               width: 1024,
               height: 1024,
-              alt: "Mate Papp Profile",
+              alt: 'Mate Papp Profile',
             },
           ],
         }}
         twitter={{
-          handle: "@matepappp",
-          site: "@matepappp",
-          cardType: "summary_large_image",
+          handle: '@matepappp',
+          site: '@matepappp',
+          cardType: 'summary_large_image',
         }}
       />
-      <ThemeProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
+      <PlausibleProvider domain="matepapp.com">
+        <ThemeProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ThemeProvider>
+      </PlausibleProvider>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
