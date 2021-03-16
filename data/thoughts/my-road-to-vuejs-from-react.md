@@ -3,21 +3,9 @@ title: My Road to Vue.js from React
 createdAt: March 16, 2021
 updatedAt:
 slug: my-road-to-vuejs-from-react
-published: true
+published: false
 excerpt: My journey how I learnt Vue.js after spending several years in the React ecosystem.
 ---
-
-In my first blog post I walk you through my process of how I learned Vue.js from having years of React experience.
-
-what about code blocks and **bold** plus _italic_ texts?
-
-```typescript
-const lofasz: String = 'hello'
-```
-
-how does it support images?
-
-![](/assets/profile.jpeg)
 
 ## Background
 
@@ -30,7 +18,5 @@ Since Glovo's web app built with Vue.js and I've used the framework only once, I
 ## Where to start?
 
 I'm kinda like an old-fashioned guy when I'm learning new technologies. I always like to start with the official documentation and yes, I prefer reading the docs first without touching any code.
-
-[https://twitter.com/iamdevloper/status/1060067235316809729?s=20](https://twitter.com/iamdevloper/status/1060067235316809729?s=20)
 
 My initial plan was to go through the whole documentation and then sign up to [VueMastery](https://www.vuemastery.com/) and watch the beginner → intermediate → advanced videos.

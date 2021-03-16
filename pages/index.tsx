@@ -21,32 +21,6 @@ const IndexPage = () => {
           More About Me
         </ButtonLink>
       </div>
-
-      <div className="card p-6">
-        <p className="dark:text-gray-200 text-gray-800">
-          I've started my career as an iOS Developer then discovered the beauty of the Web &
-          Serverless world with GraphQL and the JAMStack. Over the years, I've successfully worked
-          on several client projects in agencies and as a freelancer. Recently, I've co-founded,
-          built (and failed) startup,
-          <a href="https://cogito.study" target="_blank" rel="noopener noreferrer" className="ml-1">
-            Cogito
-          </a>
-          . Nowadays, I spend my days with my lovely girlfriend in sunny Barcelona, where I help to
-          build
-          <a
-            href="https://glovoapp.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-1"
-          >
-            Glovo
-          </a>{' '}
-          as a Frontend Engineer.
-        </p>
-        <ButtonLink href="/career" className="mt-4">
-          My Career
-        </ButtonLink>
-      </div>
     </>
   )
 }

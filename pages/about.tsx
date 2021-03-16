@@ -35,8 +35,8 @@ const AboutPage: NextPage = () => {
         When I discovered GraphQL, I completely fall in love with the concept, and I truly believe
         that this is the future of API communication.
       </p>
-      <h2 id="career">Career</h2>
-      // TODO: Career section similar to Lee Rob's timeline
+      {/* <h2 id="career">Career</h2>
+      // TODO: Career section similar to Lee Rob's timeline */}
       <h2 id="contact">Contact</h2>
       <div>
         Feel free to get in touch with me anywhere! Preferably on twitter or email, but you can find
