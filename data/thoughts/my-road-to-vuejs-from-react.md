@@ -3,7 +3,7 @@ title: My Road to Vue.js from React
 createdAt: March 16, 2021
 updatedAt:
 slug: my-road-to-vuejs-from-react
-published: true
+published: false
 excerpt: My journey how I learnt Vue.js after spending several years in the React ecosystem.
 ---
 
