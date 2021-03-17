@@ -24,7 +24,7 @@ export const Layout: FC = ({ children }) => (
       </div>
     </nav>
     <main className="flex flex-col flex-1 w-full mt-8 space-y-8">{children}</main>
-    <footer className="dark:text-gray-400 mt-14 w-full mb-4 text-sm text-center text-gray-500">
+    <footer className="dark:text-gray-400 mt-14 w-full mb-6 text-sm text-center text-gray-500">
       <div>
         <div>
           built with
@@ -47,10 +47,7 @@ export const Layout: FC = ({ children }) => (
           in Budapest & Barcelona
         </div>
         <div>
-          using <a href="https://nextjs.org">Next.js</a> &{' '}
-          <a href="https://tailwindcss.com">TailwindCSS</a>, hosted on{' '}
-          <a href="https://vercel.com">Vercel</a>, source available on{' '}
-          <a href="https://github.com/matepapp/matepapp.com">Github</a>
+          source available on <a href="https://github.com/matepapp/matepapp.com">Github</a>
         </div>
       </div>
 
