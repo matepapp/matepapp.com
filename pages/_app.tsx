@@ -36,7 +36,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         }}
       />
       <PlausibleProvider domain="matepapp.com">
-        <ThemeProvider>
+        <ThemeProvider attribute="class">
           <Layout>
             <Component {...pageProps} />
           </Layout>

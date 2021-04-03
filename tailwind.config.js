@@ -5,7 +5,7 @@ module.exports = {
   purge: {
     content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   },
-  darkMode: 'media',
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -38,7 +38,10 @@ module.exports = {
           css: [
             {
               a: {
-                color: theme('colors.green.300'),
+                color: theme('colors.green.400'),
+                '&:hover': {
+                  color: theme('colors.green.300'),
+                },
               },
               strong: {
                 color: theme('colors.white'),

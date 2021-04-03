@@ -5,11 +5,18 @@ import { FC } from 'react'
 
 export const NavLink: FC<LinkProps> = ({ href, children }) => {
   const router = useRouter()
-  const activeStyle = router.pathname.includes(href as string) && 'text-green-400'
+  const isActivePath = router.pathname === href || router.pathname === `${href}/[slug]`
 
   return (
     <Link href={href}>
-      <a className={clsx('text-xl font-medium sm:text-lg text-primary', activeStyle)}>{children}</a>
+      <a
+        className={clsx(
+          'text-xl transition font-medium sm:text-lg hover:text-green-400 dark:hover:text-green-300 text-primary',
+          isActivePath && 'text-link',
+        )}
+      >
+        {children}
+      </a>
     </Link>
   )
 }
