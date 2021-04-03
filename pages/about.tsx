@@ -1,16 +1,47 @@
+import { getBase64 } from '@plaiceholder/base64'
+import { getImage } from '@plaiceholder/next'
 import { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 import { SEO } from '../utils/seo'
 
-const AboutPage: NextPage = () => {
+export async function getStaticProps() {
+  const img = {
+    src: '/assets/profile.jpeg',
+    alt: 'Mate Papp is drinking espresso.',
+  }
+
+  const imgFile = await getImage(img.src)
+  const placeholderImg = await getBase64(imgFile)
+
+  return {
+    props: {
+      img,
+      placeholderImg,
+    },
+  }
+}
+
+type AboutPageProps = {
+  img: { src: string; alt: string }
+  placeholderImg: string
+}
+
+const AboutPage: NextPage<AboutPageProps> = ({ img, placeholderImg }) => {
   const title = SEO.titleTemplate('About')
 
   return (
     <>
       <NextSeo title={title} openGraph={{ title }} />
       <h1>About</h1>
-      <div>
+      <div className="rounded-xl relative overflow-hidden">
+        <img
+          aria-hidden="true"
+          alt=""
+          src={placeholderImg}
+          className="absolute inset-0 object-cover object-center w-full h-full"
+          style={{ filter: 'blur(24px)' }}
+        />
         <Image
           src="/assets/profile.jpeg"
           alt="Profile photo"
