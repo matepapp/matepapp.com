@@ -16,9 +16,9 @@ export const Layout: FC = ({ children }) => {
         </div>
         <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
           {theme === 'light' ? (
-            <MoonIcon className="hover:text-blue-800 w-8 h-8 transition" />
-          ) : (
             <SunIcon className="hover:text-yellow-300 w-8 h-8 transition" />
+          ) : (
+            <MoonIcon className="hover:text-blue-800 w-8 h-8 transition" />
           )}
         </button>
       </nav>
