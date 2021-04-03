@@ -9,7 +9,7 @@
     "clsx": "^1.1.1",
     "gray-matter": "^4.0.2",
     "marked": "^1.1.0",
-    "next": "^10.1.3",
+    "next": "^10.0.3",
     "next-plausible": "^1.5.1",
     "next-seo": "^4.20.0",
     "next-themes": "^0.0.12",
