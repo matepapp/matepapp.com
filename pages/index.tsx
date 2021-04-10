@@ -1,7 +1,54 @@
+import { ExternalLinkIcon } from '@heroicons/react/outline'
+import clsx from 'clsx'
 import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 import { ButtonLink } from '../components'
+import { Badge } from '../components/badge'
 import { SEO } from '../utils/seo'
+
+type ProjectCardProps = {
+  image: {
+    src: string
+    alt: string
+  }
+  title: string
+  url: string
+  isComingSoon?: boolean
+  description: string
+}
+
+const ProjectCard = ({ image, title, url, isComingSoon, description }: ProjectCardProps) => (
+  <div className={clsx('card flex flex-col p-6 cursor-not-allowed', isComingSoon && 'opacity-40')}>
+    <div className="flex items-center space-x-4">
+      <div className="flex-none w-16 overflow-hidden">
+        <Image
+          src={image.src}
+          alt={image.alt}
+          className="rounded-xl shadow-sm"
+          layout="responsive"
+          width={512}
+          height={512}
+          objectFit="cover"
+        />
+      </div>
+      <div className="flex flex-col items-start">
+        <div className="sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0 flex flex-col items-start space-y-1">
+          <h3 className="inline-flex items-center">{title}</h3>
+          {isComingSoon && <Badge>Coming Soon</Badge>}
+        </div>
+        <a
+          href={`https://${url}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-link mt-1"
+        >
+          {url} <ExternalLinkIcon className="inline w-4 h-4" />
+        </a>
+      </div>
+    </div>
+    <p className="mt-3">{description}</p>
+  </div>
+)
 
 const IndexPage = () => {
   const { title } = SEO
@@ -24,23 +71,30 @@ const IndexPage = () => {
       </div>
 
       <h2>Projects</h2>
-      <div className="card gap-x-4 gap-y-2 grid grid-cols-7 grid-rows-2 p-6">
-        <div className="sm:row-span-2 self-center col-span-1 row-span-1 overflow-hidden">
-          <Image
-            src="/assets/historico.png"
-            alt="Historico app icon"
-            className="sm:rounded-xl rounded-md shadow-sm"
-            layout="responsive"
-            width={512}
-            height={512}
-            objectFit="cover"
-          />
-        </div>
-        <h3 className="sm:col-start-2 self-center col-span-6">Historico - This Day in History</h3>
-        <p className="sm:col-span-6 sm:col-start-2 col-span-7 row-start-2">
-          A minimal & clean iOS application to discover daily historical events, births, and deaths.
-        </p>
-      </div>
+
+      <ProjectCard
+        image={{ src: '/assets/historico.png', alt: 'Historico logo' }}
+        title="Historico - This Day in History"
+        url="historico.app"
+        description="Minimal & clean iOS application to discover daily historical events, births, and deaths."
+      />
+
+      <ProjectCard
+        image={{ src: '/assets/cusfeed.png', alt: 'cusfeed logo' }}
+        title="cusfeed"
+        url="cusfeed.com"
+        isComingSoon
+        description="Create sharable or private custom Instagram feeds for specific topics. Keep your personal
+        feed clean and interact with pages & profiles without following them."
+      />
+
+      <ProjectCard
+        image={{ src: '/assets/local-roasters.png', alt: 'Local Roasters logo' }}
+        title="Local Roasters"
+        url="localroasters.coffee"
+        isComingSoon
+        description="Easily find and explore local, specialty coffee roasters in your area with a community based webpage. Because always buy local!"
+      />
     </>
   )
 }
