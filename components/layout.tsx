@@ -22,7 +22,7 @@ export const Layout: FC = ({ children }) => {
           )}
         </button>
       </nav>
-      <main className="flex flex-col flex-1 w-full mt-8 space-y-8">{children}</main>
+      <main className="flex flex-col flex-1 w-full mt-8 space-y-6">{children}</main>
       <footer className="dark:text-gray-400 mt-14 w-full mb-6 text-sm text-center text-gray-500">
         <div>
           <div>
