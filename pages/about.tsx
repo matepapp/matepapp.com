@@ -75,7 +75,7 @@ const AboutPage: NextPage<AboutPageProps> = ({ img }) => {
       <div className="pb-4">
         <StickyHeader zIndex={1}>2021</StickyHeader>
         <ul>
-          <CareerTimelineItem icon={<DeviceMobileIcon />} month="April">
+          <CareerTimelineItem icon={<DeviceMobileIcon className="w-10 h-10" />} month="April">
             Released my first, indie iOS application,{' '}
             <a href="https://historico.app" className="text-link">
               Historico
@@ -88,17 +88,17 @@ const AboutPage: NextPage<AboutPageProps> = ({ img }) => {
           2020
         </StickyHeader>
         <ul>
-          <CareerTimelineItem icon={<HomeIcon />} month="September">
+          <CareerTimelineItem icon={<HomeIcon className="w-10 h-10" />} month="September">
             Moved to Barcelona.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<BriefcaseIcon />} month="June">
+          <CareerTimelineItem icon={<BriefcaseIcon className="w-10 h-10" />} month="June">
             Joined the Content & Partners cluster within{' '}
             <a href="https://glovoapp.com" className="text-link">
               Glovo
             </a>{' '}
             as a Senior Frontend Engineer.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<XCircleIcon />} month="March">
+          <CareerTimelineItem icon={<XCircleIcon className="w-10 h-10" />} month="March">
             Partly, because of the pandemic we decided to shut down Cogito and look for other
             opportunities.
           </CareerTimelineItem>
@@ -108,7 +108,7 @@ const AboutPage: NextPage<AboutPageProps> = ({ img }) => {
           2019
         </StickyHeader>
         <ul>
-          <CareerTimelineItem icon={<MicrophoneIcon />} month="September">
+          <CareerTimelineItem icon={<MicrophoneIcon className="w-10 h-10" />} month="September">
             Mentored a half-day{' '}
             <a
               href="https://2019.jsconfbp.com/workshops/supercharge-jamstack"
@@ -118,11 +118,11 @@ const AboutPage: NextPage<AboutPageProps> = ({ img }) => {
             </a>{' '}
             about the beauty and possible opportunities of JAMStack.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<BriefcaseIcon />} month="July">
+          <CareerTimelineItem icon={<BriefcaseIcon className="w-10 h-10" />} month="July">
             Left Supercharge in order to focus on Cogito full-time. I've lead the development team
             and helped building the foundations and product of Cogito.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<MicrophoneIcon />} month="February">
+          <CareerTimelineItem icon={<MicrophoneIcon className="w-10 h-10" />} month="February">
             Had my first & second Meetup talks, plus a workshop within the company about GraphQL in
             general, and for iOS Developers.
           </CareerTimelineItem>
@@ -132,14 +132,14 @@ const AboutPage: NextPage<AboutPageProps> = ({ img }) => {
           2018
         </StickyHeader>
         <ul>
-          <CareerTimelineItem icon={<BriefcaseIcon />} month="August">
+          <CareerTimelineItem icon={<BriefcaseIcon className="w-10 h-10" />} month="August">
             Moved to the Web team within Supercharge.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<AcademicCapIcon />} month="June">
+          <CareerTimelineItem icon={<AcademicCapIcon className="w-10 h-10" />} month="June">
             Graduated as a Computer Engineer BSc at Budapest University of Technology and Economics.
             My final these was the very early version of Cogito.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<CakeIcon />} month="March">
+          <CareerTimelineItem icon={<CakeIcon className="w-10 h-10" />} month="March">
             Officially founded our startup,{' '}
             <a href="https://cogito.study" className="text-link">
               Cogito
@@ -154,7 +154,7 @@ const AboutPage: NextPage<AboutPageProps> = ({ img }) => {
           2017
         </StickyHeader>
         <ul>
-          <CareerTimelineItem icon={<BriefcaseIcon />} month="November">
+          <CareerTimelineItem icon={<BriefcaseIcon className="w-10 h-10" />} month="November">
             Joined one of the biggest digital agency in Hungary,{' '}
             <a href="https://supercharge.io" className="text-link">
               Supercharge
@@ -162,14 +162,14 @@ const AboutPage: NextPage<AboutPageProps> = ({ img }) => {
             as an iOS Developer. I worked on several client projects, from huge mobile- & internet
             banking systems to small, early stage startup products.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<MicrophoneIcon />} month="April">
+          <CareerTimelineItem icon={<MicrophoneIcon className="w-10 h-10" />} month="April">
             Hold a Design Principles workshop for newjoiners at{' '}
             <a href="https://simonyi.bme.hu" className="text-link">
               Simonyi Károly College for Advanced Studies
             </a>
             .
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<BriefcaseIcon />} month="March">
+          <CareerTimelineItem icon={<BriefcaseIcon className="w-10 h-10" />} month="March">
             Started a new job at Fornax ICT as an iOS Developer. Part of a cross-functional team, we
             were building enterprise level project- and resource management applications.
           </CareerTimelineItem>
@@ -179,7 +179,7 @@ const AboutPage: NextPage<AboutPageProps> = ({ img }) => {
           2016
         </StickyHeader>
         <ul>
-          <CareerTimelineItem icon={<SpeakerphoneIcon />} month="December">
+          <CareerTimelineItem icon={<SpeakerphoneIcon className="w-10 h-10" />} month="December">
             Joined the organizer team of the{' '}
             <a
               href="https://www.facebook.com/events/bme-i-épület/xiv-simonyi-konferencia/1113033802140234/"
@@ -189,11 +189,11 @@ const AboutPage: NextPage<AboutPageProps> = ({ img }) => {
             </a>
             .
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<BriefcaseIcon />} month="July">
+          <CareerTimelineItem icon={<BriefcaseIcon className="w-10 h-10" />} month="July">
             Started my professional career as an iOS Developer Intern (later Junior) part of
             POSSIBLE CEE.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<AcademicCapIcon />} month="April">
+          <CareerTimelineItem icon={<AcademicCapIcon className="w-10 h-10" />} month="April">
             Participated in UXStudio's Practice oriented UX & UI training program.
           </CareerTimelineItem>
         </ul>
@@ -202,17 +202,17 @@ const AboutPage: NextPage<AboutPageProps> = ({ img }) => {
           2015
         </StickyHeader>
         <ul>
-          <CareerTimelineItem icon={<DeviceMobileIcon />} month="November">
+          <CareerTimelineItem icon={<DeviceMobileIcon className="w-10 h-10" />} month="November">
             Started learning iOS application development in my free time.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<BriefcaseIcon />} month="October">
+          <CareerTimelineItem icon={<BriefcaseIcon className="w-10 h-10" />} month="October">
             Joined{' '}
             <a href="https://schdesign.hu" className="text-link">
               Schönherz Design Studio
             </a>
             , the design focused volunteer team within Simonyi Károly College for Advanced Studies.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<GlobeIcon />} month="June - September">
+          <CareerTimelineItem icon={<GlobeIcon className="w-10 h-10" />} month="June - September">
             Worked 3 months in the US as part of a staff member of a Summer Camp. I had a chance to
             visit New York, Philadelphia, Washington DC, Niagara Falls, and Los Angeles.
           </CareerTimelineItem>
@@ -222,11 +222,11 @@ const AboutPage: NextPage<AboutPageProps> = ({ img }) => {
           2014
         </StickyHeader>
         <ul>
-          <CareerTimelineItem icon={<HomeIcon />} month="August">
+          <CareerTimelineItem icon={<HomeIcon className="w-10 h-10" />} month="August">
             Moved to Budapest and started university at Budapest University of Technology and
             Economics as a Computer Engineer.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<AcademicCapIcon />} month="June">
+          <CareerTimelineItem icon={<AcademicCapIcon className="w-10 h-10" />} month="June">
             Finished High School at Nagy Lajos Gimnázium Szombathely.
           </CareerTimelineItem>
         </ul>

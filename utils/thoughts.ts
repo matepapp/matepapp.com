@@ -33,8 +33,11 @@ const mapMeta = (markdown: GrayMatterFile<string>): ThoughtMeta =>
   ({ ...markdown.data, readingTime: readingTime(markdown.content).text } as ThoughtMeta)
 
 export const fetchThoughtMetaList = (): ThoughtMeta[] =>
-  fs.readdirSync(thoughtsDirectory()).map(parseMarkdown).map(mapMeta)
-// .filter((meta) => meta.published)
+  fs
+    .readdirSync(thoughtsDirectory())
+    .map(parseMarkdown)
+    .map(mapMeta)
+    .filter((meta) => meta.published)
 
 export const fetchThought = (slug: string) =>
   fs
