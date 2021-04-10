@@ -1,3 +1,4 @@
+import { ChevronRightIcon } from '@heroicons/react/outline'
 import clsx from 'clsx'
 import Link, { LinkProps } from 'next/link'
 import { FC, HTMLAttributes } from 'react'
@@ -7,23 +8,10 @@ export const ButtonLink: FC<LinkProps & HTMLAttributes<HTMLAnchorElement>> = ({
   href,
   children,
 }) => (
-  <Link href={href} passHref>
-    <a
-      className={clsx(
-        'inline-flex items-center pl-3 pr-2 py-1 bg-green-100 text-green-500 duration-200 ease-in-out transform hover:scale-105 rounded-lg dark:text-green-300 dark:bg-green-900',
-        className,
-      )}
-    >
+  <Link href={href}>
+    <a className={clsx('inline-flex items-center py-1 font-medium text-link', className)}>
       {children}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        className="inline-block w-4 h-4 ml-1"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-      </svg>
+      <ChevronRightIcon className="inline-block w-5 h-5 ml-1" />
     </a>
   </Link>
 )

@@ -8,7 +8,7 @@ export const Layout: FC = ({ children }) => {
 
   return (
     <div className="flex flex-col items-center w-full max-w-2xl min-h-screen px-4 mx-auto">
-      <nav className="dark:bg-gray-900 bg-gray-50 sticky top-0 z-20 flex items-center justify-between w-full py-4 tracking-tight">
+      <nav className="dark:bg-gray-900 sticky top-0 z-20 flex items-center justify-between w-full py-4 tracking-tight bg-gray-100">
         <div className="flex items-center space-x-3">
           <NavLink href="/">home</NavLink>
           <NavLink href="/about">about</NavLink>
@@ -16,9 +16,9 @@ export const Layout: FC = ({ children }) => {
         </div>
         <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
           {theme === 'light' ? (
-            <SunIcon className="hover:text-yellow-300 w-8 h-8 transition" />
+            <SunIcon className="hover:text-yellow-300 w-7 h-7 transition" />
           ) : (
-            <MoonIcon className="hover:text-blue-800 w-8 h-8 transition" />
+            <MoonIcon className="hover:text-blue-800 w-7 h-7 transition" />
           )}
         </button>
       </nav>

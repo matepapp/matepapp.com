@@ -72,7 +72,7 @@ class MyDocument extends Document {
           <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png" />
           <meta name="theme-color" content="#34D399" />
         </Head>
-        <body className="bg-gray-50 text-primary dark:bg-gray-900 antialiased">
+        <body className="text-primary dark:bg-gray-900 antialiased bg-gray-100">
           <Main />
           <NextScript />
         </body>

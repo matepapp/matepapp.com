@@ -17,7 +17,7 @@ const ThoughtPage: NextPage<ThoughtPageProps> = ({ thought }) => {
       <NextSeo title={title} description={description} openGraph={{ title, description }} />
       <div>
         <h1>{meta.title}</h1>
-        <div className="text-tertiary mt-2">
+        <div className="text-tertiary mt-2 font-medium tracking-wider uppercase">
           <span>{meta.createdAt}</span> · <span>{meta.readingTime}</span>
         </div>
       </div>

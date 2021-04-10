@@ -70,7 +70,7 @@ const IndexPage = () => {
         </ButtonLink>
       </div>
 
-      <h2>Projects</h2>
+      <h2 className="mt-4">Projects</h2>
 
       <ProjectCard
         image={{ src: '/assets/historico.png', alt: 'Historico logo' }}
