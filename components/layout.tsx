@@ -26,7 +26,7 @@ export const Layout: FC = ({ children }) => {
       <footer className="dark:text-gray-400 mt-14 w-full mb-6 text-sm text-center text-gray-500">
         <div>
           <div>
-            built with
+            handcrafted with
             <div className="inline px-1">
               <HeartIcon className="inline w-5 h-5 text-red-400" />
             </div>

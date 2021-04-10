@@ -17,7 +17,7 @@ const ThoughtsPage: NextPage<ThoughtsPageProps> = ({ thoughts }) => {
       <h1>Thoughts</h1>
       {thoughts.map(({ slug, title, excerpt, createdAt, readingTime }) => (
         <Link href={`/thoughts/${slug}`} key={slug}>
-          <a className="card group dark:hover:border-green-900 hover:border-green-100 p-6 transition">
+          <a className="card group dark:hover:border-green-900 hover:scale-105 hover:border-green-100 p-6 transition transform">
             <h3 className="group-hover:text-link transition">{title}</h3>
             <div className="text-tertiary mt-1 text-sm">
               <span>{createdAt}</span> · <span>{readingTime}</span>

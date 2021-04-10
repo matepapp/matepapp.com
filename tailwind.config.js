@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       colors: {
         gray: colors.gray,
+        historico: '#AB8B70',
         twitter: '#1da1f2',
         instagram: '#c32aa3',
         facebook: '#1877f2',
@@ -91,5 +92,5 @@ module.exports = {
       typography: ['dark'],
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/aspect-ratio')],
 }
