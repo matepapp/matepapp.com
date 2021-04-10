@@ -1,4 +1,4 @@
-import { ChevronRightIcon } from '@heroicons/react/outline'
+import { ArrowRightIcon } from '@heroicons/react/outline'
 import clsx from 'clsx'
 import Link, { LinkProps } from 'next/link'
 import { FC, HTMLAttributes } from 'react'
@@ -9,9 +9,14 @@ export const ButtonLink: FC<LinkProps & HTMLAttributes<HTMLAnchorElement>> = ({
   children,
 }) => (
   <Link href={href}>
-    <a className={clsx('inline-flex items-center py-1 font-medium text-link', className)}>
+    <a
+      className={clsx(
+        'inline-flex group items-center transition py-1 font-medium text-link',
+        className,
+      )}
+    >
       {children}
-      <ChevronRightIcon className="inline-block w-5 h-5 ml-1" />
+      <ArrowRightIcon className="group-hover:opacity-100 inline-block w-4 h-4 ml-2 transition-opacity opacity-0" />
     </a>
   </Link>
 )
