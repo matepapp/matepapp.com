@@ -1,5 +1,3 @@
-// import { getBase64 } from '@plaiceholder/base64'
-// import { getImage } from '@plaiceholder/next'
 import {
   AcademicCapIcon,
   BriefcaseIcon,
@@ -11,6 +9,8 @@ import {
   SpeakerphoneIcon,
   XCircleIcon,
 } from '@heroicons/react/outline'
+import { getBase64 } from '@plaiceholder/base64'
+import { getImage } from '@plaiceholder/next'
 import clsx from 'clsx'
 import { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
@@ -37,7 +37,7 @@ type AboutPageProps = {
   placeholderImg: string
 }
 
-const AboutPage: NextPage<AboutPageProps> = ({ img }) => {
+const AboutPage: NextPage<AboutPageProps> = ({ img, placeholderImg }) => {
   const title = SEO.titleTemplate('About')
 
   return (
@@ -45,14 +45,20 @@ const AboutPage: NextPage<AboutPageProps> = ({ img }) => {
       <NextSeo title={title} openGraph={{ title }} />
       <h1>About</h1>
       <div className="rounded-xl relative overflow-hidden">
-        {/* <img
+        <img
           aria-hidden="true"
           alt=""
           src={placeholderImg}
-          className="absolute inset-0 object-cover object-center w-full h-full"
-          style={{ filter: 'blur(24px)' }}
-        /> */}
-        <Image src={img.src} alt={img.alt} className="rounded-xl" width={1024} height={1024} />
+          className="filter blur-xl absolute inset-0 object-cover object-center w-full h-full"
+        />
+        <Image
+          src={img.src}
+          alt={img.alt}
+          layout="responsive"
+          className="rounded-xl"
+          width={1024}
+          height={1024}
+        />
       </div>
       <p className="card p-6">{SEO.description}</p>
       <p className="card p-6">
@@ -255,13 +261,13 @@ export async function getStaticProps() {
     alt: 'Mate Papp is drinking espresso.',
   }
 
-  // const imgFile = await getImage(img.src)
-  // const placeholderImg = await getBase64(imgFile)
+  const imgFile = await getImage(img.src)
+  const placeholderImg = await getBase64(imgFile)
 
   return {
     props: {
       img,
-      // placeholderImg,
+      placeholderImg,
     },
   }
 }
