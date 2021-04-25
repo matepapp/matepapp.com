@@ -38,6 +38,6 @@
   }
 
   .card {
-    @apply dark:bg-gray-800 dark:border-gray-800 border border-white p-4 rounded-xl bg-white shadow-sm;
+    @apply dark:bg-gray-800 dark:border-gray-700 dark:border-opacity-50 border border-white p-4 rounded-xl bg-white shadow-sm;
   }
 }
