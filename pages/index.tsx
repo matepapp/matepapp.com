@@ -18,7 +18,7 @@ type ProjectCardProps = {
 }
 
 const ProjectCard = ({ image, title, url, isComingSoon, description }: ProjectCardProps) => (
-  <div className={clsx('card flex flex-col p-6', isComingSoon && 'cursor-not-allowed opacity-40')}>
+  <div className={clsx('card flex flex-col p-5', isComingSoon && 'cursor-not-allowed opacity-40')}>
     <div className="flex items-center space-x-4">
       <div className="flex-none w-16 overflow-hidden">
         <Image
