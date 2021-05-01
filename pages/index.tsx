@@ -78,9 +78,9 @@ const IndexPage = () => {
 
       <ProjectCard
         image={{ src: '/assets/historico.png', alt: 'Historico logo' }}
-        title="Historico - This Day in History"
+        title="Historico - Today in History"
         url="historico.app"
-        description="Minimal & clean iOS application to discover daily historical events, births, and deaths."
+        description="Minimal & clean iOS application to discover daily historical events, births, and deaths and leverage iOS14 Widgets."
       />
 
       <ProjectCard
