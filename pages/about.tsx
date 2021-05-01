@@ -113,7 +113,7 @@ const AboutPage: NextPage<AboutPageProps> = ({ img, placeholderImg }) => {
       <div className="pb-4">
         <StickyHeader zIndex={1}>2021</StickyHeader>
         <ul>
-          <CareerTimelineItem icon={<DeviceMobileIcon className="w-10 h-10" />} month="April">
+          <CareerTimelineItem icon={<DeviceMobileIcon className="w-10 h-10" />} month="May">
             Released my first, indie iOS application,{' '}
             <a href="https://historico.app" className="text-link">
               Historico
