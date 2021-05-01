@@ -15,7 +15,7 @@ export const CareerTimelineItem: FC<Props> = ({ icon, month, children }) => (
 
       <div className="relative z-0 flex items-center space-x-4">
         <div>
-          <span className="dark:bg-gray-800 ring-8 dark:ring-gray-900 ring-gray-100 text-secondary flex items-center justify-center w-10 h-10 p-2 bg-white rounded-full shadow-sm">
+          <span className="dark:bg-gray-800 card ring-8 dark:ring-gray-900 ring-gray-100 text-secondary flex items-center justify-center w-10 h-10 p-2 bg-white rounded-full shadow-sm">
             {icon}
           </span>
         </div>

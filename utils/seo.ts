@@ -1,6 +1,6 @@
 export const SEO = {
-  title: "Mate Papp",
+  title: 'Mate Papp',
   titleTemplate: (title: string) => `${title} | Mate Papp`,
-  description: `My name is Mate Papp, a 25-year-old Software Engineer, Designer, Entrepreneur, currently based in Barcelona, Spain. I'm a lifelong learner & teacher, an Apple fanboy, a fast speaker, and try to enjoy the life with an organize everything mindset.`,
+  description: `I'm Mate Papp, a Software Engineer, a lifelong learner and teacher, an Apple fanboy, and a productivity nerd (= too lazy). Originally from Hungary, currently living in beautiful Barcelona, Spain with my lovely girlfriend.`,
   url: (path: string) => `https://matepapp.com${path}`,
-};
+}

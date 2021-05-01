@@ -15,7 +15,8 @@ import clsx from 'clsx'
 import { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import Image from 'next/image'
-import { FC, HTMLAttributes } from 'react'
+import Link from 'next/link'
+import React, { FC, HTMLAttributes } from 'react'
 import { CareerTimelineItem } from '../components/career-timeline-item'
 import { SEO } from '../utils/seo'
 
@@ -60,22 +61,49 @@ const AboutPage: NextPage<AboutPageProps> = ({ img, placeholderImg }) => {
           height={1024}
         />
       </div>
-      <p className="card p-6">{SEO.description}</p>
-      <p className="card p-6">
-        I've decided to become a Software Engineer after reading
-        <a
-          href="https://www.goodreads.com/book/show/11084145-steve-jobs"
-          className="hover:text-green-300 mx-1 text-green-400"
-        >
-          Steve Jobs' biography
-        </a>
-        in high school. In my 2nd year at the university, I started to learn iOS development by
-        myself and joined a Hungarian agency as an intern. When I successfully graduated from
-        university, I've gained more than two years of real-life work experience and started to
-        explore more opportunities. I've jumped into Web development, both in Frontend and Backend.
-        When I discovered GraphQL, I completely fall in love with the concept, and I truly believe
-        that this is the future of API communication.
-      </p>
+      <div className="card dark:prose-dark p-5 prose">
+        <p>{SEO.description}</p>
+        <p>
+          During weekdays, I work as a Senior Frontend Engineer at Glovo.{' '}
+          <Link href="#career">
+            <a>Previously</a>
+          </Link>
+          , I was an iOS Developer and I've co-founded a startup. On weekends, I like to build &
+          iterate on my ideas.
+        </p>
+
+        <p>
+          In my free time, I enjoy spending time with my friends & family by traveling together,
+          playing board games, or meeting to drink a great coffee or craft beer. Apart from that, a
+          couple of my{' '}
+          <Link href="#hobbies">
+            <a>hobbies</a>
+          </Link>{' '}
+          are visiting conferences and meetups (sometimes speak), listen to podcasts, and playing
+          team sports.
+        </p>
+
+        <p>
+          Over the years, I’ve become passionate about coffee. Nowadays, I experiment with different
+          brewing methods at home (mostly{' '}
+          <a href="https://www.rok.coffee/eu/home" target="_blank" rel="noopener noreferrer">
+            manual espresso
+          </a>
+          ,{' '}
+          <a
+            href="https://global.hario.com/sp_v60series.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            V60
+          </a>
+          , and{' '}
+          <a href="https://aeropress.com" target="_blank" rel="noopener noreferrer">
+            AeroPress
+          </a>
+          ).
+        </p>
+      </div>
 
       <h2 id="career">Career</h2>
       <div className="pb-4">
@@ -238,18 +266,20 @@ const AboutPage: NextPage<AboutPageProps> = ({ img, placeholderImg }) => {
         </ul>
       </div>
 
-      <h2>Hobbies</h2>
+      <h2 id="hobbies">Hobbies</h2>
       <ul className="sm:grid-cols-2 grid grid-cols-1 gap-4 list-none">
+        <li className="card">spending time with friends & family</li>
+        <li className="card">brewing coffee</li>
         <li className="card">listening to podcasts</li>
-        <li className="card">reading</li>
-        <li className="card">being with friends & family</li>
-        <li className="card">meetups & conferences</li>
-        <li className="card">travelling</li>
+        <li className="card">reading books & articles</li>
+        <li className="card">playing team sports</li>
+        <li className="card">attending meetups & conferences</li>
+        <li className="card">traveling</li>
         <li className="card">functional training</li>
         <li className="card">cycling</li>
         <li className="card">playing boardgames</li>
         <li className="card">cooking</li>
-        <li className="card">tasting craftbeer & coffee</li>
+        <li className="card">learning new things</li>
       </ul>
     </>
   )

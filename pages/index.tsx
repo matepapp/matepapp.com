@@ -69,7 +69,7 @@ const IndexPage = () => {
           </ButtonLink>{' '}
           on those.
         </p>
-        <ButtonLink href="/about" showArrowIcon className="mt-4 font-medium">
+        <ButtonLink href="/about" showArrowIcon className="mt-4">
           More About Me
         </ButtonLink>
       </div>
