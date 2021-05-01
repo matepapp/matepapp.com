@@ -58,14 +58,18 @@ const IndexPage = () => {
       <NextSeo title={title} openGraph={{ title }} />
       <h1>Hey, I'm Mate! 👋🏻</h1>
 
-      <div className="card p-6">
+      <div className="card p-5">
         <p className="dark:text-gray-200 text-gray-800">
-          I like to refer to myself as &frac12; Software Engineer, &frac14; Designer, and &frac14;
-          Entrepreneur who is focusing on building products that people love to use. I'm passionate
-          about exploring new things and staying up-to-date with the latest hot trends and topics by
-          attending (and occasionally speaking at) meetups, conferences, and listening to podcasts.
+          Full-time Software Engineer, part-time Indie Maker, and wannabe home Barista. Passionate
+          about solving problems by building useful & aesthetic products for people and learning new
+          things along the journey. I try to stay up-to-date with the latest hot trends in Tech &
+          Software Engineering, and occasionally even share my{' '}
+          <ButtonLink href="/thoughts" showArrowIcon={false}>
+            thoughts
+          </ButtonLink>{' '}
+          on those.
         </p>
-        <ButtonLink href="/about" className="mt-4">
+        <ButtonLink href="/about" showArrowIcon className="mt-4 font-medium">
           More About Me
         </ButtonLink>
       </div>

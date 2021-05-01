@@ -28,7 +28,7 @@ const ThoughtsPage: NextPage<ThoughtsPageProps> = ({ thoughts }) => {
           </div>
           <div className="text-secondary mt-3">{excerpt}</div>
 
-          <ButtonLink href={`/thoughts/${slug}`} className="mt-3">
+          <ButtonLink href={`/thoughts/${slug}`} showArrowIcon className="mt-3 font-medium">
             Read More
           </ButtonLink>
         </div>
