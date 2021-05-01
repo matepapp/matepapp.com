@@ -68,8 +68,12 @@ const AboutPage: NextPage<AboutPageProps> = ({ img, placeholderImg }) => {
           <Link href="#career">
             <a>Previously</a>
           </Link>
-          , I was an iOS Developer and I've co-founded a startup. On weekends, I like to build &
-          iterate on my ideas.
+          , I was also an iOS Developer and I've co-founded a startup. On weekends, I like to build
+          & iterate on{' '}
+          <Link href="/#projects">
+            <a>my ideas</a>
+          </Link>
+          .
         </p>
 
         <p>
