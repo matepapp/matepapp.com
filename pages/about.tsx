@@ -10,16 +10,14 @@ import {
   SpeakerphoneIcon,
   XCircleIcon,
 } from '@heroicons/react/outline'
-import { getBase64 } from '@plaiceholder/base64'
-import { getImage } from '@plaiceholder/next'
 import clsx from 'clsx'
-import { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { FC, HTMLAttributes } from 'react'
 import { CareerTimelineItem } from '../components/career-timeline-item'
 import { SEO } from '../utils/seo'
+import profile from '/public/assets/profile.jpeg'
 
 const StickyHeader: FC<{ zIndex: number } & HTMLAttributes<HTMLHeadingElement>> = ({
   zIndex,
@@ -34,34 +32,25 @@ const StickyHeader: FC<{ zIndex: number } & HTMLAttributes<HTMLHeadingElement>> 
   </h3>
 )
 
-type AboutPageProps = {
-  img: { src: string; alt: string }
-  placeholderImg: string
-}
-
-const AboutPage: NextPage<AboutPageProps> = ({ img, placeholderImg }) => {
+const AboutPage = () => {
   const title = SEO.titleTemplate('About')
 
   return (
     <>
       <NextSeo title={title} openGraph={{ title }} />
       <h1>About</h1>
-      <div className="rounded-xl relative overflow-hidden">
-        <img
-          aria-hidden="true"
-          alt=""
-          src={placeholderImg}
-          className="filter blur-xl absolute inset-0 object-cover object-center w-full h-full"
-        />
+      <div>
         <Image
-          src={img.src}
-          alt={img.alt}
+          src={profile}
+          alt="Mate Papp is drinking espresso."
           layout="responsive"
           className="rounded-xl"
+          placeholder="blur"
           width={1024}
           height={1024}
         />
       </div>
+
       <div className="card dark:prose-dark p-5 prose">
         <p>{SEO.description}</p>
         <p>
@@ -292,23 +281,6 @@ const AboutPage: NextPage<AboutPageProps> = ({ img, placeholderImg }) => {
       </ul>
     </>
   )
-}
-
-export async function getStaticProps() {
-  const img = {
-    src: '/assets/profile.jpeg',
-    alt: 'Mate Papp is drinking espresso.',
-  }
-
-  const imgFile = await getImage(img.src)
-  const placeholderImg = await getBase64(imgFile)
-
-  return {
-    props: {
-      img,
-      placeholderImg,
-    },
-  }
 }
 
 export default AboutPage
