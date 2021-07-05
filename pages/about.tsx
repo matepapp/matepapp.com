@@ -2,6 +2,7 @@ import {
   AcademicCapIcon,
   BriefcaseIcon,
   CakeIcon,
+  CogIcon,
   DeviceMobileIcon,
   GlobeIcon,
   HomeIcon,
@@ -113,6 +114,10 @@ const AboutPage: NextPage<AboutPageProps> = ({ img, placeholderImg }) => {
       <div className="pb-4">
         <StickyHeader zIndex={1}>2021</StickyHeader>
         <ul>
+          <CareerTimelineItem icon={<CogIcon className="w-10 h-10" />} month="July">
+            Transitioned to the Web Platform team within Glovo.
+          </CareerTimelineItem>
+
           <CareerTimelineItem icon={<DeviceMobileIcon className="w-10 h-10" />} month="May">
             Released my first, indie iOS application,{' '}
             <a href="https://historico.app" className="text-link">
