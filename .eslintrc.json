@@ -4,13 +4,10 @@
     "project": "./tsconfig.json"
   },
   "extends": [
-    "plugin:@next/next/recommended",
+    "next",
     "plugin:@typescript-eslint/recommended",
-    "plugin:eslint-comments/recommended",
     "prettier",
-    "prettier/@typescript-eslint",
-    "prettier/prettier",
-    "prettier/react"
+    "prettier/prettier"
   ],
   "rules": {
     "@typescript-eslint/array-type": "error",
@@ -25,6 +22,7 @@
     "@typescript-eslint/prefer-ts-expect-error": "error", // Force type safety
     "prefer-exponentiation-operator": "error", // Auto-fix for an inherited rule
     "react/react-in-jsx-scope": "off", // React is always in scope with Next
-    "react/require-default-props": "off" // React `defaultProps` are deprecated
+    "react/require-default-props": "off", // React `defaultProps` are deprecated
+    "react/no-unescaped-entities": "off"
   }
 }

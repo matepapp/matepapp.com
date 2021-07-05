@@ -17,7 +17,7 @@ const ThoughtsPage: NextPage<ThoughtsPageProps> = ({ thoughts }) => {
       <NextSeo title={title} openGraph={{ title }} />
       <h1>Thoughts</h1>
       {thoughts.map(({ slug, title, excerpt, createdAt, readingTime }) => (
-        <div className="card p-5">
+        <div className="card p-5" key={slug}>
           <Link href={`/thoughts/${slug}`} key={slug}>
             <a>
               <h3 className="hover:text-green-400 transition">{title}</h3>
