@@ -67,14 +67,14 @@ const AboutPage = () => {
         </p>
 
         <p>
-          In my free time, I enjoy spending time with my friends & family by traveling together,
+          Beside of work, I enjoy spending time with my friends & family by traveling together,
           playing board games, or meeting to drink a great coffee or craft beer. Apart from that, a
           couple of my{' '}
           <Link href="#hobbies">
             <a>hobbies</a>
           </Link>{' '}
           are visiting conferences and meetups (sometimes speak), listen to podcasts, and playing
-          team sports.
+          any kind of team sports.
         </p>
 
         <p>
@@ -91,9 +91,17 @@ const AboutPage = () => {
           >
             V60
           </a>
-          , and{' '}
+          ,
           <a href="https://aeropress.com" target="_blank" rel="noopener noreferrer">
             AeroPress
+          </a>
+          , and{' '}
+          <a
+            href="https://global.hario.com/sp_mizudashi_cold_brewed_coffee.html#sei2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Cold Brew
           </a>
           ).
         </p>
