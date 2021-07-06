@@ -44,7 +44,7 @@ const AboutPage = () => {
           src={profile}
           alt="Mate Papp is drinking espresso."
           layout="responsive"
-          className="rounded-xl"
+          className="rounded-xl overflow-hidden"
           placeholder="blur"
           width={1024}
           height={1024}
