@@ -23,6 +23,7 @@
     "prefer-exponentiation-operator": "error", // Auto-fix for an inherited rule
     "react/react-in-jsx-scope": "off", // React is always in scope with Next
     "react/require-default-props": "off", // React `defaultProps` are deprecated
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "@typescript-eslint/ban-ts-comment": "off" // Enable ts-ignore and co.
   }
 }
