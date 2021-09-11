@@ -19,7 +19,6 @@
     "@typescript-eslint/explicit-module-boundary-types": "off", // Reduce bloat
     "@typescript-eslint/method-signature-style": "error", // Force type safety
     "@typescript-eslint/no-invalid-void-type": "error", // Force type safety
-    "@typescript-eslint/prefer-ts-expect-error": "error", // Force type safety
     "prefer-exponentiation-operator": "error", // Auto-fix for an inherited rule
     "react/react-in-jsx-scope": "off", // React is always in scope with Next
     "react/require-default-props": "off", // React `defaultProps` are deprecated
