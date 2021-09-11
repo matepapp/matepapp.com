@@ -15,8 +15,10 @@ import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { FC, HTMLAttributes } from 'react'
+import useSWR from 'swr'
 import { CareerTimelineItem } from '../components/career-timeline-item'
 import { SEO } from '../utils/seo'
+import { fetcher } from './lib/fetcher'
 import profile from '/public/assets/profile.jpeg'
 
 const StickyHeader: FC<{ zIndex: number } & HTMLAttributes<HTMLHeadingElement>> = ({
@@ -34,11 +36,31 @@ const StickyHeader: FC<{ zIndex: number } & HTMLAttributes<HTMLHeadingElement>> 
 
 const AboutPage = () => {
   const title = SEO.titleTemplate('About')
+  const { data } = useSWR('/api/spotify', fetcher)
 
   return (
     <>
       <NextSeo title={title} openGraph={{ title }} />
       <h1>About</h1>
+      <h2 id="recently-played">
+        Recently played
+        <span className="inline-flex mb-1 ml-2 align-middle">
+          <Image src="/assets/spotify-icon.png" alt="Spotify icon" height={24} width={24} />
+        </span>
+      </h2>
+      <div className="card sm:grid-cols-4 grid grid-cols-3 gap-4">
+        {data?.map(({ id, name, artist, url, image }) => (
+          <a key={id} href={url} target="_blank" rel="noopener noreferrer">
+            <Image
+              src={image.url}
+              alt={`${name} by ${artist}`}
+              width={image.width}
+              height={image.height}
+              className="overflow-hidden rounded-lg"
+            />
+          </a>
+        ))}
+      </div>
       <div>
         <Image
           src={profile}
@@ -73,15 +95,22 @@ const AboutPage = () => {
           <Link href="#hobbies">
             <a>hobbies</a>
           </Link>{' '}
-          are visiting conferences and meetups (sometimes speak), listen to podcasts, and playing
-          any kind of team sports.
+          are visiting conferences and meetups (sometimes speak),{' '}
+          <Link href="#recently-played">
+            <a>music & podcasts</a>
+          </Link>
+          , and playing any kind of team sports.
         </p>
 
         <p>
           Over the years, I’ve become passionate about coffee. Nowadays, I experiment with different
           brewing methods at home (mostly{' '}
-          <a href="https://www.rok.coffee/eu/home" target="_blank" rel="noopener noreferrer">
-            manual espresso
+          <a
+            href="https://www.vbmespresso.com/en/home-barista/domobar-junior/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            espresso
           </a>
           ,{' '}
           <a
