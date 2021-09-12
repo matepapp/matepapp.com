@@ -2,6 +2,7 @@ import {
   AcademicCapIcon,
   BriefcaseIcon,
   CakeIcon,
+  CodeIcon,
   CogIcon,
   DeviceMobileIcon,
   GlobeIcon,
@@ -120,7 +121,7 @@ const AboutPage = () => {
       <h2 id="career">Career</h2>
       <div className="pb-4">
         <StickyHeader zIndex={1}>2021</StickyHeader>
-        <ul>
+        <ul className="pl-1">
           <CareerTimelineItem icon={<CogIcon className="w-10 h-10" />} month="July">
             Transitioned to the Web Platform team within Glovo.
           </CareerTimelineItem>
@@ -137,7 +138,7 @@ const AboutPage = () => {
         <StickyHeader zIndex={2} className="mt-8">
           2020
         </StickyHeader>
-        <ul>
+        <ul className="pl-1">
           <CareerTimelineItem icon={<HomeIcon className="w-10 h-10" />} month="September">
             Moved to Barcelona.
           </CareerTimelineItem>
@@ -148,6 +149,10 @@ const AboutPage = () => {
             </a>{' '}
             as a Senior Frontend Engineer.
           </CareerTimelineItem>
+          <CareerTimelineItem icon={<CodeIcon className="w-10 h-10" />} month="April">
+            Built the first version of matepapp.com website to learn and experiment with TailwindCSS
+            and Next.js.
+          </CareerTimelineItem>
           <CareerTimelineItem icon={<XCircleIcon className="w-10 h-10" />} month="March">
             Partly, because of the pandemic we decided to shut down Cogito and look for other
             opportunities.
@@ -157,7 +162,7 @@ const AboutPage = () => {
         <StickyHeader zIndex={3} className="mt-8">
           2019
         </StickyHeader>
-        <ul>
+        <ul className="pl-1">
           <CareerTimelineItem icon={<MicrophoneIcon className="w-10 h-10" />} month="September">
             Mentored a half-day{' '}
             <a
@@ -181,13 +186,13 @@ const AboutPage = () => {
         <StickyHeader zIndex={4} className="mt-8">
           2018
         </StickyHeader>
-        <ul>
+        <ul className="pl-1">
           <CareerTimelineItem icon={<BriefcaseIcon className="w-10 h-10" />} month="August">
             Moved to the Web team within Supercharge.
           </CareerTimelineItem>
           <CareerTimelineItem icon={<AcademicCapIcon className="w-10 h-10" />} month="June">
             Graduated as a Computer Engineer BSc at Budapest University of Technology and Economics.
-            My final these was the very early version of Cogito.
+            My final thesis was the very early version of Cogito.
           </CareerTimelineItem>
           <CareerTimelineItem icon={<CakeIcon className="w-10 h-10" />} month="March">
             Officially founded our startup,{' '}
@@ -203,7 +208,7 @@ const AboutPage = () => {
         <StickyHeader zIndex={5} className="mt-8">
           2017
         </StickyHeader>
-        <ul>
+        <ul className="pl-1">
           <CareerTimelineItem icon={<BriefcaseIcon className="w-10 h-10" />} month="November">
             Joined one of the biggest digital agency in Hungary,{' '}
             <a href="https://supercharge.io" className="text-link">
@@ -228,7 +233,7 @@ const AboutPage = () => {
         <StickyHeader zIndex={6} className="mt-8">
           2016
         </StickyHeader>
-        <ul>
+        <ul className="pl-1">
           <CareerTimelineItem icon={<SpeakerphoneIcon className="w-10 h-10" />} month="December">
             Joined the organizer team of the{' '}
             <a
@@ -251,7 +256,7 @@ const AboutPage = () => {
         <StickyHeader zIndex={7} className="mt-8">
           2015
         </StickyHeader>
-        <ul>
+        <ul className="pl-1">
           <CareerTimelineItem icon={<DeviceMobileIcon className="w-10 h-10" />} month="November">
             Started learning iOS application development in my free time.
           </CareerTimelineItem>
@@ -271,7 +276,7 @@ const AboutPage = () => {
         <StickyHeader zIndex={8} className="mt-8">
           2014
         </StickyHeader>
-        <ul>
+        <ul className="pl-1">
           <CareerTimelineItem icon={<HomeIcon className="w-10 h-10" />} month="August">
             Moved to Budapest and started university at Budapest University of Technology and
             Economics as a Computer Engineer.

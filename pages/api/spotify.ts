@@ -50,6 +50,6 @@ async function getRecentlyPlayed() {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const recentlyPlayed = await getRecentlyPlayed()
 
-  res.setHeader('Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=43200')
+  res.setHeader('Cache-Control', 'public, s-maxage=21600, stale-while-revalidate=10800')
   return res.status(200).json(recentlyPlayed)
 }
