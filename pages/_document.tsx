@@ -70,10 +70,6 @@ class MyDocument extends Document {
           />
           <meta name="msapplication-TileColor" content="#34D399" />
           <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png" />
-          {/* @ts-ignore */}
-          <meta name="theme-color" content="#F4F4F5" media="(prefers-color-scheme: light)" />
-          {/* @ts-ignore */}
-          <meta name="theme-color" content="#18181B" media="(prefers-color-scheme: dark)" />
         </Head>
         <body className="text-primary dark:bg-gray-900 antialiased bg-gray-100">
           <Main />
