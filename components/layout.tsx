@@ -61,7 +61,7 @@ export const Layout: FC = ({ children }) => {
               </svg>
             </a>
 
-            <a href="https://twitter.com/matepappp" className="hover:text-twitter transition">
+            <a href="https://twitter.com/matepappcom" className="hover:text-twitter transition">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

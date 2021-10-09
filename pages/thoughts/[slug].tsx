@@ -14,10 +14,19 @@ const ThoughtPage: NextPage<ThoughtPageProps> = ({ thought }) => {
 
   return (
     <>
-      <NextSeo title={title} description={description} openGraph={{ title, description }} />
+      <NextSeo
+        title={title}
+        description={description}
+        openGraph={{
+          title,
+          description,
+          images: [{ url: `/assets/thoughts/${meta.slug}.png`, width: 1200, height: 627 }],
+        }}
+      />
+
       <div>
         <h1>{meta.title}</h1>
-        <div className="mt-2 text-sm font-medium tracking-wider text-gray-500 uppercase">
+        <div className="text-tertiary mt-4 text-sm font-medium tracking-wider uppercase">
           <span>{meta.createdAt}</span> · <span>{meta.readingTime}</span>
         </div>
       </div>

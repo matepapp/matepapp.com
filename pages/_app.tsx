@@ -30,8 +30,8 @@ const App = ({ Component, pageProps }: AppProps) => {
           ],
         }}
         twitter={{
-          handle: '@matepappp',
-          site: '@matepappp',
+          handle: '@matepappcom',
+          site: '@matepappcom',
           cardType: 'summary_large_image',
         }}
       />

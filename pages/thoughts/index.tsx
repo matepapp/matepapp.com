@@ -23,12 +23,12 @@ const ThoughtsPage: NextPage<ThoughtsPageProps> = ({ thoughts }) => {
               <h3 className="hover:text-green-400 transition">{title}</h3>
             </a>
           </Link>
-          <div className="mt-1 text-xs font-medium tracking-wider text-gray-500 uppercase">
+          <div className="text-tertiary mt-2 text-xs font-medium tracking-wider uppercase">
             <span>{createdAt}</span> · <span>{readingTime}</span>
           </div>
-          <div className="text-secondary mt-3">{excerpt}</div>
+          <div className="text-secondary my-3">{excerpt}</div>
 
-          <ButtonLink href={`/thoughts/${slug}`} showArrowIcon className="mt-3">
+          <ButtonLink href={`/thoughts/${slug}`} showArrowIcon>
             Read More
           </ButtonLink>
         </div>

@@ -77,6 +77,9 @@ module.exports = {
             code: {
               color: theme('colors.gray.50'),
             },
+            ul: {
+              color: theme('colors.gray.50'),
+            },
             'a code': {
               color: theme('colors.gray.50'),
             },
