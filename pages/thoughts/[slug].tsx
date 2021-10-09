@@ -1,5 +1,6 @@
 import { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/router'
 import { SEO } from '../../utils/seo'
 import { fetchThought, fetchThoughtMetaList, Thought } from '../../utils/thoughts'
 
@@ -8,19 +9,24 @@ type ThoughtPageProps = {
 }
 
 const ThoughtPage: NextPage<ThoughtPageProps> = ({ thought }) => {
+  const router = useRouter()
   const { meta, content } = thought
   const title = SEO.titleTemplate(meta.title)
+  const url = SEO.url(router.asPath)
   const description = meta.excerpt
+  const imageURL = SEO.url(`/assets/thoughts/${meta.slug}.png`)
 
   return (
     <>
       <NextSeo
         title={title}
         description={description}
+        canonical={url}
         openGraph={{
           title,
           description,
-          images: [{ url: `/assets/thoughts/${meta.slug}.png`, width: 1200, height: 627 }],
+          url,
+          images: [{ url: imageURL, width: 1200, height: 627 }],
         }}
       />
 
