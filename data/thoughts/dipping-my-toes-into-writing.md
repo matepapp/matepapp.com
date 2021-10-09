@@ -100,6 +100,6 @@ At the same time, I’m trying to be more active on Twitter so if you’re inter
 
 > hit that Follow button
 
-_every second influencer, circa 2021_
+– every second influencer, circa 2021
 
 PS: Last, but not least I didn’t build my website to only showcase [the songs that I listen to on Spotify](/about#recently-played).

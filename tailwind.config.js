@@ -50,7 +50,7 @@ module.exports = {
               color: theme('colors.gray.400'),
             },
             'ul > li::before': {
-              backgroundColor: theme('colors.gray.600'),
+              backgroundColor: theme('colors.gray.400'),
             },
             hr: {
               borderColor: theme('colors.gray.200'),
