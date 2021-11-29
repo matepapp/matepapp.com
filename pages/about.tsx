@@ -4,10 +4,12 @@ import {
   CakeIcon,
   CodeIcon,
   CogIcon,
+  CurrencyDollarIcon,
   DeviceMobileIcon,
   GlobeIcon,
   HomeIcon,
   MicrophoneIcon,
+  PencilIcon,
   SpeakerphoneIcon,
   XCircleIcon,
 } from '@heroicons/react/outline'
@@ -122,6 +124,28 @@ const AboutPage = () => {
       <div className="pb-4">
         <StickyHeader zIndex={1}>2021</StickyHeader>
         <ul className="pl-1">
+          <CareerTimelineItem icon={<CurrencyDollarIcon className="w-10 h-10" />} month="November">
+            <a
+              href="https://twitter.com/matepappcom/status/1464321635796803592"
+              className="text-link"
+            >
+              Made my first 17,13$ online
+            </a>{' '}
+            by running{' '}
+            <a href="https://historico.app" className="text-link">
+              Historico
+            </a>{' '}
+            as a paid app for a month.
+          </CareerTimelineItem>
+
+          <CareerTimelineItem icon={<PencilIcon className="w-10 h-10" />} month="October">
+            Wrote my first{' '}
+            <Link href="/thoughts/dipping-my-toes-into-writing" passHref>
+              <a className="text-link">blog post about writing</a>
+            </Link>{' '}
+            (meta-writing).
+          </CareerTimelineItem>
+
           <CareerTimelineItem icon={<CogIcon className="w-10 h-10" />} month="July">
             Transitioned to the Web Platform team within Glovo.
           </CareerTimelineItem>

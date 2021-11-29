@@ -2,6 +2,7 @@ import { ExternalLinkIcon } from '@heroicons/react/outline'
 import clsx from 'clsx'
 import { NextSeo } from 'next-seo'
 import Image from 'next/image'
+import { ReactElement } from 'react'
 import { ButtonLink } from '../components'
 import { Badge } from '../components/badge'
 import { SEO } from '../utils/seo'
@@ -13,12 +14,12 @@ type ProjectCardProps = {
   }
   title: string
   url: string
-  isComingSoon?: boolean
+  badge?: ReactElement
   description: string
 }
 
-const ProjectCard = ({ image, title, url, isComingSoon, description }: ProjectCardProps) => (
-  <div className={clsx('card flex flex-col p-5', isComingSoon && 'cursor-not-allowed opacity-40')}>
+const ProjectCard = ({ image, title, url, badge, description }: ProjectCardProps) => (
+  <div className={clsx('card flex flex-col p-5')}>
     <div className="flex items-center space-x-4">
       <div className="flex-none w-16 overflow-hidden">
         <Image
@@ -33,16 +34,16 @@ const ProjectCard = ({ image, title, url, isComingSoon, description }: ProjectCa
       </div>
       <div className="flex flex-col items-start">
         <div className="sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0 flex flex-col items-start space-y-1">
-          <h3 className="inline-flex items-center">{title}</h3>
-          {isComingSoon && <Badge>Coming Soon</Badge>}
+          <h3 className="inline-flex items-center mr-2">{title}</h3>
+          {badge}
         </div>
         <a
           href={`https://${url}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-link mt-1"
+          className="text-link flex items-center mt-1"
         >
-          {url} <ExternalLinkIcon className="inline w-4 h-4" />
+          {url} <ExternalLinkIcon className="inline w-4 h-4 ml-1" />
         </a>
       </div>
     </div>
@@ -77,27 +78,18 @@ const IndexPage = () => {
       <h2 className="mt-4">Projects</h2>
 
       <ProjectCard
+        image={{ src: '/assets/bankliday.png', alt: 'Bankliday logo' }}
+        title="bankliday"
+        url="bankliday.com"
+        badge={<Badge>In Progress</Badge>}
+        description="Automated bank holiday tracker for international companies, distributed organizations, and remote teams."
+      />
+
+      <ProjectCard
         image={{ src: '/assets/historico.png', alt: 'Historico logo' }}
         title="Historico - Today in History"
         url="historico.app"
         description="Minimal & clean iOS application to discover daily historical events, births, and deaths and leverage iOS14 Widgets."
-      />
-
-      <ProjectCard
-        image={{ src: '/assets/cusfeed.png', alt: 'cusfeed logo' }}
-        title="cusfeed"
-        url="cusfeed.com"
-        isComingSoon
-        description="Create sharable or private custom Instagram feeds for specific topics. Keep your personal
-        feed clean and interact with pages & profiles without following them."
-      />
-
-      <ProjectCard
-        image={{ src: '/assets/local-roasters.png', alt: 'Local Roasters logo' }}
-        title="Local Roasters"
-        url="localroasters.coffee"
-        isComingSoon
-        description="Easily find and explore local, specialty coffee roasters in your area with a community based webpage. Because always buy local!"
       />
     </>
   )
