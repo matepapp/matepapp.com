@@ -104,7 +104,7 @@ const AboutPage = () => {
           >
             V60
           </a>
-          ,
+          ,{' '}
           <a href="https://aeropress.com" target="_blank" rel="noopener noreferrer">
             AeroPress
           </a>
