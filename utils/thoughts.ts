@@ -38,6 +38,7 @@ export const fetchThoughtMetaList = (): ThoughtMeta[] =>
     .map(parseMarkdown)
     .map(mapMeta)
     .filter((meta) => meta.published)
+    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
 
 export const fetchThought = (slug: string) =>
   fs

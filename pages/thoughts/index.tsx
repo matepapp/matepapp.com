@@ -36,8 +36,10 @@ const ThoughtsPage: NextPage<ThoughtsPageProps> = ({ thoughts }) => {
     </>
   )
 }
+
 export function getStaticProps() {
   const thoughts = fetchThoughtMetaList()
   return { props: { thoughts } }
 }
+
 export default ThoughtsPage
