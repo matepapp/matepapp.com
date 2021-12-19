@@ -38,7 +38,7 @@ const ThoughtPage: NextPage<ThoughtPageProps> = ({ thought }) => {
       </div>
       {content && (
         <div
-          className="lg:prose-lg dark:prose-dark prose"
+          className="lg:prose-lg dark:prose-invert prose-zinc prose-a:no-underline prose-a:text-emerald-500 hover:prose-a:text-emerald-400 prose-img:rounded-xl dark:prose-a:text-emerald-400 dark:hover:prose-a:text-emerald-300 prose"
           dangerouslySetInnerHTML={{ __html: content }}
         />
       )}
