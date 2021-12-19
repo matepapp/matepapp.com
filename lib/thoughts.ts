@@ -2,8 +2,6 @@ import fs from 'fs'
 import { bundleMDX } from 'mdx-bundler'
 import path from 'path'
 
-// TODO: OG Image?
-
 export type ThoughtMeta = {
   title: string
   createdAt: string
@@ -12,6 +10,7 @@ export type ThoughtMeta = {
   published: boolean
   excerpt: string
   readingTime: string
+  tweetIDs?: string[]
 }
 
 export type Thought = {

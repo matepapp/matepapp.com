@@ -3,6 +3,6 @@
  */
 module.exports = {
   images: {
-    domains: ['i.scdn.co', 'res.craft.do'],
+    domains: ['i.scdn.co', 'pbs.twimg.com'],
   },
 }

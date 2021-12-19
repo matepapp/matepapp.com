@@ -2,20 +2,29 @@ import { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 import { MDX } from '../../components/mdx'
+import { Tweet } from '../../components/tweet'
+import { fetchThought, fetchThoughtMetaList, Thought } from '../../lib/thoughts'
+import { fetchTweets } from '../../lib/twitter'
 import { SEO } from '../../utils/seo'
-import { fetchThought, fetchThoughtMetaList, Thought } from '../../utils/thoughts'
 
 type ThoughtPageProps = {
   thought: Thought
+  tweets: any[]
 }
 
-const ThoughtPage: NextPage<ThoughtPageProps> = ({ thought }) => {
+const ThoughtPage: NextPage<ThoughtPageProps> = ({ thought, tweets }) => {
   const router = useRouter()
   const { meta, content } = thought
   const title = SEO.titleTemplate(meta.title)
   const url = SEO.url(router.asPath)
   const description = meta.excerpt
   const imageURL = SEO.url(`/assets/thoughts/${meta.slug}/meta.png`)
+
+  const StaticTweet = ({ id }) => {
+    const tweet = tweets?.find((tweet) => tweet.id === id)
+    console.log({ tweets, id })
+    return tweet ? <Tweet id={id} {...tweet} /> : null
+  }
 
   return (
     <>
@@ -38,7 +47,7 @@ const ThoughtPage: NextPage<ThoughtPageProps> = ({ thought }) => {
         </div>
       </div>
       <div className="prose-wrapper">
-        <MDX code={content} />
+        <MDX code={content} components={{ StaticTweet }} />
       </div>
     </>
   )
@@ -47,10 +56,9 @@ const ThoughtPage: NextPage<ThoughtPageProps> = ({ thought }) => {
 export async function getStaticProps({ params }) {
   const { slug } = params
   const thought = await fetchThought(slug)
+  const tweets = await fetchTweets(thought.meta.tweetIDs)
 
-  return {
-    props: { thought },
-  }
+  return { props: { thought, tweets } }
 }
 
 export async function getStaticPaths() {

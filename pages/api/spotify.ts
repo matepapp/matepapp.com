@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import querystring from 'querystring'
 
 const client_id = process.env.SPOTIFY_CLIENT_ID
 const client_secret = process.env.SPOTIFY_CLIENT_SECRET
@@ -15,7 +14,7 @@ async function getAccessToken() {
       Authorization: `Basic ${basic}`,
       'Content-Type': 'application/x-www-form-urlencoded',
     },
-    body: querystring.stringify({
+    body: JSON.stringify({
       grant_type: 'refresh_token',
       refresh_token,
     }),

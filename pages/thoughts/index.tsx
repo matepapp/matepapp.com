@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { ButtonLink } from '../../components'
 import { SEO } from '../../utils/seo'
-import { fetchThoughtMetaList, ThoughtMeta } from '../../utils/thoughts'
+import { fetchThoughtMetaList, ThoughtMeta } from '../../lib/thoughts'
 
 type ThoughtsPageProps = {
   thoughts: ThoughtMeta[]
