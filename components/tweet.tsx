@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { format } from 'date-fns'
 
 /**
  * Copied from leerob.io blog
