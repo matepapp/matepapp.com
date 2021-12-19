@@ -1,5 +1,4 @@
 import fs from 'fs'
-import marked from 'marked'
 import { bundleMDX } from 'mdx-bundler'
 import path from 'path'
 
