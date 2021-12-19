@@ -37,8 +37,8 @@ const ThoughtsPage: NextPage<ThoughtsPageProps> = ({ thoughts }) => {
   )
 }
 
-export function getStaticProps() {
-  const thoughts = fetchThoughtMetaList()
+export async function getStaticProps() {
+  const thoughts = await fetchThoughtMetaList()
   return { props: { thoughts } }
 }
 

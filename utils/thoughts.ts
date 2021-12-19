@@ -1,8 +1,7 @@
 import fs from 'fs'
-import matter, { GrayMatterFile } from 'gray-matter'
 import marked from 'marked'
+import { bundleMDX } from 'mdx-bundler'
 import path from 'path'
-import readingTime from 'reading-time'
 
 // TODO: OG Image?
 
@@ -21,28 +20,35 @@ export type Thought = {
   content: string
 }
 
-const thoughtsDirectory = () => path.join(process.cwd(), '/data/thoughts')
+export async function bundleThoughtFiles() {
+  return Promise.all(
+    fs.readdirSync(path.join(process.cwd(), '/data/thoughts')).map(async (filename) => {
+      const filePath = path.join(path.join(process.cwd(), '/data/thoughts'), filename)
+      const fileContents = fs.readFileSync(filePath).toString()
 
-const parseMarkdown = (filename: string): GrayMatterFile<string> => {
-  const filePath = path.join(thoughtsDirectory(), filename)
-  const fileContents = fs.readFileSync(filePath).toString()
-  return matter(fileContents)
+      return await bundleMDX({ source: fileContents })
+    }),
+  )
 }
 
-const mapMeta = (markdown: GrayMatterFile<string>): ThoughtMeta =>
-  ({ ...markdown.data, readingTime: readingTime(markdown.content).text } as ThoughtMeta)
+export async function fetchThoughtMetaList(): Promise<ThoughtMeta[]> {
+  const files = await bundleThoughtFiles()
 
-export const fetchThoughtMetaList = (): ThoughtMeta[] =>
-  fs
-    .readdirSync(thoughtsDirectory())
-    .map(parseMarkdown)
-    .map(mapMeta)
-    .filter((meta) => meta.published)
-    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+  return files
+    .filter((file) => file.frontmatter.published)
+    .sort(
+      (a, b) =>
+        new Date(b.frontmatter.createdAt).getTime() - new Date(a.frontmatter.createdAt).getTime(),
+    )
+    .map((file) => file.frontmatter as ThoughtMeta)
+}
 
-export const fetchThought = (slug: string) =>
-  fs
-    .readdirSync(thoughtsDirectory())
-    .map(parseMarkdown)
-    .map((markdown) => ({ meta: mapMeta(markdown), content: marked(markdown.content) } as Thought))
-    .find((thought) => thought.meta.slug === slug)
+export async function fetchThought(slug: string): Promise<Thought> {
+  const files = await bundleThoughtFiles()
+  const thought = files.find((file) => file.frontmatter.slug === slug)
+
+  return {
+    meta: thought.frontmatter as ThoughtMeta,
+    content: thought.code,
+  }
+}

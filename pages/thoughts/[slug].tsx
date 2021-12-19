@@ -1,6 +1,7 @@
 import { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
+import { MDX } from '../../components/mdx'
 import { SEO } from '../../utils/seo'
 import { fetchThought, fetchThoughtMetaList, Thought } from '../../utils/thoughts'
 
@@ -14,7 +15,7 @@ const ThoughtPage: NextPage<ThoughtPageProps> = ({ thought }) => {
   const title = SEO.titleTemplate(meta.title)
   const url = SEO.url(router.asPath)
   const description = meta.excerpt
-  const imageURL = SEO.url(`/assets/thoughts/${meta.slug}.png`)
+  const imageURL = SEO.url(`/assets/thoughts/${meta.slug}/meta.png`)
 
   return (
     <>
@@ -36,22 +37,24 @@ const ThoughtPage: NextPage<ThoughtPageProps> = ({ thought }) => {
           <span>{meta.createdAt}</span> · <span>{meta.readingTime}</span>
         </div>
       </div>
-      {content && <div className="prose-wrapper" dangerouslySetInnerHTML={{ __html: content }} />}
+      <div className="prose-wrapper">
+        <MDX code={content} />
+      </div>
     </>
   )
 }
 
-export function getStaticProps({ params }) {
+export async function getStaticProps({ params }) {
   const { slug } = params
-  const thought = fetchThought(slug)
+  const thought = await fetchThought(slug)
 
   return {
     props: { thought },
   }
 }
 
-export function getStaticPaths() {
-  const thoughtMetaList = fetchThoughtMetaList()
+export async function getStaticPaths() {
+  const thoughtMetaList = await fetchThoughtMetaList()
 
   return {
     paths: thoughtMetaList.map(({ slug }) => ({
