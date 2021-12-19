@@ -26,7 +26,7 @@ export const Tweet = ({
   const quoteTweet = referenced_tweets && referenced_tweets.find((t) => t.type === 'quoted')
 
   return (
-    <div className="not-prose card dark:bg-gray-900 w-full p-5 my-5">
+    <div className="not-prose card dark:bg-gray-900 max-w-xl p-5 mx-auto my-6">
       <div className="flex items-center">
         <a className="flex w-12 h-12" href={authorUrl} target="_blank" rel="noopener noreferrer">
           <Image
@@ -41,7 +41,7 @@ export const Tweet = ({
           href={authorUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="author flex flex-col ml-4 no-underline"
+          className="author flex flex-col ml-3 no-underline"
         >
           <span
             className="dark:text-gray-100 flex items-center font-bold leading-5 text-gray-900"
@@ -68,14 +68,16 @@ export const Tweet = ({
           <svg viewBox="328 355 335 276" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M 630, 425    A 195, 195 0 0 1 331, 600    A 142, 142 0 0 0 428, 570    A  70,  70 0 0 1 370, 523    A  70,  70 0 0 0 401, 521    A  70,  70 0 0 1 344, 455    A  70,  70 0 0 0 372, 460    A  70,  70 0 0 1 354, 370    A 195, 195 0 0 0 495, 442    A  67,  67 0 0 1 611, 380    A 117, 117 0 0 0 654, 363    A  65,  65 0 0 1 623, 401    A 117, 117 0 0 0 662, 390    A  65,  65 0 0 1 630, 425    Z"
-              style={{ fill: '#3BA9EE' }}
+              className="fill-twitter"
             />
           </svg>
         </a>
       </div>
-      <div className="dark:text-gray-300 mt-4 mb-2 text-lg leading-normal text-gray-700 whitespace-pre-wrap">
+
+      <div className="dark:text-gray-300 text-md mt-4 mb-2 leading-normal text-gray-700 whitespace-pre-wrap">
         {formattedText}
       </div>
+
       {media && media.length ? (
         <div
           className={
@@ -99,7 +101,7 @@ export const Tweet = ({
       {quoteTweet ? <Tweet {...quoteTweet} /> : null}
 
       <a
-        className="text-sm text-gray-500"
+        className="hover:underline text-sm text-gray-500"
         href={tweetUrl}
         target="_blank"
         rel="noopener noreferrer"
@@ -107,19 +109,17 @@ export const Tweet = ({
         <time title={`Time Posted: ${createdAt.toUTCString()}`} dateTime={createdAt.toISOString()}>
           {new Intl.DateTimeFormat('en-us', {
             year: 'numeric',
-            month: 'numeric',
+            month: 'short',
             day: 'numeric',
             hour: 'numeric',
             minute: 'numeric',
-            hour12: true,
-            timeZone: 'UTC',
           }).format(createdAt)}
         </time>
       </a>
 
-      <div className="dark:text-gray-300 flex mt-3 text-sm text-gray-700">
+      <div className="dark:text-gray-300 dark:border-gray-800 flex pt-2 mt-2 space-x-4 text-sm text-gray-700 border-t border-gray-200">
         <a
-          className="hover:text-blue-500 flex items-center mr-4 text-gray-500 transition"
+          className="hover:text-blue-500 flex items-center text-gray-500 transition"
           href={replyUrl}
           target="_blank"
           rel="noopener noreferrer"
@@ -135,7 +135,7 @@ export const Tweet = ({
           </span>
         </a>
         <a
-          className="hover:text-green-500 flex items-center mr-4 text-gray-500 transition"
+          className="hover:text-green-500 flex items-center text-gray-500 transition"
           href={retweetUrl}
           target="_blank"
           rel="noopener noreferrer"
