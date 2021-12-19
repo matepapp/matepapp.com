@@ -14,10 +14,10 @@ async function getAccessToken() {
       Authorization: `Basic ${basic}`,
       'Content-Type': 'application/x-www-form-urlencoded',
     },
-    body: JSON.stringify({
+    body: new URLSearchParams({
       grant_type: 'refresh_token',
       refresh_token,
-    }),
+    }).toString(),
   })
 
   return response.json()

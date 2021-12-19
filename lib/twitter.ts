@@ -3,21 +3,15 @@ export const fetchTweets = async (ids: string[]) => {
     return []
   }
 
-  const queryParams = new URLSearchParams()
-  queryParams.append('ids', ids.join(','))
-  queryParams.append(
-    'expansions',
-    'author_id,attachments.media_keys,referenced_tweets.id,referenced_tweets.id.author_id',
-  )
-  queryParams.append(
-    'tweet.fields',
-    'attachments,author_id,public_metrics,created_at,id,in_reply_to_user_id,referenced_tweets,text',
-  )
-  queryParams.append('user.fields', 'id,name,profile_image_url,protected,url,username,verified')
-  queryParams.append(
-    'media.fields',
-    'duration_ms,height,media_key,preview_image_url,type,url,width,public_metrics',
-  )
+  const queryParams = new URLSearchParams({
+    ids: ids.join(','),
+    expansions:
+      'author_id,attachments.media_keys,referenced_tweets.id,referenced_tweets.id.author_id',
+    'tweet.fields':
+      'attachments,author_id,public_metrics,created_at,id,in_reply_to_user_id,referenced_tweets,text',
+    'user.fields': 'id,name,profile_image_url,protected,url,username,verified',
+    'media.fields': 'duration_ms,height,media_key,preview_image_url,type,url,width,public_metrics',
+  })
 
   const response = await fetch(`https://api.twitter.com/2/tweets?${queryParams.toString()}`, {
     headers: {
@@ -26,7 +20,6 @@ export const fetchTweets = async (ids: string[]) => {
   })
 
   const tweets = await response.json()
-  console.log(tweets)
 
   const getAuthorInfo = (author_id) => {
     return tweets.includes.users.find((user) => user.id === author_id)

@@ -22,7 +22,6 @@ const ThoughtPage: NextPage<ThoughtPageProps> = ({ thought, tweets }) => {
 
   const StaticTweet = ({ id }) => {
     const tweet = tweets?.find((tweet) => tweet.id === id)
-    console.log({ tweets, id })
     return tweet ? <Tweet id={id} {...tweet} /> : null
   }
 
