@@ -1,5 +1,3 @@
-// require('sharp')
-
 /**
  * @type {import('next').NextConfig}
  */

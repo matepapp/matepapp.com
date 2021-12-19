@@ -57,7 +57,7 @@ const AboutPage = () => {
         />
       </div>
 
-      <div className="card dark:prose-dark p-5 prose">
+      <div className="card prose-wrapper p-5">
         <p>{SEO.description}</p>
         <p>
           During weekdays, I work as a Senior Frontend Engineer at Glovo.{' '}

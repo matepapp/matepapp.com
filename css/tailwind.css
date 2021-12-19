@@ -40,4 +40,8 @@
   .card {
     @apply dark:bg-gray-800 dark:border-gray-700 dark:border-opacity-50 rounded-xl p-4 bg-white border border-white shadow-sm;
   }
+
+  .prose-wrapper {
+    @apply dark:prose-invert prose-zinc prose-a:no-underline prose-a:text-emerald-500 hover:prose-a:text-emerald-400 prose-img:rounded-xl dark:prose-a:text-emerald-400 dark:hover:prose-a:text-emerald-300 prose;
+  }
 }
