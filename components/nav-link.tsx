@@ -11,7 +11,7 @@ export const NavLink: FC<LinkProps> = ({ href, children }) => {
     <Link href={href}>
       <a
         className={clsx(
-          'text-xl transition font-medium sm:text-lg hover:text-green-400 dark:hover:text-green-300 text-primary',
+          'text-xl transition font-medium sm:text-lg hover:text-emerald-400 dark:hover:text-emerald-300 text-primary',
           isActivePath && 'text-link',
         )}
       >

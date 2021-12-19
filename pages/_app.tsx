@@ -1,6 +1,5 @@
 import PlausibleProvider from 'next-plausible'
 import { DefaultSeo } from 'next-seo'
-import { ThemeProvider } from 'next-themes'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { Layout } from '../components'
@@ -36,11 +35,9 @@ const App = ({ Component, pageProps }: AppProps) => {
         }}
       />
       <PlausibleProvider domain="matepapp.com">
-        <ThemeProvider attribute="class">
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </ThemeProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </PlausibleProvider>
     </>
   )

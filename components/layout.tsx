@@ -1,11 +1,8 @@
-import { HeartIcon, MoonIcon, SunIcon } from '@heroicons/react/outline'
-import { useTheme } from 'next-themes'
+import { HeartIcon } from '@heroicons/react/outline'
 import { FC } from 'react'
 import { NavLink } from './nav-link'
 
 export const Layout: FC = ({ children }) => {
-  const { theme, setTheme } = useTheme()
-
   return (
     <div className="flex flex-col items-center w-full max-w-2xl min-h-screen px-4 mx-auto">
       <nav className="dark:bg-gray-900 sticky top-0 z-20 flex items-center justify-between w-full py-4 tracking-tight bg-gray-100">
@@ -14,15 +11,8 @@ export const Layout: FC = ({ children }) => {
           <NavLink href="/about">about</NavLink>
           <NavLink href="/thoughts">thoughts</NavLink>
         </div>
-        <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-          {theme === 'light' ? (
-            <SunIcon className="hover:text-yellow-300 w-7 h-7 transition" />
-          ) : (
-            <MoonIcon className="hover:text-blue-800 w-7 h-7 transition" />
-          )}
-        </button>
       </nav>
-      <main className="flex flex-col flex-1 w-full mt-8 space-y-6">{children}</main>
+      <main className="flex flex-col flex-1 w-full mt-10 space-y-6">{children}</main>
       <footer className="dark:text-gray-400 mt-14 w-full mb-6 text-sm text-center text-gray-500">
         <div>
           <div>
@@ -43,7 +33,7 @@ export const Layout: FC = ({ children }) => {
         <div className="flex flex-col items-center justify-between mt-2 space-y-2">
           <div>© Mate Papp, 2021</div>
           <div className="flex flex-row space-x-3">
-            <a href="mailto:matepapp@icloud.com" className="hover:text-green-400 transition">
+            <a href="mailto:matepapp@icloud.com" className="hover:text-emerald-400 transition">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
