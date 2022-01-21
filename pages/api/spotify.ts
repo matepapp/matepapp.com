@@ -25,7 +25,7 @@ async function getAccessToken() {
 
 async function getRecentlyPlayed() {
   const { access_token } = await getAccessToken()
-  const response = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=12', {
+  const response = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=8', {
     headers: {
       Accept: 'application/json',
       ContentType: 'application/json',

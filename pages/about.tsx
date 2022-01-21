@@ -317,7 +317,7 @@ const AboutPage = () => {
           <Image src="/assets/spotify-icon.png" alt="Spotify icon" height={24} width={24} />
         </span>
       </h2>
-      <div className="card sm:grid-cols-4 grid grid-cols-3 gap-4">
+      <div className="card sm:grid-cols-4 grid grid-cols-2 gap-4">
         {data?.map(({ id, name, artist, url, image }) => (
           <a key={id} href={url} target="_blank" rel="noopener noreferrer">
             <Image
