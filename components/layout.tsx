@@ -13,7 +13,8 @@ export const Layout: FC = ({ children }) => {
         </div>
       </nav>
       <main className="flex flex-col flex-1 w-full mt-10 space-y-6">{children}</main>
-      <footer className="dark:text-gray-400 mt-14 w-full mb-6 text-sm text-center text-gray-500">
+
+      <footer className="dark:text-gray-400 w-full mt-16 mb-6 text-sm text-center text-gray-500">
         <div>
           <div>
             handcrafted with
@@ -30,7 +31,7 @@ export const Layout: FC = ({ children }) => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between mt-2 space-y-2">
+        <div className="flex flex-col items-center justify-between mt-4 space-y-3">
           <div>© Mate Papp, 2021</div>
           <div className="flex flex-row space-x-3">
             <a href="mailto:matepapp@icloud.com" className="hover:text-emerald-400 transition">
