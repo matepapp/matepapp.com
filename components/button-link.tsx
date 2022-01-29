@@ -14,10 +14,10 @@ export const ButtonLink: FC<Props & LinkProps & HTMLAttributes<HTMLAnchorElement
   showArrowIcon,
 }) => (
   <Link href={href}>
-    <a className={clsx('inline-flex group items-center font-medium text-link', className)}>
+    <a className={clsx('group text-link inline-flex items-center font-medium', className)}>
       {children}
       {showArrowIcon && (
-        <ArrowRightIcon className="group-hover:opacity-100 inline-block w-4 h-4 ml-2 transition-opacity opacity-0" />
+        <ArrowRightIcon className="ml-2 inline-block h-4 w-4 opacity-0 transition-opacity group-hover:opacity-100" />
       )}
     </a>
   </Link>

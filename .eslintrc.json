@@ -3,12 +3,7 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "extends": [
-    "next",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "prettier/prettier"
-  ],
+  "extends": ["next", "plugin:@typescript-eslint/recommended", "prettier", "prettier/prettier"],
   "rules": {
     "@typescript-eslint/array-type": "error",
     "@typescript-eslint/consistent-indexed-object-style": [

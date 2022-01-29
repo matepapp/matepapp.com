@@ -11,7 +11,7 @@ const IndexPage = () => {
       <h1>Hey, I'm Mate! 👋🏻</h1>
 
       <div className="card p-5">
-        <p className="dark:text-gray-200 text-gray-800">
+        <p className="text-gray-800 dark:text-gray-200">
           Full-time Software Engineer, part-time Indie Maker, and wannabe home Barista. Passionate
           about solving problems by building useful & aesthetic products for people and learning new
           things along the journey. I try to stay up-to-date with the latest hot trends in Tech &

@@ -71,7 +71,7 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#34D399" />
           <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png" />
         </Head>
-        <body className="text-primary dark:bg-gray-900 antialiased bg-gray-100">
+        <body className="text-primary bg-gray-100 antialiased dark:bg-gray-900">
           <Main />
           <NextScript />
         </body>

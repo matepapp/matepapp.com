@@ -17,7 +17,7 @@ type ProjectCardProps = {
 export const ProjectCard = ({ image, title, url, badge, description }: ProjectCardProps) => (
   <div className={clsx('card flex flex-col p-5')}>
     <div className="flex items-center space-x-4">
-      <div className="flex-none w-16 overflow-hidden">
+      <div className="w-16 flex-none overflow-hidden">
         <Image
           src={image.src}
           alt={image.alt}
@@ -29,17 +29,17 @@ export const ProjectCard = ({ image, title, url, badge, description }: ProjectCa
         />
       </div>
       <div className="flex flex-col items-start">
-        <div className="sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0 flex flex-col items-start space-y-1">
-          <h3 className="inline-flex items-center mr-2">{title}</h3>
+        <div className="flex flex-col items-start space-y-1 sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0">
+          <h3 className="mr-2 inline-flex items-center">{title}</h3>
           {badge}
         </div>
         <a
           href={`https://${url}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-link flex items-center mt-1"
+          className="text-link mt-1 flex items-center"
         >
-          {url} <ExternalLinkIcon className="inline w-4 h-4 ml-1" />
+          {url} <ExternalLinkIcon className="ml-1 inline h-4 w-4" />
         </a>
       </div>
     </div>

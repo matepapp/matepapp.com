@@ -40,7 +40,7 @@ const ThoughtPage: NextPage<ThoughtPageProps> = ({ thought, tweets }) => {
 
       <div>
         <h1>{meta.title}</h1>
-        <div className="text-tertiary mt-4 text-sm font-medium tracking-wider uppercase">
+        <div className="text-tertiary mt-4 text-sm font-medium uppercase tracking-wider">
           <span>{meta.createdAt}</span> · <span>{meta.readingTime}</span>
         </div>
       </div>

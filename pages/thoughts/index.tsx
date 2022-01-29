@@ -20,10 +20,10 @@ const ThoughtsPage: NextPage<ThoughtsPageProps> = ({ thoughts }) => {
         <div className="card p-5" key={slug}>
           <Link href={`/thoughts/${slug}`} key={slug}>
             <a>
-              <h3 className="hover:text-emerald-400 transition">{title}</h3>
+              <h3 className="transition hover:text-emerald-400">{title}</h3>
             </a>
           </Link>
-          <div className="text-tertiary mt-2 text-xs font-medium tracking-wider uppercase">
+          <div className="text-tertiary mt-2 text-xs font-medium uppercase tracking-wider">
             <span>{createdAt}</span> · <span>{readingTime}</span>
           </div>
           <div className="text-secondary my-3">{excerpt}</div>

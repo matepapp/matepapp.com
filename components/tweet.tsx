@@ -26,9 +26,9 @@ export const Tweet = ({
   const quoteTweet = referenced_tweets && referenced_tweets.find((t) => t.type === 'quoted')
 
   return (
-    <div className="not-prose card dark:bg-gray-900 max-w-xl p-5 mx-auto my-6">
+    <div className="not-prose card mx-auto my-6 max-w-xl p-5 dark:bg-gray-900">
       <div className="flex items-center">
-        <a className="flex w-12 h-12" href={authorUrl} target="_blank" rel="noopener noreferrer">
+        <a className="flex h-12 w-12" href={authorUrl} target="_blank" rel="noopener noreferrer">
           <Image
             alt={author.username}
             height={48}
@@ -41,17 +41,17 @@ export const Tweet = ({
           href={authorUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="author flex flex-col ml-3 no-underline"
+          className="author ml-3 flex flex-col no-underline"
         >
           <span
-            className="dark:text-gray-100 flex items-center font-bold leading-5 text-gray-900"
+            className="flex items-center font-bold leading-5 text-gray-900 dark:text-gray-100"
             title={author.name}
           >
             {author.name}
             {author.verified ? (
               <svg
                 aria-label="Verified Account"
-                className="dark:text-white inline w-4 h-4 ml-1 text-blue-500"
+                className="ml-1 inline h-4 w-4 text-blue-500 dark:text-white"
                 viewBox="0 0 24 24"
               >
                 <g fill="currentColor">
@@ -74,7 +74,7 @@ export const Tweet = ({
         </a>
       </div>
 
-      <div className="dark:text-gray-300 text-md mt-4 mb-2 leading-normal text-gray-700 whitespace-pre-wrap">
+      <div className="text-md mt-4 mb-2 whitespace-pre-wrap leading-normal text-gray-700 dark:text-gray-300">
         {formattedText}
       </div>
 
@@ -82,8 +82,8 @@ export const Tweet = ({
         <div
           className={
             media.length === 1
-              ? 'inline-grid grid-cols-1 gap-x-2 gap-y-2 my-2'
-              : 'inline-grid grid-cols-2 gap-x-2 gap-y-2 my-2'
+              ? 'my-2 inline-grid grid-cols-1 gap-x-2 gap-y-2'
+              : 'my-2 inline-grid grid-cols-2 gap-x-2 gap-y-2'
           }
         >
           {media.map((m) => (
@@ -101,7 +101,7 @@ export const Tweet = ({
       {quoteTweet ? <Tweet {...quoteTweet} /> : null}
 
       <a
-        className="hover:underline text-sm text-gray-500"
+        className="text-sm text-gray-500 hover:underline"
         href={tweetUrl}
         target="_blank"
         rel="noopener noreferrer"
@@ -117,9 +117,9 @@ export const Tweet = ({
         </time>
       </a>
 
-      <div className="dark:text-gray-300 dark:border-gray-800 flex pt-2 mt-2 space-x-4 text-sm text-gray-700 border-t border-gray-200">
+      <div className="mt-2 flex space-x-4 border-t border-gray-200 pt-2 text-sm text-gray-700 dark:border-gray-800 dark:text-gray-300">
         <a
-          className="hover:text-blue-500 flex items-center text-gray-500 transition"
+          className="flex items-center text-gray-500 transition hover:text-blue-500"
           href={replyUrl}
           target="_blank"
           rel="noopener noreferrer"
@@ -135,7 +135,7 @@ export const Tweet = ({
           </span>
         </a>
         <a
-          className="hover:text-green-500 flex items-center text-gray-500 transition"
+          className="flex items-center text-gray-500 transition hover:text-green-500"
           href={retweetUrl}
           target="_blank"
           rel="noopener noreferrer"
@@ -151,7 +151,7 @@ export const Tweet = ({
           </span>
         </a>
         <a
-          className="hover:text-red-500 flex items-center text-gray-500 transition"
+          className="flex items-center text-gray-500 transition hover:text-red-500"
           href={likeUrl}
           target="_blank"
           rel="noopener noreferrer"

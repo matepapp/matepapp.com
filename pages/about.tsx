@@ -30,7 +30,7 @@ const StickyHeader: FC<{ zIndex: number } & HTMLAttributes<HTMLHeadingElement>> 
   className,
 }) => (
   <h3
-    className={clsx('top-14 dark:bg-gray-900 sticky z-10 w-full py-1 bg-gray-100', className)}
+    className={clsx('sticky top-14 z-10 w-full bg-gray-100 py-1 dark:bg-gray-900', className)}
     style={{ zIndex }}
   >
     {children}
@@ -50,7 +50,7 @@ const AboutPage = () => {
           src={profile}
           alt="Mate Papp is drinking espresso."
           layout="responsive"
-          className="rounded-xl overflow-hidden"
+          className="overflow-hidden rounded-xl"
           placeholder="blur"
           width={1024}
           height={1024}
@@ -124,7 +124,7 @@ const AboutPage = () => {
       <div className="pb-4">
         <StickyHeader zIndex={1}>2021</StickyHeader>
         <ul className="pl-1">
-          <CareerTimelineItem icon={<CurrencyDollarIcon className="w-10 h-10" />} month="November">
+          <CareerTimelineItem icon={<CurrencyDollarIcon className="h-10 w-10" />} month="November">
             <a
               href="https://twitter.com/matepappcom/status/1464321635796803592"
               className="text-link"
@@ -138,7 +138,7 @@ const AboutPage = () => {
             as a paid app for a month.
           </CareerTimelineItem>
 
-          <CareerTimelineItem icon={<PencilIcon className="w-10 h-10" />} month="October">
+          <CareerTimelineItem icon={<PencilIcon className="h-10 w-10" />} month="October">
             Wrote my first{' '}
             <Link href="/thoughts/dipping-my-toes-into-writing" passHref>
               <a className="text-link">blog post about writing</a>
@@ -146,11 +146,11 @@ const AboutPage = () => {
             (meta-writing).
           </CareerTimelineItem>
 
-          <CareerTimelineItem icon={<CogIcon className="w-10 h-10" />} month="July">
+          <CareerTimelineItem icon={<CogIcon className="h-10 w-10" />} month="July">
             Transitioned to the Web Platform team within Glovo.
           </CareerTimelineItem>
 
-          <CareerTimelineItem icon={<DeviceMobileIcon className="w-10 h-10" />} month="May">
+          <CareerTimelineItem icon={<DeviceMobileIcon className="h-10 w-10" />} month="May">
             Released my first, indie iOS application,{' '}
             <a href="https://historico.app" className="text-link">
               Historico
@@ -163,21 +163,21 @@ const AboutPage = () => {
           2020
         </StickyHeader>
         <ul className="pl-1">
-          <CareerTimelineItem icon={<HomeIcon className="w-10 h-10" />} month="September">
+          <CareerTimelineItem icon={<HomeIcon className="h-10 w-10" />} month="September">
             Moved to Barcelona.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<BriefcaseIcon className="w-10 h-10" />} month="June">
+          <CareerTimelineItem icon={<BriefcaseIcon className="h-10 w-10" />} month="June">
             Joined the Content & Partners cluster within{' '}
             <a href="https://glovoapp.com" className="text-link">
               Glovo
             </a>{' '}
             as a Senior Frontend Engineer.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<CodeIcon className="w-10 h-10" />} month="April">
+          <CareerTimelineItem icon={<CodeIcon className="h-10 w-10" />} month="April">
             Built the first version of matepapp.com website to learn and experiment with TailwindCSS
             and Next.js.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<XCircleIcon className="w-10 h-10" />} month="March">
+          <CareerTimelineItem icon={<XCircleIcon className="h-10 w-10" />} month="March">
             Partly, because of the pandemic we decided to shut down Cogito and look for other
             opportunities.
           </CareerTimelineItem>
@@ -187,7 +187,7 @@ const AboutPage = () => {
           2019
         </StickyHeader>
         <ul className="pl-1">
-          <CareerTimelineItem icon={<MicrophoneIcon className="w-10 h-10" />} month="September">
+          <CareerTimelineItem icon={<MicrophoneIcon className="h-10 w-10" />} month="September">
             Mentored a half-day{' '}
             <a
               href="https://2019.jsconfbp.com/workshops/supercharge-jamstack"
@@ -197,11 +197,11 @@ const AboutPage = () => {
             </a>{' '}
             about the beauty and possible opportunities of JAMStack.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<BriefcaseIcon className="w-10 h-10" />} month="July">
+          <CareerTimelineItem icon={<BriefcaseIcon className="h-10 w-10" />} month="July">
             Left Supercharge in order to focus on Cogito full-time. I've lead the development team
             and helped building the foundations and product of Cogito.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<MicrophoneIcon className="w-10 h-10" />} month="February">
+          <CareerTimelineItem icon={<MicrophoneIcon className="h-10 w-10" />} month="February">
             Had my first & second Meetup talks, plus a workshop within the company about GraphQL in
             general, and for iOS Developers.
           </CareerTimelineItem>
@@ -211,14 +211,14 @@ const AboutPage = () => {
           2018
         </StickyHeader>
         <ul className="pl-1">
-          <CareerTimelineItem icon={<BriefcaseIcon className="w-10 h-10" />} month="August">
+          <CareerTimelineItem icon={<BriefcaseIcon className="h-10 w-10" />} month="August">
             Moved to the Web team within Supercharge.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<AcademicCapIcon className="w-10 h-10" />} month="June">
+          <CareerTimelineItem icon={<AcademicCapIcon className="h-10 w-10" />} month="June">
             Graduated as a Computer Engineer BSc at Budapest University of Technology and Economics.
             My final thesis was the very early version of Cogito.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<CakeIcon className="w-10 h-10" />} month="March">
+          <CareerTimelineItem icon={<CakeIcon className="h-10 w-10" />} month="March">
             Officially founded our startup,{' '}
             <a href="https://cogito.study" className="text-link">
               Cogito
@@ -233,7 +233,7 @@ const AboutPage = () => {
           2017
         </StickyHeader>
         <ul className="pl-1">
-          <CareerTimelineItem icon={<BriefcaseIcon className="w-10 h-10" />} month="November">
+          <CareerTimelineItem icon={<BriefcaseIcon className="h-10 w-10" />} month="November">
             Joined one of the biggest digital agency in Hungary,{' '}
             <a href="https://supercharge.io" className="text-link">
               Supercharge
@@ -241,14 +241,14 @@ const AboutPage = () => {
             as an iOS Developer. I worked on several client projects, from huge mobile- & internet
             banking systems to small, early stage startup products.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<MicrophoneIcon className="w-10 h-10" />} month="April">
+          <CareerTimelineItem icon={<MicrophoneIcon className="h-10 w-10" />} month="April">
             Hold a Design Principles workshop for newjoiners at{' '}
             <a href="https://simonyi.bme.hu" className="text-link">
               Simonyi Károly College for Advanced Studies
             </a>
             .
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<BriefcaseIcon className="w-10 h-10" />} month="March">
+          <CareerTimelineItem icon={<BriefcaseIcon className="h-10 w-10" />} month="March">
             Started a new job at Fornax ICT as an iOS Developer. Part of a cross-functional team, we
             were building enterprise level project- and resource management applications.
           </CareerTimelineItem>
@@ -258,7 +258,7 @@ const AboutPage = () => {
           2016
         </StickyHeader>
         <ul className="pl-1">
-          <CareerTimelineItem icon={<SpeakerphoneIcon className="w-10 h-10" />} month="December">
+          <CareerTimelineItem icon={<SpeakerphoneIcon className="h-10 w-10" />} month="December">
             Joined the organizer team of the{' '}
             <a
               href="https://www.facebook.com/events/bme-i-épület/xiv-simonyi-konferencia/1113033802140234/"
@@ -268,11 +268,11 @@ const AboutPage = () => {
             </a>
             .
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<BriefcaseIcon className="w-10 h-10" />} month="July">
+          <CareerTimelineItem icon={<BriefcaseIcon className="h-10 w-10" />} month="July">
             Started my professional career as an iOS Developer Intern (later Junior) part of
             POSSIBLE CEE.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<AcademicCapIcon className="w-10 h-10" />} month="April">
+          <CareerTimelineItem icon={<AcademicCapIcon className="h-10 w-10" />} month="April">
             Participated in UXStudio's Practice oriented UX & UI training program.
           </CareerTimelineItem>
         </ul>
@@ -281,17 +281,17 @@ const AboutPage = () => {
           2015
         </StickyHeader>
         <ul className="pl-1">
-          <CareerTimelineItem icon={<DeviceMobileIcon className="w-10 h-10" />} month="November">
+          <CareerTimelineItem icon={<DeviceMobileIcon className="h-10 w-10" />} month="November">
             Started learning iOS application development in my free time.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<BriefcaseIcon className="w-10 h-10" />} month="October">
+          <CareerTimelineItem icon={<BriefcaseIcon className="h-10 w-10" />} month="October">
             Joined{' '}
             <a href="https://schdesign.hu" className="text-link">
               Schönherz Design Studio
             </a>
             , the design focused volunteer team within Simonyi Károly College for Advanced Studies.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<GlobeIcon className="w-10 h-10" />} month="June - September">
+          <CareerTimelineItem icon={<GlobeIcon className="h-10 w-10" />} month="June - September">
             Worked 3 months in the US as part of a staff member of a Summer Camp. I had a chance to
             visit New York, Philadelphia, Washington DC, Niagara Falls, and Los Angeles.
           </CareerTimelineItem>
@@ -301,11 +301,11 @@ const AboutPage = () => {
           2014
         </StickyHeader>
         <ul className="pl-1">
-          <CareerTimelineItem icon={<HomeIcon className="w-10 h-10" />} month="August">
+          <CareerTimelineItem icon={<HomeIcon className="h-10 w-10" />} month="August">
             Moved to Budapest and started university at Budapest University of Technology and
             Economics as a Computer Engineer.
           </CareerTimelineItem>
-          <CareerTimelineItem icon={<AcademicCapIcon className="w-10 h-10" />} month="June">
+          <CareerTimelineItem icon={<AcademicCapIcon className="h-10 w-10" />} month="June">
             Finished High School at Nagy Lajos Gimnázium Szombathely.
           </CareerTimelineItem>
         </ul>
@@ -313,11 +313,11 @@ const AboutPage = () => {
 
       <h2 id="recently-played">
         Recently played
-        <span className="inline-flex mb-1 ml-2 align-middle">
+        <span className="mb-1 ml-2 inline-flex align-middle">
           <Image src="/assets/spotify-icon.png" alt="Spotify icon" height={24} width={24} />
         </span>
       </h2>
-      <div className="card sm:grid-cols-4 grid grid-cols-2 gap-4">
+      <div className="card grid grid-cols-2 gap-4 sm:grid-cols-4">
         {data?.map(({ id, name, artist, url, image }) => (
           <a key={id} href={url} target="_blank" rel="noopener noreferrer">
             <Image
@@ -332,7 +332,7 @@ const AboutPage = () => {
       </div>
 
       <h2 id="hobbies">Hobbies</h2>
-      <ul className="sm:grid-cols-2 grid grid-cols-1 gap-4 list-none">
+      <ul className="grid list-none grid-cols-1 gap-4 sm:grid-cols-2">
         <li className="card">spending time with friends & family</li>
         <li className="card">brewing coffee</li>
         <li className="card">listening to podcasts</li>
