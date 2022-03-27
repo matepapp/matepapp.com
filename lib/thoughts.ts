@@ -1,5 +1,7 @@
 import fs from 'fs'
 import { bundleMDX } from 'mdx-bundler'
+import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import path from 'path'
 
 export type ThoughtMeta = {
@@ -24,7 +26,17 @@ export async function bundleThoughtFiles() {
       const filePath = path.join(path.join(process.cwd(), '/data/thoughts'), filename)
       const fileContents = fs.readFileSync(filePath).toString()
 
-      return await bundleMDX({ source: fileContents })
+      return await bundleMDX({
+        source: fileContents,
+        xdmOptions: (options) => {
+          options.rehypePlugins = [
+            ...(options?.rehypePlugins ?? []),
+            rehypeSlug,
+            rehypeAutolinkHeadings,
+          ]
+          return options
+        },
+      })
     }),
   )
 }
