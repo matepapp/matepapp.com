@@ -16,32 +16,32 @@
   }
 
   p {
-    @apply dark:text-gray-200 leading-7 text-gray-800;
+    @apply leading-7 text-gray-800 dark:text-gray-200;
   }
 }
 
 @layer components {
   .text-primary {
-    @apply dark:text-gray-100 text-gray-900;
+    @apply text-gray-900 dark:text-gray-100;
   }
 
   .text-secondary {
-    @apply dark:text-gray-200 text-gray-800;
+    @apply text-gray-800 dark:text-gray-200;
   }
 
   .text-tertiary {
-    @apply dark:text-gray-400 text-gray-600;
+    @apply text-gray-600 dark:text-gray-400;
   }
 
   .text-link {
-    @apply text-emerald-500 dark:text-emerald-400 hover:text-emerald-400 dark:hover:text-emerald-300 transition;
+    @apply text-emerald-500 transition hover:text-emerald-400 dark:text-emerald-400 dark:hover:text-emerald-300;
   }
 
   .card {
-    @apply dark:bg-gray-800 dark:border-gray-700 dark:border-opacity-50 rounded-xl p-4 bg-white border border-white shadow-sm;
+    @apply rounded-xl border border-white bg-white p-4 shadow-sm dark:border-gray-700 dark:border-opacity-50 dark:bg-gray-800;
   }
 
   .prose-wrapper {
-    @apply dark:prose-invert prose-zinc prose-a:no-underline prose-a:text-emerald-500 hover:prose-a:text-emerald-400 prose-img:rounded-xl dark:prose-a:text-emerald-400 dark:hover:prose-a:text-emerald-300 prose;
+    @apply prose prose-zinc prose-a:text-emerald-500 prose-a:no-underline hover:prose-a:text-emerald-400 prose-img:rounded-xl dark:prose-invert dark:prose-a:text-emerald-400 dark:hover:prose-a:text-emerald-300;
   }
 }
