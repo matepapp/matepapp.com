@@ -1,8 +1,10 @@
+import { Analytics } from '@vercel/analytics/react'
 import PlausibleProvider from 'next-plausible'
 import { DefaultSeo } from 'next-seo'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { Layout } from '../components'
+
 import '../css/tailwind.css'
 import { SEO } from '../utils/seo'
 
@@ -36,6 +38,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <PlausibleProvider domain="matepapp.com">
         <Layout>
           <Component {...pageProps} />
+          <Analytics />
         </Layout>
       </PlausibleProvider>
     </>
