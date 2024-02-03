@@ -1,21 +1,25 @@
 import clsx from 'clsx'
 import Link, { LinkProps } from 'next/link'
 import { useRouter } from 'next/router'
-import { FC } from 'react'
+import { ReactNode } from 'react'
 
-export const NavLink: FC<LinkProps> = ({ href, children }) => {
+type NavLinkProps = LinkProps & {
+  children: ReactNode
+}
+
+export function NavLink(props: NavLinkProps) {
   const router = useRouter()
-  const isActivePath = router.pathname === href || router.pathname === `${href}/[slug]`
+  const isActivePath = router.pathname === props.href || router.pathname === `${props.href}/[slug]`
 
   return (
-    <Link legacyBehavior href={href}>
+    <Link legacyBehavior {...props}>
       <a
         className={clsx(
-          'text-primary text-xl font-medium transition hover:text-emerald-400 dark:hover:text-emerald-300 sm:text-lg',
+          'text-primary text-xl font-medium transition hover:text-emerald-400 sm:text-lg dark:hover:text-emerald-300',
           isActivePath && 'text-link',
         )}
       >
-        {children}
+        {props.children}
       </a>
     </Link>
   )
