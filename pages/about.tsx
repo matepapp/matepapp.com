@@ -61,12 +61,12 @@ const AboutPage = () => {
         <p>{SEO.description}</p>
         <p>
           During weekdays, I work as a Senior Frontend Engineer at Glovo.{' '}
-          <Link href="#career">
+          <Link legacyBehavior href="#career">
             <a>Previously</a>
           </Link>
           , I was also an iOS Developer and I've co-founded a startup. On weekends, I like to build
           & iterate on{' '}
-          <Link href="/#projects">
+          <Link legacyBehavior href="/#projects">
             <a>my ideas</a>
           </Link>
           .
@@ -76,11 +76,11 @@ const AboutPage = () => {
           Beside of work, I enjoy spending time with my friends & family by traveling together,
           playing board games, or meeting to drink a great coffee or craft beer. Apart from that, a
           couple of my{' '}
-          <Link href="#hobbies">
+          <Link legacyBehavior href="#hobbies">
             <a>hobbies</a>
           </Link>{' '}
           are visiting conferences and meetups (sometimes speak),{' '}
-          <Link href="#recently-played">
+          <Link legacyBehavior href="#recently-played">
             <a>music & podcasts</a>
           </Link>
           , and playing any kind of team sports.
@@ -140,7 +140,7 @@ const AboutPage = () => {
 
           <CareerTimelineItem icon={<PencilIcon className="h-10 w-10" />} month="October">
             Wrote my first{' '}
-            <Link href="/thoughts/dipping-my-toes-into-writing" passHref>
+            <Link legacyBehavior href="/thoughts/dipping-my-toes-into-writing" passHref>
               <a className="text-link">blog post about writing</a>
             </Link>{' '}
             (meta-writing).

@@ -18,7 +18,7 @@ const ThoughtsPage: NextPage<ThoughtsPageProps> = ({ thoughts }) => {
       <h1>Thoughts</h1>
       {thoughts.map(({ slug, title, excerpt, createdAt, readingTime }) => (
         <div className="card p-5" key={slug}>
-          <Link href={`/thoughts/${slug}`} key={slug}>
+          <Link legacyBehavior href={`/thoughts/${slug}`} key={slug}>
             <a>
               <h3 className="transition hover:text-emerald-400">{title}</h3>
             </a>

@@ -8,7 +8,7 @@ export const NavLink: FC<LinkProps> = ({ href, children }) => {
   const isActivePath = router.pathname === href || router.pathname === `${href}/[slug]`
 
   return (
-    <Link href={href}>
+    <Link legacyBehavior href={href}>
       <a
         className={clsx(
           'text-primary text-xl font-medium transition hover:text-emerald-400 dark:hover:text-emerald-300 sm:text-lg',

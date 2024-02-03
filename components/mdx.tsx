@@ -9,7 +9,7 @@ const Anchor: FC<ComponentProps<'a'>> = (props) => {
 
   if (isInternalLink) {
     return (
-      <Link href={href} passHref>
+      <Link legacyBehavior href={href} passHref>
         <a {...props}>{props.children}</a>
       </Link>
     )
