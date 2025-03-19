@@ -1,5 +1,5 @@
 import { NextSeo } from 'next-seo'
-import { Badge, ButtonLink, ProjectCard } from '../components'
+import { ButtonLink } from '../components'
 import { SEO } from '../utils/seo'
 
 const IndexPage = () => {
@@ -25,23 +25,6 @@ const IndexPage = () => {
           More About Me
         </ButtonLink>
       </div>
-
-      <h2 className="mt-4">Projects</h2>
-
-      <ProjectCard
-        image={{ src: '/assets/bankliday.png', alt: 'Bankliday logo' }}
-        title="bankliday"
-        url="bankliday.com"
-        badge={<Badge>In Progress</Badge>}
-        description="Automated bank holiday tracker for international companies, distributed organizations, and remote teams."
-      />
-
-      <ProjectCard
-        image={{ src: '/assets/historico.png', alt: 'Historico logo' }}
-        title="Historico - Today in History"
-        url="historico.app"
-        description="Minimal & clean iOS application to discover daily historical events, births, and deaths and leverage iOS14 Widgets."
-      />
     </>
   )
 }
