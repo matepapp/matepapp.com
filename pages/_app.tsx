@@ -1,5 +1,4 @@
-import { Analytics } from '@vercel/analytics/react'
-import PlausibleProvider from 'next-plausible'
+import { Analytics } from '@vercel/analytics/next'
 import { DefaultSeo } from 'next-seo'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
@@ -35,12 +34,10 @@ const App = ({ Component, pageProps }: AppProps) => {
           cardType: 'summary_large_image',
         }}
       />
-      <PlausibleProvider domain="matepapp.com">
-        <Layout>
-          <Component {...pageProps} />
-          <Analytics />
-        </Layout>
-      </PlausibleProvider>
+      <Layout>
+        <Component {...pageProps} />
+        <Analytics />
+      </Layout>
     </>
   )
 }

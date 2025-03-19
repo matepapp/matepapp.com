@@ -9,16 +9,14 @@
     "start": "next start"
   },
   "engines": {
-    "node": "18.x"
+    "node": "20.x"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.5",
-    "@vercel/analytics": "^0.1.11",
+    "@vercel/analytics": "^1.5.0",
     "clsx": "^1.1.1",
-    "esbuild": "^0.14.5",
     "mdx-bundler": "^8.0.1",
     "next": "^13.2.4",
-    "next-plausible": "^3.7.2",
     "next-seo": "^4.28.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
