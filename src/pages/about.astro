@@ -1,23 +1,8 @@
 ---
-import {
-  AcademicCapIcon,
-  BriefcaseIcon,
-  CakeIcon,
-  CodeBracketIcon,
-  Cog6ToothIcon,
-  CurrencyDollarIcon,
-  DevicePhoneMobileIcon,
-  GlobeAltIcon,
-  HomeIcon,
-  MegaphoneIcon,
-  MicrophoneIcon,
-  PencilIcon,
-  XCircleIcon,
-} from "@heroicons/react/24/outline";
-import clsx from "clsx";
 import CareerTimelineItem from "../components/career-timeline-item.astro";
-import Layout from "../components/layout.astro";
-import { SITE, pageTitle } from "../site";
+import TimelineIcon from "../components/timeline-icon.astro";
+import { SITE } from "../config/site";
+import Layout from "../layouts/layout.astro";
 
 type StickyHeaderProps = {
   className?: string;
@@ -25,23 +10,28 @@ type StickyHeaderProps = {
 };
 
 const stickyHeaderClass = ({ className }: StickyHeaderProps) =>
-  clsx(
+  [
     "sticky top-0 pt-18 z-20 w-full border-b border-zinc-200/80 bg-zinc-100 py-2 text-sm font-semibold uppercase tracking-[0.22em] text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400",
     className,
-  );
+  ]
+    .filter(Boolean)
+    .join(" ");
 ---
 
-<Layout title={pageTitle("About")}>
+<Layout title={`About | ${SITE.name}`}>
   <section class="section-stack">
     <div class="space-y-4">
       <h1>About</h1>
       <p class="page-intro">
-        A slightly more personal overview of how I work, what I care about, and the path that
-        brought me from iOS into frontend engineering and independent projects.
+        A slightly more personal overview of how I work, what I care about, and
+        the path that brought me from iOS into frontend engineering and
+        independent projects.
       </p>
     </div>
 
-    <div class="grid gap-6 md:grid-cols-[minmax(0,17rem)_minmax(0,1fr)] md:items-start">
+    <div
+      class="grid gap-6 md:grid-cols-[minmax(0,17rem)_minmax(0,1fr)] md:items-start"
+    >
       <div class="md:sticky md:top-28">
         <img
           src="/assets/profile.jpeg"
@@ -59,24 +49,32 @@ const stickyHeaderClass = ({ className }: StickyHeaderProps) =>
           <p>{SITE.description}</p>
           <p>
             During weekdays, I work as a Senior Frontend Engineer at Glovo.
-            <a href="#career">Previously</a>, I was also an iOS Developer and I&apos;ve co-founded
-            a startup. On weekends, I like to build &amp; iterate on my ideas.
+            <a href="#career">Previously</a>, I was also an iOS Developer and
+            I&apos;ve co-founded a startup. On weekends, I like to build &amp;
+            iterate on my ideas.
           </p>
 
           <p>
-            Outside work, I enjoy spending time with my friends &amp; family by traveling together,
-            playing board games, or meeting for great coffee or craft beer. A couple of my
-            <a href="#hobbies">hobbies</a> are music, podcasts, visiting conferences and meetups,
-            and playing team sports.
+            Outside work, I enjoy spending time with my friends &amp; family by
+            traveling together, playing board games, or meeting for great coffee
+            or craft beer. A couple of my
+            <a href="#hobbies">hobbies</a> are music, podcasts, visiting conferences
+            and meetups, and playing team sports.
           </p>
 
           <p>
-            Over the years, I’ve become passionate about coffee. Nowadays, I experiment with
-            different brewing methods at home, mostly
-            <a href="https://www.vbmespresso.com/en/home-barista/domobar-junior/">espresso</a>,
+            Over the years, I’ve become passionate about coffee. Nowadays, I
+            experiment with different brewing methods at home, mostly
+            <a
+              href="https://www.vbmespresso.com/en/home-barista/domobar-junior/"
+              >espresso</a
+            >,
             <a href="https://global.hario.com/sp_v60series.html">V60</a>,
             <a href="https://aeropress.com">AeroPress</a>, and
-            <a href="https://global.hario.com/sp_mizudashi_cold_brewed_coffee.html#sei2">Cold Brew</a>.
+            <a
+              href="https://global.hario.com/sp_mizudashi_cold_brewed_coffee.html#sei2"
+              >Cold Brew</a
+            >.
           </p>
         </div>
 
@@ -87,10 +85,12 @@ const stickyHeaderClass = ({ className }: StickyHeaderProps) =>
           </div>
 
           <div class="pb-4">
-            <h3 class={stickyHeaderClass({ zIndex: 1 })} style={`z-index: 1;`}>2021</h3>
+            <h3 class={stickyHeaderClass({ zIndex: 1 })} style={`z-index: 1;`}>
+              2021
+            </h3>
             <ul class="space-y-1 pt-4">
               <CareerTimelineItem month="November">
-                <CurrencyDollarIcon slot="icon" />
+                <TimelineIcon slot="icon" name="currency-dollar" />
                 <a
                   href="https://twitter.com/matepappcom/status/1464321635796803592"
                   class="text-link"
@@ -102,57 +102,66 @@ const stickyHeaderClass = ({ className }: StickyHeaderProps) =>
                 as a paid app for a month.
               </CareerTimelineItem>
               <CareerTimelineItem month="October">
-                <PencilIcon slot="icon" />
+                <TimelineIcon slot="icon" name="pencil" />
                 Wrote my first
-                <a href="/thoughts/dipping-my-toes-into-writing" class="text-link">
+                <a
+                  href="/thoughts/dipping-my-toes-into-writing"
+                  class="text-link"
+                >
                   blog post about writing
                 </a>
                 (meta-writing).
               </CareerTimelineItem>
               <CareerTimelineItem month="July">
-                <Cog6ToothIcon slot="icon" />
+                <TimelineIcon slot="icon" name="cog-6-tooth" />
                 Transitioned to the Web Platform team within Glovo.
               </CareerTimelineItem>
               <CareerTimelineItem month="May">
-                <DevicePhoneMobileIcon slot="icon" />
+                <TimelineIcon slot="icon" name="device-phone-mobile" />
                 Released my first, indie iOS application,
                 <a href="https://historico.app" class="text-link">Historico</a>
                 to the App Store.
               </CareerTimelineItem>
             </ul>
 
-            <h3 class={stickyHeaderClass({ zIndex: 2, className: "mt-8" })} style={`z-index: 2;`}>
+            <h3
+              class={stickyHeaderClass({ zIndex: 2, className: "mt-8" })}
+              style={`z-index: 2;`}
+            >
               2020
             </h3>
             <ul class="space-y-1 pt-4">
               <CareerTimelineItem month="September">
-                <HomeIcon slot="icon" />
+                <TimelineIcon slot="icon" name="home" />
                 Moved to Barcelona.
               </CareerTimelineItem>
               <CareerTimelineItem month="June">
-                <BriefcaseIcon slot="icon" />
+                <TimelineIcon slot="icon" name="briefcase" />
                 Joined the Content &amp; Partners cluster within
                 <a href="https://glovoapp.com" class="text-link">Glovo</a>
                 as a Senior Frontend Engineer.
               </CareerTimelineItem>
               <CareerTimelineItem month="April">
-                <CodeBracketIcon slot="icon" />
-                Built the first version of matepapp.com website to learn and experiment with
-                TailwindCSS and Next.js.
+                <TimelineIcon slot="icon" name="code-bracket" />
+                Built the first version of matepapp.com website to learn and experiment
+                with TailwindCSS and Next.js.
               </CareerTimelineItem>
               <CareerTimelineItem month="March">
-                <XCircleIcon slot="icon" />
-                Partly, because of the pandemic we decided to shut down Cogito and look for other
-                opportunities.
+                <TimelineIcon slot="icon" name="x-circle" />
+                Partly, because of the pandemic we decided to shut down Cogito and
+                look for other opportunities.
               </CareerTimelineItem>
             </ul>
 
-            <h3 class={stickyHeaderClass({ zIndex: 3, className: "mt-8" })} style={`z-index: 3;`}>
+            <h3
+              class={stickyHeaderClass({ zIndex: 3, className: "mt-8" })}
+              style={`z-index: 3;`}
+            >
               2019
             </h3>
             <ul class="space-y-1 pt-4">
               <CareerTimelineItem month="September">
-                <MicrophoneIcon slot="icon" />
+                <TimelineIcon slot="icon" name="microphone" />
                 Mentored a half-day
                 <a
                   href="https://2019.jsconfbp.com/workshops/supercharge-jamstack"
@@ -163,72 +172,85 @@ const stickyHeaderClass = ({ className }: StickyHeaderProps) =>
                 about the beauty and possible opportunities of JAMStack.
               </CareerTimelineItem>
               <CareerTimelineItem month="July">
-                <BriefcaseIcon slot="icon" />
-                Left Supercharge in order to focus on Cogito full-time. I&apos;ve lead the
-                development team and helped building the foundations and product of Cogito.
+                <TimelineIcon slot="icon" name="briefcase" />
+                Left Supercharge in order to focus on Cogito full-time. I&apos;ve
+                lead the development team and helped building the foundations and
+                product of Cogito.
               </CareerTimelineItem>
               <CareerTimelineItem month="February">
-                <MicrophoneIcon slot="icon" />
-                Had my first &amp; second Meetup talks, plus a workshop within the company about
-                GraphQL in general, and for iOS Developers.
+                <TimelineIcon slot="icon" name="microphone" />
+                Had my first &amp; second Meetup talks, plus a workshop within the
+                company about GraphQL in general, and for iOS Developers.
               </CareerTimelineItem>
             </ul>
 
-            <h3 class={stickyHeaderClass({ zIndex: 4, className: "mt-8" })} style={`z-index: 4;`}>
+            <h3
+              class={stickyHeaderClass({ zIndex: 4, className: "mt-8" })}
+              style={`z-index: 4;`}
+            >
               2018
             </h3>
             <ul class="space-y-1 pt-4">
               <CareerTimelineItem month="August">
-                <BriefcaseIcon slot="icon" />
+                <TimelineIcon slot="icon" name="briefcase" />
                 Moved to the Web team within Supercharge.
               </CareerTimelineItem>
               <CareerTimelineItem month="June">
-                <AcademicCapIcon slot="icon" />
-                Graduated as a Computer Engineer BSc at Budapest University of Technology and
-                Economics. My final thesis was the very early version of Cogito.
+                <TimelineIcon slot="icon" name="academic-cap" />
+                Graduated as a Computer Engineer BSc at Budapest University of Technology
+                and Economics. My final thesis was the very early version of Cogito.
               </CareerTimelineItem>
               <CareerTimelineItem month="March">
-                <CakeIcon slot="icon" />
+                <TimelineIcon slot="icon" name="cake" />
                 Officially founded our startup,
                 <a href="https://cogito.study" class="text-link">Cogito</a>
-                with 5 friends of mine. Cogito is a community based, collaborative learning
-                management platform mainly for universities. Initially, we participated in an
-                incubator program, StartIT@K&amp;H.
+                with 5 friends of mine. Cogito is a community based, collaborative
+                learning management platform mainly for universities. Initially, we
+                participated in an incubator program, StartIT@K&amp;H.
               </CareerTimelineItem>
             </ul>
 
-            <h3 class={stickyHeaderClass({ zIndex: 5, className: "mt-8" })} style={`z-index: 5;`}>
+            <h3
+              class={stickyHeaderClass({ zIndex: 5, className: "mt-8" })}
+              style={`z-index: 5;`}
+            >
               2017
             </h3>
             <ul class="space-y-1 pt-4">
               <CareerTimelineItem month="November">
-                <BriefcaseIcon slot="icon" />
+                <TimelineIcon slot="icon" name="briefcase" />
                 Joined one of the biggest digital agency in Hungary,
-                <a href="https://supercharge.io" class="text-link">Supercharge</a>
-                as an iOS Developer. I worked on several client projects, from huge mobile- &amp;
-                internet banking systems to small, early stage startup products.
+                <a href="https://supercharge.io" class="text-link"
+                  >Supercharge</a
+                >
+                as an iOS Developer. I worked on several client projects, from huge
+                mobile- &amp; internet banking systems to small, early stage startup
+                products.
               </CareerTimelineItem>
               <CareerTimelineItem month="April">
-                <MicrophoneIcon slot="icon" />
+                <TimelineIcon slot="icon" name="microphone" />
                 Hold a Design Principles workshop for newjoiners at
                 <a href="https://simonyi.bme.hu" class="text-link">
                   Simonyi Károly College for Advanced Studies
                 </a>.
               </CareerTimelineItem>
               <CareerTimelineItem month="March">
-                <BriefcaseIcon slot="icon" />
+                <TimelineIcon slot="icon" name="briefcase" />
                 Started a new job at Fornax ICT as an iOS Developer. Part of a cross-functional
                 team, we were building enterprise level project- and resource management
                 applications.
               </CareerTimelineItem>
             </ul>
 
-            <h3 class={stickyHeaderClass({ zIndex: 6, className: "mt-8" })} style={`z-index: 6;`}>
+            <h3
+              class={stickyHeaderClass({ zIndex: 6, className: "mt-8" })}
+              style={`z-index: 6;`}
+            >
               2016
             </h3>
             <ul class="space-y-1 pt-4">
               <CareerTimelineItem month="December">
-                <MegaphoneIcon slot="icon" />
+                <TimelineIcon slot="icon" name="megaphone" />
                 Joined the organizer team of the
                 <a
                   href="https://www.facebook.com/events/bme-i-épület/xiv-simonyi-konferencia/1113033802140234/"
@@ -238,49 +260,58 @@ const stickyHeaderClass = ({ className }: StickyHeaderProps) =>
                 </a>.
               </CareerTimelineItem>
               <CareerTimelineItem month="July">
-                <BriefcaseIcon slot="icon" />
-                Started my professional career as an iOS Developer Intern (later Junior) part of
-                POSSIBLE CEE.
+                <TimelineIcon slot="icon" name="briefcase" />
+                Started my professional career as an iOS Developer Intern (later Junior)
+                part of POSSIBLE CEE.
               </CareerTimelineItem>
               <CareerTimelineItem month="April">
-                <AcademicCapIcon slot="icon" />
-                Participated in UXStudio&apos;s Practice oriented UX &amp; UI training program.
+                <TimelineIcon slot="icon" name="academic-cap" />
+                Participated in UXStudio&apos;s Practice oriented UX &amp; UI training
+                program.
               </CareerTimelineItem>
             </ul>
 
-            <h3 class={stickyHeaderClass({ zIndex: 7, className: "mt-8" })} style={`z-index: 7;`}>
+            <h3
+              class={stickyHeaderClass({ zIndex: 7, className: "mt-8" })}
+              style={`z-index: 7;`}
+            >
               2015
             </h3>
             <ul class="space-y-1 pt-4">
               <CareerTimelineItem month="November">
-                <DevicePhoneMobileIcon slot="icon" />
+                <TimelineIcon slot="icon" name="device-phone-mobile" />
                 Started learning iOS application development in my free time.
               </CareerTimelineItem>
               <CareerTimelineItem month="October">
-                <BriefcaseIcon slot="icon" />
+                <TimelineIcon slot="icon" name="briefcase" />
                 Joined
-                <a href="https://schdesign.hu" class="text-link">Schönherz Design Studio</a>, the
-                design focused volunteer team within Simonyi Károly College for Advanced Studies.
+                <a href="https://schdesign.hu" class="text-link"
+                  >Schönherz Design Studio</a
+                >, the design focused volunteer team within Simonyi Károly
+                College for Advanced Studies.
               </CareerTimelineItem>
               <CareerTimelineItem month="June - September">
-                <GlobeAltIcon slot="icon" />
-                Worked 3 months in the US as part of a staff member of a Summer Camp. I had a
-                chance to visit New York, Philadelphia, Washington DC, Niagara Falls, and Los
-                Angeles.
+                <TimelineIcon slot="icon" name="globe-alt" />
+                Worked 3 months in the US as part of a staff member of a Summer Camp.
+                I had a chance to visit New York, Philadelphia, Washington DC, Niagara
+                Falls, and Los Angeles.
               </CareerTimelineItem>
             </ul>
 
-            <h3 class={stickyHeaderClass({ zIndex: 8, className: "mt-8" })} style={`z-index: 8;`}>
+            <h3
+              class={stickyHeaderClass({ zIndex: 8, className: "mt-8" })}
+              style={`z-index: 8;`}
+            >
               2014
             </h3>
             <ul class="space-y-1 pt-4">
               <CareerTimelineItem month="August">
-                <HomeIcon slot="icon" />
-                Moved to Budapest and started university at Budapest University of Technology and
-                Economics as a Computer Engineer.
+                <TimelineIcon slot="icon" name="home" />
+                Moved to Budapest and started university at Budapest University of
+                Technology and Economics as a Computer Engineer.
               </CareerTimelineItem>
               <CareerTimelineItem month="June">
-                <AcademicCapIcon slot="icon" />
+                <TimelineIcon slot="icon" name="academic-cap" />
                 Finished High School at Nagy Lajos Gimnázium Szombathely.
               </CareerTimelineItem>
             </ul>
@@ -293,18 +324,66 @@ const stickyHeaderClass = ({ className }: StickyHeaderProps) =>
             <h2 class="section-title">Hobbies</h2>
           </div>
           <ul class="grid list-none grid-cols-1 gap-3 sm:grid-cols-2">
-            <li class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300">spending time with friends &amp; family</li>
-            <li class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300">brewing coffee</li>
-            <li class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300">listening to podcasts</li>
-            <li class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300">reading books &amp; articles</li>
-            <li class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300">playing team sports</li>
-            <li class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300">attending meetups &amp; conferences</li>
-            <li class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300">traveling</li>
-            <li class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300">functional training</li>
-            <li class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300">cycling</li>
-            <li class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300">playing boardgames</li>
-            <li class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300">cooking</li>
-            <li class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300">learning new things</li>
+            <li
+              class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300"
+            >
+              spending time with friends &amp; family
+            </li>
+            <li
+              class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300"
+            >
+              brewing coffee
+            </li>
+            <li
+              class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300"
+            >
+              listening to podcasts
+            </li>
+            <li
+              class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300"
+            >
+              reading books &amp; articles
+            </li>
+            <li
+              class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300"
+            >
+              playing team sports
+            </li>
+            <li
+              class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300"
+            >
+              attending meetups &amp; conferences
+            </li>
+            <li
+              class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300"
+            >
+              traveling
+            </li>
+            <li
+              class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300"
+            >
+              functional training
+            </li>
+            <li
+              class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300"
+            >
+              cycling
+            </li>
+            <li
+              class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300"
+            >
+              playing boardgames
+            </li>
+            <li
+              class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300"
+            >
+              cooking
+            </li>
+            <li
+              class="border-t border-zinc-200/80 pt-3 text-sm text-zinc-700 dark:border-zinc-800 dark:text-zinc-300"
+            >
+              learning new things
+            </li>
           </ul>
         </section>
       </div>

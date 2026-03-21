@@ -6,7 +6,7 @@ This file is a quick operator guide for humans and coding agents working in this
 
 - Personal site built with Astro.
 - Styling is done with Tailwind CSS v4 through `@tailwindcss/vite`.
-- Small React components are used where JSX is more convenient, but the site is primarily static.
+- The site is fully Astro-based with no React integration.
 - Content posts live as Markdown files under `src/pages/thoughts`.
 - Production deployment goes to Cloudflare via Wrangler and serves the built `dist` directory as static assets.
 
@@ -38,15 +38,17 @@ Defined in [`package.json`](/Users/mate.papp/Documents/Dev/matepapp.com/package.
 - `npm run dev` starts the Astro dev server
 - `npm run build` creates the production build in `dist/`
 - `npm run preview` serves the production build locally
+- `npm run format` runs Prettier
+- `npm run format:check` checks Prettier formatting
+- `npm run lint` runs ESLint with Astro + TypeScript support
+- `npm run lint:fix` runs ESLint with autofix
 - `npm run typecheck` runs `astro check`
-- `npm run lint` runs `oxlint`
-- `npm run format` runs `oxfmt`
 - `npm run deploy` deploys with Wrangler
 
 Recommended validation flow before shipping:
 
 ```bash
-npm run format
+npm run format:check
 npm run lint
 npm run typecheck
 npm run build
@@ -55,11 +57,10 @@ npm run build
 ## Project structure
 
 - [`src/pages`](/Users/mate.papp/Documents/Dev/matepapp.com/src/pages) contains routes
-- [`src/components`](/Users/mate.papp/Documents/Dev/matepapp.com/src/components) contains shared Astro and React UI
-- [`src/components/pages`](/Users/mate.papp/Documents/Dev/matepapp.com/src/components/pages) contains page-specific React components
-- [`src/layouts`](/Users/mate.papp/Documents/Dev/matepapp.com/src/layouts) contains Markdown/content layouts
+- [`src/components`](/Users/mate.papp/Documents/Dev/matepapp.com/src/components) contains shared Astro UI pieces
+- [`src/layouts`](/Users/mate.papp/Documents/Dev/matepapp.com/src/layouts) contains the shared page shell and Markdown/content layouts
+- [`src/config/site.ts`](/Users/mate.papp/Documents/Dev/matepapp.com/src/config/site.ts) contains site metadata defaults
 - [`src/styles/global.css`](/Users/mate.papp/Documents/Dev/matepapp.com/src/styles/global.css) contains global theme tokens and shared utility classes
-- [`src/site.ts`](/Users/mate.papp/Documents/Dev/matepapp.com/src/site.ts) is the central place for site metadata and canonical/title helpers
 - [`public`](/Users/mate.papp/Documents/Dev/matepapp.com/public) holds static assets copied as-is
 - [`wrangler.jsonc`](/Users/mate.papp/Documents/Dev/matepapp.com/wrangler.jsonc) defines the Cloudflare deployment config
 
@@ -70,8 +71,8 @@ These are the patterns to preserve unless there is a strong reason to change the
 ### 1. Prefer static Astro pages first
 
 - Default to `.astro` pages and layouts for routing and page shells.
-- Reach for React only when it meaningfully improves composition or readability.
-- Avoid adding client-side hydration unless the feature truly needs interactivity.
+- Avoid introducing framework integrations unless the feature truly needs them.
+- Avoid client-side hydration unless the feature truly needs interactivity.
 
 ### 2. Keep content as files, not as a system
 
@@ -81,8 +82,9 @@ These are the patterns to preserve unless there is a strong reason to change the
 
 ### 3. Reuse the shared site metadata
 
-- Use helpers from [`src/site.ts`](/Users/mate.papp/Documents/Dev/matepapp.com/src/site.ts) for titles and canonical URLs.
-- If the site URL, description, or social metadata changes, update it there instead of duplicating values elsewhere.
+- Reuse values from [`src/config/site.ts`](/Users/mate.papp/Documents/Dev/matepapp.com/src/config/site.ts) for site name, description, and social metadata.
+- Layouts handle canonical URLs with `Astro.site` and `Astro.url`, so do not reintroduce helper wrappers for that.
+- If the site URL changes, update [`astro.config.mjs`](/Users/mate.papp/Documents/Dev/matepapp.com/astro.config.mjs) deliberately.
 
 ### 4. Extend existing styles before inventing new systems
 
@@ -106,8 +108,8 @@ These are the patterns to preserve unless there is a strong reason to change the
 ### Adding or changing a page
 
 - Add a route in `src/pages`.
-- Wrap it with the shared [`layout.astro`](/Users/mate.papp/Documents/Dev/matepapp.com/src/components/layout.astro) unless there is a strong reason not to.
-- Use `pageTitle(...)` for subpages so titles stay consistent.
+- Wrap it with the shared [`layout.astro`](/Users/mate.papp/Documents/Dev/matepapp.com/src/layouts/layout.astro) unless there is a strong reason not to.
+- Set page titles directly using the `SITE.name` convention, for example `"About | ${SITE.name}"`.
 
 ### Adding a new thought post
 
@@ -118,8 +120,9 @@ These are the patterns to preserve unless there is a strong reason to change the
 
 ### Updating shared metadata or SEO
 
-- Page shell metadata lives in [`src/components/layout.astro`](/Users/mate.papp/Documents/Dev/matepapp.com/src/components/layout.astro).
-- Site-wide defaults live in [`src/site.ts`](/Users/mate.papp/Documents/Dev/matepapp.com/src/site.ts).
+- Page shell metadata lives in [`src/layouts/layout.astro`](/Users/mate.papp/Documents/Dev/matepapp.com/src/layouts/layout.astro).
+- Site-wide defaults live in [`src/config/site.ts`](/Users/mate.papp/Documents/Dev/matepapp.com/src/config/site.ts).
+- Thought post metadata is extended in [`src/layouts/thought-layout.astro`](/Users/mate.papp/Documents/Dev/matepapp.com/src/layouts/thought-layout.astro).
 
 ## Deployment
 
@@ -167,7 +170,7 @@ npm run dev
 Run the checks that match the scope of the change. For most code changes, this is enough:
 
 ```bash
-npm run format
+npm run format:check
 npm run lint
 npm run typecheck
 npm run build

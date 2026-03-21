@@ -82,6 +82,19 @@
     @apply text-emerald-600 transition-colors duration-200 hover:text-emerald-500 dark:text-emerald-400 dark:hover:text-emerald-300;
   }
 
+  .button-link {
+    @apply inline-flex items-center gap-2 font-medium tracking-tight text-emerald-600 transition-colors duration-200 hover:text-emerald-500 dark:text-emerald-400 dark:hover:text-emerald-300;
+  }
+
+  .button-link__icon {
+    @apply inline-block h-4 w-4 -translate-x-1 opacity-0 transition-all duration-200;
+  }
+
+  .button-link:hover .button-link__icon,
+  .button-link:focus-visible .button-link__icon {
+    @apply translate-x-0 opacity-100;
+  }
+
   .card {
     @apply border-t border-zinc-200/80 bg-transparent p-0 shadow-none dark:border-zinc-800;
   }

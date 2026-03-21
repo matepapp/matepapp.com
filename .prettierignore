@@ -1,0 +1,9 @@
+.agents
+.astro
+.vscode
+dist
+node_modules
+.wrangler
+output
+package-lock.json
+public/assets

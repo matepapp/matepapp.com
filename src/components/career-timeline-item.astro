@@ -10,18 +10,23 @@ const { month } = Astro.props;
   <div class="relative pt-3">
     <span
       class="absolute top-4 left-4 h-[calc(100%-0.25rem)] w-px bg-zinc-200 dark:bg-zinc-800"
-      aria-hidden="true"
-    />
+      aria-hidden="true"></span>
 
     <div class="relative z-0 grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4">
       <div class="pt-1">
-        <span class="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-200 bg-zinc-100 text-zinc-600 [&>svg]:h-4 [&>svg]:w-4 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300">
+        <span
+          class="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-200 bg-zinc-100 text-zinc-600 [&>svg]:h-4 [&>svg]:w-4 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300"
+        >
           <slot name="icon" />
         </span>
       </div>
 
-      <div class="min-w-0 border-b border-zinc-200/80 pb-4 dark:border-zinc-800">
-        <h4 class="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
+      <div
+        class="min-w-0 border-b border-zinc-200/80 pb-4 dark:border-zinc-800"
+      >
+        <h4
+          class="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400"
+        >
           {month}
         </h4>
         <p class="text-primary mt-2 text-[0.97rem] leading-7">

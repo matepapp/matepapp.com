@@ -1,6 +1,8 @@
 ---
-import Layout from "../components/layout.astro";
-import { canonicalUrl, pageTitle } from "../site";
+import type { MarkdownLayoutProps } from "astro";
+
+import { SITE } from "../config/site";
+import Layout from "./layout.astro";
 
 type ThoughtFrontmatter = {
   createdAt: string;
@@ -10,13 +12,16 @@ type ThoughtFrontmatter = {
   title: string;
 };
 
-const { frontmatter } = Astro.props as { frontmatter: ThoughtFrontmatter };
-const canonical = canonicalUrl(Astro.url.pathname);
-const image = canonicalUrl(`/assets/thoughts/${frontmatter.slug}/meta.png`);
+const { frontmatter } = Astro.props as MarkdownLayoutProps<ThoughtFrontmatter>;
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const image = new URL(
+  `/assets/thoughts/${frontmatter.slug}/meta.png`,
+  Astro.site,
+).toString();
 ---
 
 <Layout
-  title={pageTitle(frontmatter.title)}
+  title={`${frontmatter.title} | ${SITE.name}`}
   description={frontmatter.excerpt}
   canonical={canonical}
   image={image}
@@ -24,8 +29,12 @@ const image = canonicalUrl(`/assets/thoughts/${frontmatter.slug}/meta.png`);
   <header class="section-stack">
     <div class="space-y-4">
       <h1>{frontmatter.title}</h1>
-      <div class="text-tertiary text-sm font-medium uppercase tracking-[0.18em]">
-        <span>{frontmatter.createdAt}</span> · <span>{frontmatter.readingTime}</span>
+      <div
+        class="text-tertiary text-sm font-medium uppercase tracking-[0.18em]"
+      >
+        <span>{frontmatter.createdAt}</span> · <span
+          >{frontmatter.readingTime}</span
+        >
       </div>
     </div>
   </header>
