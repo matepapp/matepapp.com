@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/thought-layout.astro
-title: The First Baby Steps Of Bankliday
+title: The First Baby Steps of Bankliday
 createdAt: November 30, 2021
 updatedAt: ""
 slug: the-first-baby-steps-of-bankliday
@@ -74,7 +74,7 @@ If you ever had a chance to work with me, you might be aware that I’m obsessed
 
 - [Next.js](https://nextjs.org) for both the marketing pages and the app (`/pages`-based rendering solves everything!)
 - [Vercel](https://vercel.com/) for hosting (frontend, serverless functions, edge functions, etc.)
-- [TailwindCSS](https://tailwindcss.com) and [TailwindUI](https://tailwindui.com) for UI design (slightly customized by adding custom colors and font) sprinkled with some [HeadlessUI](https://headlessui.dev) and/or [RadixUI](https://www.radix-ui.com) magic
+- [Tailwind CSS](https://tailwindcss.com) and [Tailwind UI](https://tailwindui.com) for UI design (slightly customized by adding custom colors and font), sprinkled with some [Headless UI](https://headlessui.dev) and/or [Radix UI](https://www.radix-ui.com) magic
 - [Supabase](https://supabase.com) as a managed BaaS (Backend as a Service) with built-in Auth, Storage, and PostgreSQL
 - [ConvertKit](https://convertkit.com) for collecting emails
 

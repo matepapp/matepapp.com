@@ -5,7 +5,7 @@ createdAt: January 22, 2022
 updatedAt: ""
 slug: 8-principles-im-focusing-on
 published: true
-excerpt: Not an exhaustive list of principles that I find valuable to dedicate time and believe that helps me to become a better person.
+excerpt: Not an exhaustive list of principles that I find valuable and that help me become a better person.
 readingTime: 7 minutes
 ---
 

@@ -5,53 +5,44 @@ import Layout from "../layouts/layout.astro";
 
 <Layout title={SITE.name}>
   <section class="section-stack">
-    <div class="space-y-5">
+    <div class="space-y-4">
       <h1>Hey, I&apos;m Mate.</h1>
-      <p class="page-intro">
-        Software Engineer, Indie Maker, and curious home barista. I write about
-        software, building useful products, and the habits that help creative
-        work last.
-      </p>
-      <div class="border-t border-zinc-200/80 pt-5 dark:border-zinc-800">
-        <p class="max-w-[68ch] leading-8 text-zinc-700 dark:text-zinc-300">
-          {SITE.description}
-        </p>
-        <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
-          <a href="/thoughts" class="button-link">
-            <span>Read My Thoughts</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              class="button-link__icon"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
-            </svg>
-          </a>
-          <a href="/about" class="button-link">
-            <span>More About Me</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              class="button-link__icon"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
-            </svg>
-          </a>
-        </div>
+      <p class="page-intro max-w-[42rem]">{SITE.description}</p>
+      <div class="flex flex-wrap items-center gap-x-5 gap-y-3">
+        <a href="/thoughts" class="button-link">
+          <span>Read thoughts</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            class="button-link__icon"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+          </svg>
+        </a>
+        <a href="/about" class="button-link">
+          <span>More about me</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            class="button-link__icon"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+          </svg>
+        </a>
       </div>
     </div>
   </section>

@@ -25,11 +25,17 @@ const navLinks = [
   { href: "/thoughts", label: "thoughts" },
 ];
 
-function navClass(href: string) {
-  const isActive = pathname === href || pathname.startsWith(`${href}/`);
+function isActivePath(href: string) {
+  if (href === "/") {
+    return pathname === "/";
+  }
+
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
+function navClass() {
   return [
-    "text-primary text-lg font-medium tracking-tight transition-colors duration-200 hover:text-emerald-500 sm:text-base dark:hover:text-emerald-300",
-    isActive ? "text-link" : "",
+    "px-0 py-1 text-lg font-medium tracking-tight text-zinc-900 transition-colors duration-200 hover:text-emerald-500 aria-[current=page]:text-emerald-600 sm:text-base dark:text-zinc-100 dark:hover:text-emerald-300 dark:aria-[current=page]:text-emerald-300",
   ]
     .filter(Boolean)
     .join(" ");
@@ -147,7 +153,9 @@ function navClass(href: string) {
     />
     <slot name="head" />
   </head>
-  <body class="text-primary bg-zinc-100 antialiased dark:bg-zinc-900">
+  <body
+    class="bg-zinc-100 text-zinc-900 antialiased dark:bg-zinc-900 dark:text-zinc-100"
+  >
     <a
       href="#main-content"
       class="sr-only absolute top-4 left-4 z-50 rounded-md bg-zinc-950 px-3 py-2 text-sm font-medium text-zinc-50 focus:not-sr-only focus-visible:ring-offset-zinc-100 dark:bg-zinc-50 dark:text-zinc-950 dark:focus-visible:ring-offset-zinc-900"
@@ -165,7 +173,11 @@ function navClass(href: string) {
         <div class="mx-auto flex w-full max-w-3xl items-center gap-5">
           {
             navLinks.map((link) => (
-              <a class={navClass(link.href)} href={link.href}>
+              <a
+                class={navClass()}
+                href={link.href}
+                aria-current={isActivePath(link.href) ? "page" : undefined}
+              >
                 {link.label}
               </a>
             ))
@@ -206,7 +218,7 @@ function navClass(href: string) {
             <div>
               source available on <a
                 href="https://github.com/matepapp/matepapp.com"
-                class="text-link">Github</a
+                class="text-link">GitHub</a
               >
             </div>
           </div>

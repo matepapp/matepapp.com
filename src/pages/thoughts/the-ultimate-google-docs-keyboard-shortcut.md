@@ -5,7 +5,7 @@ createdAt: March 27, 2022
 updatedAt: ""
 slug: the-ultimate-google-docs-keyboard-shortcut
 published: true
-excerpt: An exaplanation about my favorite and in my opinion, the most underrated Google Docs keyboard shortcut.
+excerpt: An explanation of my favorite and, in my opinion, most underrated Google Docs keyboard shortcut.
 readingTime: 6 minutes
 ---
 
@@ -37,10 +37,10 @@ Thankfully, I wasn’t the only fan of Spotlight and some apps started to replic
 
 websites
 
-- [Github](https://github.com)
+- [GitHub](https://github.com)
 - [Netlify](https://www.netlify.com)
 - [Vercel](https://vercel.com)
-- [TailwindCSS](https://tailwindcss.com) docs
+- [Tailwind CSS](https://tailwindcss.com) docs
 - most of the code documentation sites that use Algolia’s search under the hood such as [Vue.js docs](https://vuejs.org)
 - even [JIRA](https://www.atlassian.com/software/jira)
 
@@ -51,7 +51,7 @@ Apart from the day-to-day apps and services, there are some companies ([like](ht
 
 _A quick disclaimer from the author. The OG power-user utility software was [Alfred](https://www.alfredapp.com) and the redesign of Spotlight in Yosemite could be highly influenced by it. Although, the [creators said](https://www.alfredapp.com/blog/announcements/alfred-and-os-x-10-10-yosemite/) it was **not** another case of “Sherlocking”, we all know how it works._
 
-## <s>GSuite</s> Google Workspace
+## <s>G Suite</s> Google Workspace
 
 [Google Workspace](https://workspace.google.com) – formerly known as GSuite – was the leading office management solution in the US in 2020 (according to [Statista](https://www.statista.com/statistics/961105/japan-market-share-of-office-suites-technologies/)) with ~60% market share. Even if the numbers are not accurate anymore, they're head-to-head competing against Microsoft 365 – formerly known as Office 365, a.k.a. the software suite where we could all become a graphic designer for a day using WordArt – with their subscription. Both companies offer a wide range of products, from document editor to email management, cloud storage, and the list goes on. Also good to highlight that Google was one of the early companies that proved that a web-based application could be a viable alternative to desktop software. They've started to pave the way for the modern web that we all know today.
 

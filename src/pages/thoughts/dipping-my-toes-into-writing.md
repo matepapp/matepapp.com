@@ -19,7 +19,7 @@ Being Hungarian means that English is not my first language and unfortunately, i
 
 When I was younger, I quickly realized that speaking only Hungarian could be a huge roadblock for my career – especially in Tech – and my personal life. Don’t get me wrong, I truly think that **Hungarian is one of the most beautiful languages** – and one of the hardest to learn – but we have to admit that it limits you to potentially reach a maximum of ~10 million people. Compared to English, which is kinda the official business language of the world, spoken by more than 20% of the population. Apart from school, to practice, I started watching TV Series & movies, listening to podcasts, reading articles in English. It felt that a whole new world opened in my life with a limitless amount of content and opportunities. Fun fact, I even forced myself to learn touch typing on English keyboard layout instead of Hungarian (which, in retrospect, was one of my best life- and productivity hacks so far).
 
-During my university years in Hungary, there wasn’t a lot of international presence around me, apart from a couple of Erasmus parties, where I only went to practice my English, of course. In the summer of 2015, I had a chance to work for 3 months in a Summer Camp in the USA, then traveled around for 2 weeks. This was another eye-opening and life-changing experience.
+During my university years in Hungary, there wasn’t a lot of international presence around me, apart from a couple of Erasmus parties, where I only went to practice my English, of course. In the summer of 2015, I had a chance to work for three months at a summer camp in the USA, then traveled around for two weeks. This was another eye-opening and life-changing experience.
 
 In my early career, within certain companies, we had a couple of colleagues from abroad, so the official communication in bigger Slack channels happened in English. Thankfully in [Supercharge](https://supercharge.io), I had more opportunities to practice my English, such as meetup talks and conference workshops.
 
@@ -87,7 +87,7 @@ A couple of people that I closely follow and learned a lot from reading, watchin
 - [Matt D’Avella](http://twitter.com/mattdavella) and his [YouTube channel](https://www.youtube.com/mattdavella) and [newsletter](https://www.mattdavella.com)
 - [Sarah Drasner](https://twitter.com/sarah_edo) and her [blog](https://sarah.dev/writing)
 - [Fabrizio Rinaldi](https://twitter.com/linuz90) and [Francesco Di Lorenzo](https://twitter.com/frankdilo) founders of [Mailbrew](https://mailbrew.com) and [Typefully](https://typefully.app)
-- [Adam Wathan](https://twitter.com/adamwathan) and [Steve Schoger](https://twitter.com/steveschoger) with all their work around [TailwindCSS](https://tailwindcss.com), [TailwindUI](https://tailwindui.com), [Refactoring UI](https://www.refactoringui.com)
+- [Adam Wathan](https://twitter.com/adamwathan) and [Steve Schoger](https://twitter.com/steveschoger) with all their work around [Tailwind CSS](https://tailwindcss.com), [Tailwind UI](https://tailwindui.com), [Refactoring UI](https://www.refactoringui.com)
 - [Jon Yongfook](https://twitter.com/yongfook) and his journey about his open [startup](https://www.bannerbear.com/open/)
 
 and the list goes on…
