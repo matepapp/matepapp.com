@@ -2,7 +2,8 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --font-sans: "Rubik", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Newsreader", ui-serif, Georgia, serif;
   --color-historico: #ab8b70;
   --color-twitter: #1da1f2;
   --color-instagram: #c32aa3;
@@ -20,23 +21,48 @@
   }
 
   body {
-    @apply bg-zinc-100 font-sans antialiased dark:bg-zinc-900;
+    @apply bg-zinc-100 font-sans text-zinc-900 antialiased dark:bg-zinc-900 dark:text-zinc-100;
   }
 
   h1 {
-    @apply text-4xl font-bold tracking-tight;
+    @apply text-balance text-[clamp(2.6rem,6vw,4.75rem)] leading-none font-semibold tracking-tight;
   }
 
   h2 {
-    @apply text-2xl font-bold;
+    @apply text-balance text-[clamp(1.75rem,3vw,2.5rem)] leading-tight font-semibold tracking-tight;
   }
 
   h3 {
-    @apply text-xl font-medium;
+    @apply text-balance text-[clamp(1.2rem,2vw,1.6rem)] leading-tight font-medium;
   }
 
   p {
-    @apply leading-7 text-zinc-800 dark:text-zinc-200;
+    @apply leading-8 text-zinc-700 dark:text-zinc-300;
+  }
+
+  ::selection {
+    @apply bg-emerald-200 text-zinc-900 dark:bg-emerald-500/40 dark:text-zinc-50;
+  }
+
+  a,
+  button,
+  [role="button"],
+  [tabindex]:not([tabindex="-1"]) {
+    @apply rounded-sm;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  [tabindex]:not([tabindex="-1"]):focus-visible {
+    @apply outline-none ring-2 ring-emerald-500/80 ring-offset-4 ring-offset-zinc-100 dark:ring-emerald-400 dark:ring-offset-zinc-900;
+  }
+
+  h1[id],
+  h2[id],
+  h3[id],
+  section[id] {
+    scroll-margin-top: 5.5rem;
   }
 }
 
@@ -54,14 +80,38 @@
   }
 
   .text-link {
-    @apply text-emerald-500 transition hover:text-emerald-400 dark:text-emerald-400 dark:hover:text-emerald-300;
+    @apply text-emerald-600 transition-colors duration-200 hover:text-emerald-500 dark:text-emerald-400 dark:hover:text-emerald-300;
   }
 
   .card {
-    @apply rounded-xl border border-white bg-white p-4 shadow-sm dark:border-zinc-700/50 dark:bg-zinc-800;
+    @apply rounded-2xl border border-zinc-200/80 bg-white/95 p-4 shadow-[0_1px_2px_rgba(0,0,0,0.05),0_10px_30px_rgba(0,0,0,0.03)] dark:border-zinc-800 dark:bg-zinc-950/70;
   }
 
   .prose-wrapper {
-    @apply prose prose-zinc max-w-none prose-a:text-emerald-500 prose-a:no-underline hover:prose-a:text-emerald-400 prose-img:rounded-xl dark:prose-invert dark:prose-a:text-emerald-400 dark:hover:prose-a:text-emerald-300;
+    @apply prose prose-zinc max-w-none prose-headings:font-serif prose-headings:font-medium prose-headings:text-zinc-950 prose-h2:mt-12 prose-h2:mb-4 prose-h2:text-[clamp(1.7rem,2.8vw,2.25rem)] prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-[clamp(1.25rem,2vw,1.5rem)] prose-p:max-w-[68ch] prose-p:text-zinc-700 prose-p:leading-8 prose-a:text-emerald-600 prose-a:no-underline prose-a:decoration-emerald-400/50 prose-a:underline-offset-4 hover:prose-a:text-emerald-500 prose-strong:text-zinc-950 prose-img:rounded-2xl prose-img:border prose-img:border-zinc-200/70 prose-img:shadow-sm prose-code:text-zinc-900 prose-code:before:content-none prose-code:after:content-none dark:prose-invert dark:prose-headings:text-zinc-50 dark:prose-p:text-zinc-300 dark:prose-a:text-emerald-400 dark:hover:prose-a:text-emerald-300 dark:prose-strong:text-zinc-50 dark:prose-code:text-zinc-100 dark:prose-img:border-zinc-800;
+  }
+
+  .surface {
+    @apply border-y border-zinc-200/80 bg-white/70 dark:border-zinc-800 dark:bg-zinc-950/40;
+  }
+
+  .eyebrow {
+    @apply text-xs font-medium uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-400;
+  }
+
+  .section-title {
+    @apply font-serif font-medium text-zinc-950 dark:text-zinc-50;
+  }
+
+  .page-intro {
+    @apply max-w-[68ch] text-lg leading-8 text-zinc-700 dark:text-zinc-300;
+  }
+
+  .section-stack {
+    @apply space-y-6 md:space-y-8;
+  }
+
+  .story-card {
+    @apply rounded-2xl border border-zinc-200/80 bg-white/90 p-5 transition-colors duration-200 hover:border-emerald-300/70 dark:border-zinc-800 dark:bg-zinc-950/70 dark:hover:border-emerald-700/70;
   }
 }

@@ -1,0 +1,309 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "home" [ref=e5] [cursor=pointer]:
+          - /url: /
+        - link "about" [ref=e6] [cursor=pointer]:
+          - /url: /about
+        - link "thoughts" [ref=e7] [cursor=pointer]:
+          - /url: /thoughts
+    - main [ref=e8]:
+      - heading "About" [level=1] [ref=e9]
+      - img "Mate Papp is drinking espresso." [ref=e11]
+      - generic [ref=e12]:
+        - paragraph [ref=e13]: I'm Mate Papp, a Software Engineer, a lifelong learner and teacher, an Apple fanboy, a wannabe home barista, and a productivity nerd (= too lazy). Originally from Hungary, currently living in beautiful Barcelona, Spain with my beloved wife.
+        - paragraph [ref=e14]:
+          - text: During weekdays, I work as a Senior Frontend Engineer at Glovo.
+          - link "Previously" [ref=e15] [cursor=pointer]:
+            - /url: "#career"
+          - text: ", I was also an iOS Developer and I've co-founded a startup. On weekends, I like to build & iterate on my ideas."
+        - paragraph [ref=e16]:
+          - text: Beside of work, I enjoy spending time with my friends & family by traveling together, playing board games, or meeting to drink a great coffee or craft beer. Apart from that, a couple of my
+          - link "hobbies" [ref=e17] [cursor=pointer]:
+            - /url: "#hobbies"
+          - text: are music, podcasts, visiting conferences and meetups (sometimes speak), and playing any kind of team sports.
+        - paragraph [ref=e18]:
+          - text: Over the years, I’ve become passionate about coffee. Nowadays, I experiment with different brewing methods at home (mostly
+          - link "espresso" [ref=e19] [cursor=pointer]:
+            - /url: https://www.vbmespresso.com/en/home-barista/domobar-junior/
+          - text: ","
+          - link "V60" [ref=e20] [cursor=pointer]:
+            - /url: https://global.hario.com/sp_v60series.html
+          - text: ","
+          - link "AeroPress" [ref=e21] [cursor=pointer]:
+            - /url: https://aeropress.com
+          - text: ", and"
+          - link "Cold Brew" [ref=e22] [cursor=pointer]:
+            - /url: https://global.hario.com/sp_mizudashi_cold_brewed_coffee.html#sei2
+          - text: ).
+      - heading "Career" [level=2] [ref=e23]
+      - generic [ref=e24]:
+        - heading "2021" [level=3] [ref=e25]
+        - list [ref=e26]:
+          - listitem [ref=e27]:
+            - generic [ref=e30]:
+              - img [ref=e33]
+              - generic [ref=e35]:
+                - heading "November" [level=4] [ref=e36]
+                - paragraph [ref=e37]:
+                  - link "Made my first 17,13$ online" [ref=e38] [cursor=pointer]:
+                    - /url: https://twitter.com/matepappcom/status/1464321635796803592
+                  - text: by running
+                  - link "Historico" [ref=e39] [cursor=pointer]:
+                    - /url: https://historico.app
+                  - text: as a paid app for a month.
+          - listitem [ref=e40]:
+            - generic [ref=e43]:
+              - img [ref=e46]
+              - generic [ref=e48]:
+                - heading "October" [level=4] [ref=e49]
+                - paragraph [ref=e50]:
+                  - text: Wrote my first
+                  - link "blog post about writing" [ref=e51] [cursor=pointer]:
+                    - /url: /thoughts/dipping-my-toes-into-writing
+                  - text: (meta-writing).
+          - listitem [ref=e52]:
+            - generic [ref=e55]:
+              - img [ref=e58]
+              - generic [ref=e61]:
+                - heading "July" [level=4] [ref=e62]
+                - paragraph [ref=e63]: Transitioned to the Web Platform team within Glovo.
+          - listitem [ref=e64]:
+            - generic [ref=e67]:
+              - img [ref=e70]
+              - generic [ref=e72]:
+                - heading "May" [level=4] [ref=e73]
+                - paragraph [ref=e74]:
+                  - text: Released my first, indie iOS application,
+                  - link "Historico" [ref=e75] [cursor=pointer]:
+                    - /url: https://historico.app
+                  - text: to the App Store.
+        - heading "2020" [level=3] [ref=e76]
+        - list [ref=e77]:
+          - listitem [ref=e78]:
+            - generic [ref=e81]:
+              - img [ref=e84]
+              - generic [ref=e86]:
+                - heading "September" [level=4] [ref=e87]
+                - paragraph [ref=e88]: Moved to Barcelona.
+          - listitem [ref=e89]:
+            - generic [ref=e92]:
+              - img [ref=e95]
+              - generic [ref=e97]:
+                - heading "June" [level=4] [ref=e98]
+                - paragraph [ref=e99]:
+                  - text: Joined the Content & Partners cluster within
+                  - link "Glovo" [ref=e100] [cursor=pointer]:
+                    - /url: https://glovoapp.com
+                  - text: as a Senior Frontend Engineer.
+          - listitem [ref=e101]:
+            - generic [ref=e104]:
+              - img [ref=e107]
+              - generic [ref=e109]:
+                - heading "April" [level=4] [ref=e110]
+                - paragraph [ref=e111]: Built the first version of matepapp.com website to learn and experiment with TailwindCSS and Next.js.
+          - listitem [ref=e112]:
+            - generic [ref=e115]:
+              - img [ref=e118]
+              - generic [ref=e120]:
+                - heading "March" [level=4] [ref=e121]
+                - paragraph [ref=e122]: Partly, because of the pandemic we decided to shut down Cogito and look for other opportunities.
+        - heading "2019" [level=3] [ref=e123]
+        - list [ref=e124]:
+          - listitem [ref=e125]:
+            - generic [ref=e128]:
+              - img [ref=e131]
+              - generic [ref=e133]:
+                - heading "September" [level=4] [ref=e134]
+                - paragraph [ref=e135]:
+                  - text: Mentored a half-day
+                  - link "workshop at JSConf BP '19" [ref=e136] [cursor=pointer]:
+                    - /url: https://2019.jsconfbp.com/workshops/supercharge-jamstack
+                  - text: about the beauty and possible opportunities of JAMStack.
+          - listitem [ref=e137]:
+            - generic [ref=e140]:
+              - img [ref=e143]
+              - generic [ref=e145]:
+                - heading "July" [level=4] [ref=e146]
+                - paragraph [ref=e147]: Left Supercharge in order to focus on Cogito full-time. I've lead the development team and helped building the foundations and product of Cogito.
+          - listitem [ref=e148]:
+            - generic [ref=e151]:
+              - img [ref=e154]
+              - generic [ref=e156]:
+                - heading "February" [level=4] [ref=e157]
+                - paragraph [ref=e158]: Had my first & second Meetup talks, plus a workshop within the company about GraphQL in general, and for iOS Developers.
+        - heading "2018" [level=3] [ref=e159]
+        - list [ref=e160]:
+          - listitem [ref=e161]:
+            - generic [ref=e164]:
+              - img [ref=e167]
+              - generic [ref=e169]:
+                - heading "August" [level=4] [ref=e170]
+                - paragraph [ref=e171]: Moved to the Web team within Supercharge.
+          - listitem [ref=e172]:
+            - generic [ref=e175]:
+              - img [ref=e178]
+              - generic [ref=e180]:
+                - heading "June" [level=4] [ref=e181]
+                - paragraph [ref=e182]: Graduated as a Computer Engineer BSc at Budapest University of Technology and Economics. My final thesis was the very early version of Cogito.
+          - listitem [ref=e183]:
+            - generic [ref=e186]:
+              - img [ref=e189]
+              - generic [ref=e191]:
+                - heading "March" [level=4] [ref=e192]
+                - paragraph [ref=e193]:
+                  - text: Officially founded our startup,
+                  - link "Cogito" [ref=e194] [cursor=pointer]:
+                    - /url: https://cogito.study
+                  - text: with 5 friends of mine. Cogito is a community based, collaborative learning management platform mainly for universities. Initially, we participated in an incubator program, StartIT@K&H.
+        - heading "2017" [level=3] [ref=e195]
+        - list [ref=e196]:
+          - listitem [ref=e197]:
+            - generic [ref=e200]:
+              - img [ref=e203]
+              - generic [ref=e205]:
+                - heading "November" [level=4] [ref=e206]
+                - paragraph [ref=e207]:
+                  - text: Joined one of the biggest digital agency in Hungary,
+                  - link "Supercharge" [ref=e208] [cursor=pointer]:
+                    - /url: https://supercharge.io
+                  - text: as an iOS Developer. I worked on several client projects, from huge mobile- & internet banking systems to small, early stage startup products.
+          - listitem [ref=e209]:
+            - generic [ref=e212]:
+              - img [ref=e215]
+              - generic [ref=e217]:
+                - heading "April" [level=4] [ref=e218]
+                - paragraph [ref=e219]:
+                  - text: Hold a Design Principles workshop for newjoiners at
+                  - link "Simonyi Károly College for Advanced Studies" [ref=e220] [cursor=pointer]:
+                    - /url: https://simonyi.bme.hu
+                  - text: .
+          - listitem [ref=e221]:
+            - generic [ref=e224]:
+              - img [ref=e227]
+              - generic [ref=e229]:
+                - heading "March" [level=4] [ref=e230]
+                - paragraph [ref=e231]: Started a new job at Fornax ICT as an iOS Developer. Part of a cross-functional team, we were building enterprise level project- and resource management applications.
+        - heading "2016" [level=3] [ref=e232]
+        - list [ref=e233]:
+          - listitem [ref=e234]:
+            - generic [ref=e237]:
+              - img [ref=e240]
+              - generic [ref=e242]:
+                - heading "December" [level=4] [ref=e243]
+                - paragraph [ref=e244]:
+                  - text: Joined the organizer team of the
+                  - link "XIV. Simonyi Conference" [ref=e245] [cursor=pointer]:
+                    - /url: https://www.facebook.com/events/bme-i-épület/xiv-simonyi-konferencia/1113033802140234/
+                  - text: .
+          - listitem [ref=e246]:
+            - generic [ref=e249]:
+              - img [ref=e252]
+              - generic [ref=e254]:
+                - heading "July" [level=4] [ref=e255]
+                - paragraph [ref=e256]: Started my professional career as an iOS Developer Intern (later Junior) part of POSSIBLE CEE.
+          - listitem [ref=e257]:
+            - generic [ref=e260]:
+              - img [ref=e263]
+              - generic [ref=e265]:
+                - heading "April" [level=4] [ref=e266]
+                - paragraph [ref=e267]: Participated in UXStudio's Practice oriented UX & UI training program.
+        - heading "2015" [level=3] [ref=e268]
+        - list [ref=e269]:
+          - listitem [ref=e270]:
+            - generic [ref=e273]:
+              - img [ref=e276]
+              - generic [ref=e278]:
+                - heading "November" [level=4] [ref=e279]
+                - paragraph [ref=e280]: Started learning iOS application development in my free time.
+          - listitem [ref=e281]:
+            - generic [ref=e284]:
+              - img [ref=e287]
+              - generic [ref=e289]:
+                - heading "October" [level=4] [ref=e290]
+                - paragraph [ref=e291]:
+                  - text: Joined
+                  - link "Schönherz Design Studio" [ref=e292] [cursor=pointer]:
+                    - /url: https://schdesign.hu
+                  - text: ", the design focused volunteer team within Simonyi Károly College for Advanced Studies."
+          - listitem [ref=e293]:
+            - generic [ref=e296]:
+              - img [ref=e299]
+              - generic [ref=e301]:
+                - heading "June - September" [level=4] [ref=e302]
+                - paragraph [ref=e303]: Worked 3 months in the US as part of a staff member of a Summer Camp. I had a chance to visit New York, Philadelphia, Washington DC, Niagara Falls, and Los Angeles.
+        - heading "2014" [level=3] [ref=e304]
+        - list [ref=e305]:
+          - listitem [ref=e306]:
+            - generic [ref=e309]:
+              - img [ref=e312]
+              - generic [ref=e314]:
+                - heading "August" [level=4] [ref=e315]
+                - paragraph [ref=e316]: Moved to Budapest and started university at Budapest University of Technology and Economics as a Computer Engineer.
+          - listitem [ref=e317]:
+            - generic [ref=e320]:
+              - img [ref=e323]
+              - generic [ref=e325]:
+                - heading "June" [level=4] [ref=e326]
+                - paragraph [ref=e327]: Finished High School at Nagy Lajos Gimnázium Szombathely.
+      - heading "Hobbies" [level=2] [ref=e328]
+      - list [ref=e329]:
+        - listitem [ref=e330]: spending time with friends & family
+        - listitem [ref=e331]: brewing coffee
+        - listitem [ref=e332]: listening to podcasts
+        - listitem [ref=e333]: reading books & articles
+        - listitem [ref=e334]: playing team sports
+        - listitem [ref=e335]: attending meetups & conferences
+        - listitem [ref=e336]: traveling
+        - listitem [ref=e337]: functional training
+        - listitem [ref=e338]: cycling
+        - listitem [ref=e339]: playing boardgames
+        - listitem [ref=e340]: cooking
+        - listitem [ref=e341]: learning new things
+    - contentinfo [ref=e342]:
+      - generic [ref=e343]:
+        - generic [ref=e344]:
+          - text: handcrafted with
+          - img [ref=e346]
+          - text: in Budapest & Barcelona
+        - generic [ref=e348]:
+          - text: source available on
+          - link "Github" [ref=e349] [cursor=pointer]:
+            - /url: https://github.com/matepapp/matepapp.com
+      - generic [ref=e350]:
+        - generic [ref=e351]: © Mate Papp, 2021
+        - generic [ref=e352]:
+          - link [ref=e353] [cursor=pointer]:
+            - /url: mailto:mate.papp@icloud.com
+            - img [ref=e354]
+          - link [ref=e357] [cursor=pointer]:
+            - /url: https://twitter.com/matepappcom
+            - img [ref=e358]
+          - link [ref=e360] [cursor=pointer]:
+            - /url: https://instagram.com/pappmate
+            - img [ref=e361]
+          - link [ref=e364] [cursor=pointer]:
+            - /url: https://facebook.com/pappmatesz
+            - img [ref=e365]
+          - link [ref=e367] [cursor=pointer]:
+            - /url: https://github.com/matepapp
+            - img [ref=e368]
+          - link [ref=e370] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/matepapp/
+            - img [ref=e371]
+  - generic [ref=e377]:
+    - button "Menu" [ref=e378]:
+      - img [ref=e380]
+      - generic: Menu
+    - button "Inspect" [ref=e384]:
+      - img [ref=e386]
+      - generic: Inspect
+    - button "Audit" [ref=e388]:
+      - generic [ref=e389]:
+        - img [ref=e390]
+        - img [ref=e393]
+      - generic: Audit
+    - button "Settings" [ref=e396]:
+      - img [ref=e398]
+      - generic: Settings
