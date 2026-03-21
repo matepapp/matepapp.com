@@ -5,17 +5,22 @@ import { SITE } from '../site';
 ---
 
 <Layout title={SITE.title}>
-  <h1>Hey, I'm Mate! 👋🏻</h1>
-
-  <div class="card p-5">
-    <p class="text-zinc-800 dark:text-zinc-200">
-      Full-time Software Engineer, part-time Indie Maker, and wannabe home Barista. Passionate
-      about solving problems by building useful & aesthetic products for people and learning new
-      things along the journey. I try to stay up-to-date with the latest hot trends in Tech &
-      Software Engineering, and occasionally even share my{' '}
-      <ButtonLink href="/thoughts" showArrowIcon={false}>thoughts</ButtonLink>
-      {' '}on those.
-    </p>
-    <ButtonLink href="/about" showArrowIcon={true} className="mt-4">More About Me</ButtonLink>
-  </div>
+  <section class="section-stack">
+    <div class="space-y-5">
+      <h1>Hey, I&apos;m Mate.</h1>
+      <p class="page-intro">
+        Software engineer, indie maker, and curious home barista. I write about software,
+        building useful products, and the habits that help creative work last.
+      </p>
+      <div class="border-t border-zinc-200/80 pt-5 dark:border-zinc-800">
+        <p class="max-w-[68ch] leading-8 text-zinc-700 dark:text-zinc-300">
+          {SITE.description}
+        </p>
+        <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
+          <ButtonLink href="/thoughts" showArrowIcon={true}>Read My Thoughts</ButtonLink>
+          <ButtonLink href="/about" showArrowIcon={true}>More About Me</ButtonLink>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>

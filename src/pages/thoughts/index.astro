@@ -24,18 +24,38 @@ const thoughts = Object.values(
 ---
 
 <Layout title={pageTitle("Thoughts")}>
-  <h1>Thoughts</h1>
-  {thoughts.map((post) => (
-    <div class="card p-5">
-      <a href={post.url}>
-        <h3 class="transition hover:text-emerald-400">{post.frontmatter.title}</h3>
-      </a>
-      <div class="text-tertiary mt-2 text-xs font-medium uppercase tracking-wider">
-        <span>{post.frontmatter.createdAt}</span> · <span>{post.frontmatter.readingTime}</span>
-      </div>
-      <div class="text-secondary my-3">{post.frontmatter.excerpt}</div>
-
-      <ButtonLink href={post.url ?? "/thoughts"} showArrowIcon={true}>Read More</ButtonLink>
+  <section class="section-stack">
+    <div class="space-y-4">
+      <h1>Thoughts</h1>
+      <p class="page-intro">
+        A small archive of notes on software, product thinking, learning in public, and projects
+        that stayed interesting long enough to write about.
+      </p>
     </div>
-  ))}
+  </section>
+
+  <section class="section-stack">
+    {thoughts.map((post) => (
+      <article class="story-card grid gap-4 md:grid-cols-[11rem_minmax(0,1fr)] md:gap-8 md:p-6">
+        <div class="space-y-1">
+          <div class="text-tertiary text-xs font-medium uppercase tracking-[0.18em]">
+            {post.frontmatter.createdAt}
+          </div>
+          <div class="text-sm text-zinc-500 dark:text-zinc-400">{post.frontmatter.readingTime}</div>
+        </div>
+
+        <div class="min-w-0 space-y-4">
+          <h2 class="text-[clamp(1.45rem,2vw,1.9rem)]">
+            <a href={post.url} class="transition-colors duration-200 hover:text-emerald-500">
+              {post.frontmatter.title}
+            </a>
+          </h2>
+          <p class="max-w-[62ch] text-base leading-8 text-zinc-700 dark:text-zinc-300">
+            {post.frontmatter.excerpt}
+          </p>
+          <ButtonLink href={post.url ?? "/thoughts"} showArrowIcon={true}>Read Essay</ButtonLink>
+        </div>
+      </article>
+    ))}
+  </section>
 </Layout>

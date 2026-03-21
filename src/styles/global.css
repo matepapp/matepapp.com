@@ -3,7 +3,6 @@
 
 @theme {
   --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Newsreader", ui-serif, Georgia, serif;
   --color-historico: #ab8b70;
   --color-twitter: #1da1f2;
   --color-instagram: #c32aa3;
@@ -84,11 +83,11 @@
   }
 
   .card {
-    @apply rounded-2xl border border-zinc-200/80 bg-white/95 p-4 shadow-[0_1px_2px_rgba(0,0,0,0.05),0_10px_30px_rgba(0,0,0,0.03)] dark:border-zinc-800 dark:bg-zinc-950/70;
+    @apply border-t border-zinc-200/80 bg-transparent p-0 shadow-none dark:border-zinc-800;
   }
 
   .prose-wrapper {
-    @apply prose prose-zinc max-w-none prose-headings:font-serif prose-headings:font-medium prose-headings:text-zinc-950 prose-h2:mt-12 prose-h2:mb-4 prose-h2:text-[clamp(1.7rem,2.8vw,2.25rem)] prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-[clamp(1.25rem,2vw,1.5rem)] prose-p:max-w-[68ch] prose-p:text-zinc-700 prose-p:leading-8 prose-a:text-emerald-600 prose-a:no-underline prose-a:decoration-emerald-400/50 prose-a:underline-offset-4 hover:prose-a:text-emerald-500 prose-strong:text-zinc-950 prose-img:rounded-2xl prose-img:border prose-img:border-zinc-200/70 prose-img:shadow-sm prose-code:text-zinc-900 prose-code:before:content-none prose-code:after:content-none dark:prose-invert dark:prose-headings:text-zinc-50 dark:prose-p:text-zinc-300 dark:prose-a:text-emerald-400 dark:hover:prose-a:text-emerald-300 dark:prose-strong:text-zinc-50 dark:prose-code:text-zinc-100 dark:prose-img:border-zinc-800;
+    @apply prose prose-zinc max-w-none prose-headings:font-sans prose-headings:font-semibold prose-headings:text-zinc-950 prose-h2:mt-12 prose-h2:mb-4 prose-h2:text-[clamp(1.7rem,2.8vw,2.25rem)] prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-[clamp(1.25rem,2vw,1.5rem)] prose-p:max-w-[68ch] prose-p:text-zinc-700 prose-p:leading-8 prose-a:text-emerald-600 prose-a:no-underline prose-a:decoration-emerald-400/50 prose-a:underline-offset-4 hover:prose-a:text-emerald-500 prose-strong:text-zinc-950 prose-img:rounded-2xl prose-img:border prose-img:border-zinc-200/70 prose-code:text-zinc-900 prose-code:before:content-none prose-code:after:content-none dark:prose-invert dark:prose-headings:text-zinc-50 dark:prose-p:text-zinc-300 dark:prose-a:text-emerald-400 dark:hover:prose-a:text-emerald-300 dark:prose-strong:text-zinc-50 dark:prose-code:text-zinc-100 dark:prose-img:border-zinc-800;
   }
 
   .surface {
@@ -100,7 +99,7 @@
   }
 
   .section-title {
-    @apply font-serif font-medium text-zinc-950 dark:text-zinc-50;
+    @apply font-sans font-semibold text-zinc-950 dark:text-zinc-50;
   }
 
   .page-intro {
@@ -112,6 +111,6 @@
   }
 
   .story-card {
-    @apply rounded-2xl border border-zinc-200/80 bg-white/90 p-5 transition-colors duration-200 hover:border-emerald-300/70 dark:border-zinc-800 dark:bg-zinc-950/70 dark:hover:border-emerald-700/70;
+    @apply border-t border-zinc-200/80 py-5 transition-colors duration-200 dark:border-zinc-800;
   }
 }

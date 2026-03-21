@@ -17,13 +17,16 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   return (
     <a
-      className={clsx("text-link group inline-flex items-center font-medium", className)}
+      className={clsx(
+        "text-link group inline-flex items-center gap-2 font-medium tracking-tight",
+        className,
+      )}
       href={href}
       {...props}
     >
       {children}
       {showArrowIcon ? (
-        <ArrowRightIcon className="ml-2 inline-block h-4 w-4 opacity-0 transition-opacity group-hover:opacity-100" />
+        <ArrowRightIcon className="inline-block h-4 w-4 -translate-x-1 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100" />
       ) : null}
     </a>
   );
