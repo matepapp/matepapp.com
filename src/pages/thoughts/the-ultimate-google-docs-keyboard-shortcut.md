@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/thought-layout.astro
 title: The Ultimate Google Docs Keyboard Shortcut
 createdAt: March 27, 2022
 updatedAt: ""

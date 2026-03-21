@@ -1,0 +1,34 @@
+---
+import Layout from "../components/layout.astro";
+import { canonicalUrl, pageTitle } from "../site";
+
+type ThoughtFrontmatter = {
+  createdAt: string;
+  excerpt: string;
+  readingTime: string;
+  slug: string;
+  title: string;
+};
+
+const { frontmatter } = Astro.props as { frontmatter: ThoughtFrontmatter };
+const canonical = canonicalUrl(Astro.url.pathname);
+const image = canonicalUrl(`/assets/thoughts/${frontmatter.slug}/meta.png`);
+---
+
+<Layout
+  title={pageTitle(frontmatter.title)}
+  description={frontmatter.excerpt}
+  canonical={canonical}
+  image={image}
+>
+  <div>
+    <h1>{frontmatter.title}</h1>
+    <div class="text-tertiary mt-4 text-sm font-medium uppercase tracking-wider">
+      <span>{frontmatter.createdAt}</span> · <span>{frontmatter.readingTime}</span>
+    </div>
+  </div>
+
+  <div class="prose-wrapper">
+    <slot />
+  </div>
+</Layout>

@@ -1,12 +1,12 @@
-import { ArrowRightIcon } from '@heroicons/react/24/outline'
-import clsx from 'clsx'
-import type { AnchorHTMLAttributes, ReactNode } from 'react'
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import clsx from "clsx";
+import type { AnchorHTMLAttributes, ReactNode } from "react";
 
 type ButtonLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
-  children: ReactNode
-  href: string
-  showArrowIcon: boolean
-}
+  children: ReactNode;
+  href: string;
+  showArrowIcon: boolean;
+};
 
 export function ButtonLink({
   children,
@@ -17,7 +17,7 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   return (
     <a
-      className={clsx('text-link group inline-flex items-center font-medium', className)}
+      className={clsx("text-link group inline-flex items-center font-medium", className)}
       href={href}
       {...props}
     >
@@ -26,5 +26,5 @@ export function ButtonLink({
         <ArrowRightIcon className="ml-2 inline-block h-4 w-4 opacity-0 transition-opacity group-hover:opacity-100" />
       ) : null}
     </a>
-  )
+  );
 }

@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/thought-layout.astro
 title: Dipping My Toes Into Writing
 createdAt: October 9, 2021
 updatedAt: ""

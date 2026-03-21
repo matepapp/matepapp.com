@@ -16,8 +16,8 @@ import {
 import clsx from "clsx";
 import type { HTMLAttributes } from "react";
 
-import { CareerTimelineItem } from "../career-timeline-item";
 import { SITE } from "../../site";
+import { CareerTimelineItem } from "../career-timeline-item";
 
 function StickyHeader({
   children,

@@ -1,28 +1,41 @@
 ---
-import { getCollection } from 'astro:content';
+import type { MarkdownInstance } from "astro";
 
 import { ButtonLink } from "../../components/button-link";
 import Layout from "../../components/layout.astro";
-import { pageTitle } from '../../site';
+import { pageTitle } from "../../site";
 
-const thoughts = (await getCollection('thoughts'))
-  .filter(({ data }) => data.published)
-  .sort((a, b) => new Date(b.data.createdAt).getTime() - new Date(a.data.createdAt).getTime());
+type ThoughtFrontmatter = {
+  createdAt: string;
+  excerpt: string;
+  published: boolean;
+  readingTime: string;
+  title: string;
+};
+
+const thoughts = Object.values(
+  import.meta.glob<MarkdownInstance<ThoughtFrontmatter>>("./*.md", { eager: true }),
+)
+  .filter((post) => post.frontmatter.published)
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.createdAt).getTime() - new Date(a.frontmatter.createdAt).getTime(),
+  );
 ---
 
-<Layout title={pageTitle('Thoughts')}>
+<Layout title={pageTitle("Thoughts")}>
   <h1>Thoughts</h1>
-  {thoughts.map(({ data }) => (
+  {thoughts.map((post) => (
     <div class="card p-5">
-      <a href={`/thoughts/${data.slug}`}>
-        <h3 class="transition hover:text-emerald-400">{data.title}</h3>
+      <a href={post.url}>
+        <h3 class="transition hover:text-emerald-400">{post.frontmatter.title}</h3>
       </a>
       <div class="text-tertiary mt-2 text-xs font-medium uppercase tracking-wider">
-        <span>{data.createdAt}</span> · <span>{data.readingTime}</span>
+        <span>{post.frontmatter.createdAt}</span> · <span>{post.frontmatter.readingTime}</span>
       </div>
-      <div class="text-secondary my-3">{data.excerpt}</div>
+      <div class="text-secondary my-3">{post.frontmatter.excerpt}</div>
 
-      <ButtonLink href={`/thoughts/${data.slug}`} showArrowIcon={true}>Read More</ButtonLink>
+      <ButtonLink href={post.url ?? "/thoughts"} showArrowIcon={true}>Read More</ButtonLink>
     </div>
   ))}
 </Layout>

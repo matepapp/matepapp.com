@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/thought-layout.astro
 title: 8 Principles I’m Focusing On (More)
 createdAt: January 22, 2022
 updatedAt: ""

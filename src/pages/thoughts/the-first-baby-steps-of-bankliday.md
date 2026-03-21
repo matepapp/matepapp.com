@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/thought-layout.astro
 title: The First Baby Steps Of Bankliday
 createdAt: November 30, 2021
 updatedAt: ""
