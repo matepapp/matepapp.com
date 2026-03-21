@@ -1,0 +1,21 @@
+---
+import { ButtonLink } from "../components/button-link";
+import Layout from "../components/layout.astro";
+import { SITE } from '../site';
+---
+
+<Layout title={SITE.title}>
+  <h1>Hey, I'm Mate! 👋🏻</h1>
+
+  <div class="card p-5">
+    <p class="text-zinc-800 dark:text-zinc-200">
+      Full-time Software Engineer, part-time Indie Maker, and wannabe home Barista. Passionate
+      about solving problems by building useful & aesthetic products for people and learning new
+      things along the journey. I try to stay up-to-date with the latest hot trends in Tech &
+      Software Engineering, and occasionally even share my{' '}
+      <ButtonLink href="/thoughts" showArrowIcon={false}>thoughts</ButtonLink>
+      {' '}on those.
+    </p>
+    <ButtonLink href="/about" showArrowIcon={true} className="mt-4">More About Me</ButtonLink>
+  </div>
+</Layout>

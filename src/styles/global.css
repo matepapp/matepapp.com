@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Rubik", ui-sans-serif, system-ui, sans-serif;
+  --color-historico: #ab8b70;
+  --color-twitter: #1da1f2;
+  --color-instagram: #c32aa3;
+  --color-facebook: #1877f2;
+  --color-linkedin: #007bb5;
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-zinc-100 font-sans antialiased dark:bg-zinc-900;
+  }
+
+  h1 {
+    @apply text-4xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-2xl font-bold;
+  }
+
+  h3 {
+    @apply text-xl font-medium;
+  }
+
+  p {
+    @apply leading-7 text-zinc-800 dark:text-zinc-200;
+  }
+}
+
+@layer components {
+  .text-primary {
+    @apply text-zinc-900 dark:text-zinc-100;
+  }
+
+  .text-secondary {
+    @apply text-zinc-800 dark:text-zinc-200;
+  }
+
+  .text-tertiary {
+    @apply text-zinc-600 dark:text-zinc-400;
+  }
+
+  .text-link {
+    @apply text-emerald-500 transition hover:text-emerald-400 dark:text-emerald-400 dark:hover:text-emerald-300;
+  }
+
+  .card {
+    @apply rounded-xl border border-white bg-white p-4 shadow-sm dark:border-zinc-700/50 dark:bg-zinc-800;
+  }
+
+  .prose-wrapper {
+    @apply prose prose-zinc max-w-none prose-a:text-emerald-500 prose-a:no-underline hover:prose-a:text-emerald-400 prose-img:rounded-xl dark:prose-invert dark:prose-a:text-emerald-400 dark:hover:prose-a:text-emerald-300;
+  }
+}
