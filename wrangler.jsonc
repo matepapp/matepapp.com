@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "matepapp-com",
+  "name": "matepapp",
   "compatibility_date": "2026-03-21",
   "assets": {
     "directory": "./dist",
